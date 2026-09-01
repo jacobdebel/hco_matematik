@@ -4,3 +4,4 @@ Dette er en samling af præsentationer til matematikundervisningen.
 
 Der er følgende præsentationer:
 
+https://jacobdebel.github.io/hco_matematik/funktioner_og_intro_til_infinitesimalregning

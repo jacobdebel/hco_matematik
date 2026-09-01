@@ -1,0 +1,3209 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Funktioner og intro til infinitesimalregning</title>
+<meta name="author" content="Jacob Debel"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/night.css" id="theme"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h2>Funktioner og intro til infinitesimalregning</h2><h3>Matematik</h3><h4>Jacob Debel</h4><h4></h4>
+</section>
+<section>
+<section id="slide-orgbaba897" data-background="">
+<h2 id="orgbaba897">Hvad vi skal</h2>
+<div style="font-size: 60%;">
+<ul>
+<li>Intro til funktioner generelt</li>
+<li>Intro til afledte funktioner (differentiation) og funktioners hældninger</li>
+<li>Intro til stamfunktioner/antiafledte (integration) og arealer under grafer</li>
+<li>Intro til funktionstyper, deres afledte funktioner og deres stamfunktioner</li>
+<li>Arbejde med matematikprojekt skatepark.</li>
+<li>Vi går mere i deltalje med differentiation og integration i senere forløb</li>
+
+</ul>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org350db28" data-background="">
+<h2 id="org350db28">Funktioner generelt</h2>
+<div class="outline-text-2" id="text-org350db28">
+</div>
+</section>
+<section id="slide-orgaf9b49d" data-background="">
+<h3 id="orgaf9b49d">Sammenhæng mellem variable</h3>
+<div style="font-size: 60%;">
+<p>
+I kender det allerede:
+</p>
+<ul>
+<li class="fragment appear">Regningen på energidrik afhænger af antallet af energidrik, der købes (og mærket selvfølgelig).</li>
+<li class="fragment appear">Renteindtægterne i banken afhænger af pengene på bankbogen.</li>
+<li class="fragment appear">Tidevand afhænger af tidspunktet på døgnet.</li>
+
+</ul>
+
+</div>
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Fælles er:
+</p>
+<ul>
+<li class="fragment appear">at en størrelse afhænger af en anden.</li>
+<li class="fragment appear">men at den anden størrelse ikke afhænger af den første.</li>
+
+</ul>
+
+<p class="fragment (appear)">
+Eksempel
+</p>
+<ul>
+<li class="fragment appear">Der er ikke både flod og ebbe (høj- og lavvande) på samme tid.</li>
+<li class="fragment appear">Vi betaler ikke to forskellige beløb for det samme antal mælk (af samme mærke og i samme butik).</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org44db840" data-background="">
+<h3 id="org44db840">To variabeltyper</h3>
+<ul>
+<li>Den <b>uafhængige</b> variabel
+<ul>
+<li>Den I før har kaldt x.</li>
+<li>Værdierne kan vælges "frit".</li>
+
+</ul></li>
+<li>Den <b>afhængige</b> variabel
+<ul>
+<li>Den I før har kaldt y og nu kommer til at kalde \(f(x)\).</li>
+<li>Værdien <i>afhænger</i> af, hvad den uafhængige værdi.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-orge9f0ecb" data-background="">
+<h3 id="orge9f0ecb">Parsammenligning</h3>
+<p>
+<b>Find selv på eksempler, hvor en størrelse afhænger af en anden.</b>
+</p>
+<ul>
+<li>Først i makkerpar.</li>
+<li>Del jeres eksempler i makkerskabsgruppen.</li>
+
+</ul>
+</section>
+<section id="slide-org18e10d6" data-background="">
+<h3 id="org18e10d6">Funktionsbegrebet</h3>
+<div style="font-size: 60%;">
+<p>
+I matematik er en <i>funktion</i> en matematisk sammenhæng mellem to størrelser.
+</p>
+
+<blockquote>
+<p>
+En funktion forstås som en beskrivelse af sammenhængen mellem en uafhængig variabelskift \(x\) og en afhængig variabel \(f(x)\).
+</p>
+
+<p>
+Det gælder, at der til én værdi af den uafhængige variabel \(x\) kun findes én værdi af den afhængige variabel \(f(x)\).
+</p>
+</blockquote>
+</div>
+</section>
+<section id="slide-org21a1c4e" data-background="">
+<h3 id="org21a1c4e">Repræsentationsformer</h3>
+<div style="font-size: 60%;">
+<p>
+Typisk beskrives en matematisk funktion ved en <b>forskrift</b> og/eller en <b>graf</b>.
+</p>
+
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<p>
+Forskrifter:
+</p>
+<div>
+\begin{align*}
+f(x)&= \frac{1}{2}x -3 \\
+g(x)&= 2 e^{-\frac{1}{2}x} \\
+h(x) &= \sqrt{x} \\
+i(x) &= - \frac{1}{x}+3
+\end{align*}
+
+</div>
+
+<p>
+Hvad skal det sige inde i hovedet?
+</p>
+</div>
+
+<div>
+<p>
+De tilhørende grafer:
+</p>
+
+
+<div id="orgcadc8a0" class="figure">
+<p><img src="img/2022-01-23_20-59-18_screenshot.png" alt="2022-01-23_20-59-18_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="slide-orgb1dddd4" data-background="">
+<h3 id="orgb1dddd4">Opgave 7.1.4</h3>
+<div style="font-size: 60%;">
+<p>
+Diskutér i makkerpar.
+</p>
+
+
+<div id="orgce9ed8c" class="figure">
+<p><img src="img/opgave_714.png" alt="opgave_714.png" height="500px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-orgcd3dd00" data-background="">
+<h3 id="orgcd3dd00">Opgave 7.1.1 og 7.1.2</h3>
+
+<div id="org190c823" class="figure">
+<p><img src="img/opgave_711_712.png" alt="opgave_711_712.png" height="500px" />
+</p>
+</div>
+</section>
+<section id="slide-orgd44489a" data-background="">
+<h3 id="orgd44489a">DM og VM</h3>
+<div style="font-size: 60%;">
+<p>
+Nej, der er hverken tale om Danmarks- eller verdensmesterskabet her.
+</p>
+
+<dl>
+<dt>DM <i>Definitionsmængde</i></dt><dd>Mængden af tal, der kan anvendes som uafhængig variabel, typisk \(x\) i en funktion.</dd>
+
+<dt>VM <i>Værdimængde</i></dt><dd>Mængden af funktionsværdier, typisk \(f(x)\), der fremkommer ved gennemløb af definitionsmængden.</dd>
+
+</dl>
+</div>
+</section>
+<section id="slide-org91a786b" data-background="">
+<h3 id="org91a786b">DM og VM</h3>
+<div style="font-size: 50%;">
+<p>
+Det skrives på en helt særlig måde.
+</p>
+
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<div>
+\begin{align*}
+Dm(f) &= \left\{ x \in \mathbb{R} \right\} \\
+Vm(f) &= \left\{ f \in \mathbb{R} \right\} \\
+\\
+Dm(g) &= \left\{ x \in \mathbb{R} \right\} \\
+Vm(g) &= \left\{ g \in \mathbb{R} | g > 0 \right\} = \left\{ g \in \mathbb{R}_+^{*} \right\}\\
+\\
+Dm(h) &= \left\{ x \in \mathbb{R} | x \geq 0 \right\} = \left\{ x \in \mathbb{R}_+ \right\}\\
+Vm(h) &= \left\{ h \in \mathbb{R} | h \geq 0 \right\} = \left\{ h \in \mathbb{R}_+ \right\}\\
+\\
+Dm(i) &= \left\{ x \in \mathbb{R} | x \neq 0 \right\} = \left\{ x \in \mathbb{R}\setminus \{0\} \right\}\\
+Vm(i) &= \left\{ i \in \mathbb{R} | i \neq 3 \right\} = \left\{ i \in \mathbb{R}\setminus \{3\} \right\}
+\end{align*}
+
+</div>
+
+<p class="fragment (appear)">
+Gad vide, hvad det siger inde i hovedet? :)
+</p>
+</div>
+
+<div>
+<p>
+Graferne fra tidligere
+</p>
+
+<div id="org63e4a58" class="figure">
+<p><img src="img/2022-01-23_20-59-18_screenshot.png" alt="2022-01-23_20-59-18_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="slide-orge26d754" data-background="">
+<h3 id="orge26d754">Opgave 7.1.5 og 7.1.6</h3>
+<div style="font-size: 60%;">
+
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<ul>
+<li>Note 7.1.5: Kan I se, at der er forskel på "bollerne" i enderne af graferne? Der er en lille forskel i deres betydning.</li>
+<li>Ekstra udfordring til opgave 7.1.6: Bestem Dm og Vm <i>uden</i> at tegne graferne først.</li>
+
+</ul>
+</div>
+
+<div>
+
+<div id="orge1cf364" class="figure">
+<p><img src="img/opgave_715_716.png" alt="opgave_715_716.png" height="500px" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="slide-org09d9f66" data-background="">
+<h3 id="org09d9f66">Monotoniforhold</h3>
+<div style="font-size: 50%;">
+<div style="display: grid; grid-template-columns: 60% auto;">
+<div>
+<ul>
+<li>Når noget er monotont, er det ensformigt.</li>
+<li>En funktion er monoton, når den er voksende eller aftagende i hele sin Dm.</li>
+<li>En funktion, som hverken vokser eller aftager, er konstant.</li>
+<li>En funktion kan skifte mellem at være voksende og aftagende. Man fastlægger dens <i>monotoniforhold</i>.</li>
+
+</ul>
+
+<blockquote>
+<ul>
+<li>f er voksende i et interval, hvis \(x_1 < x_2 \Rightarrow f(x_1) < f(x_2)\) eller \(f'(x) > 0\)</li>
+<li>f er aftagende i et interval, hvis \(x_1 < x_2 \Rightarrow f(x_1) > f(x_2)\) eller \(f'(x) < 0\)</li>
+<li>f er konstant, hvis \(f(x) = k\) i hele Dm.</li>
+
+</ul>
+</blockquote>
+<ul>
+<li>Læg mærke til apostroffen. Mere om det under differentialregning.</li>
+
+</ul>
+</div>
+
+<div>
+
+<div id="org96ea564" class="figure">
+<p><img src="./img/voksende_funktion.png" alt="voksende_funktion.png" height="120px" />
+</p>
+</div>
+
+<div id="orga632696" class="figure">
+<p><img src="./img/aftagende_funktion.png" alt="aftagende_funktion.png" height="120px" />
+</p>
+</div>
+
+<div id="org86000bb" class="figure">
+<p><img src="./img/vekslende_funktion.png" alt="vekslende_funktion.png" height="120px" />
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="slide-orgc02767d" data-background="">
+<h3 id="orgc02767d">Ekstremumspunkter</h3>
+<div style="font-size: 60%;">
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<ul>
+<li>Et ekstremumspunkt er enten er minimumspunkt eller et maksimumspunkt.</li>
+<li>Hedder også et ekstremum i ental og ekstrama i flertal.</li>
+<li>Der er både <i>globale</i> og <i>lokale</i> ekstremumspunkter.</li>
+
+</ul>
+</div>
+
+<div>
+
+<div id="orgf846acc" class="figure">
+<p><img src="./img/ekstrema.png" alt="ekstrema.png" width="300px" />
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="slide-orge02532d" data-background="">
+<h3 id="orge02532d">Ekstremumspunkter</h3>
+<div style="font-size: 50%;">
+<p>
+Eksempel 7.1.6.1
+</p>
+
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<ul>
+<li>Lokalt og globalt minimum: \((3\,,\, -13.5)\)</li>
+<li>Lokalt maksimum: \((-2\,,\,7.33)\)</li>
+<li>Globalt maksimum: \((6\,,\,18)\)</li>
+<li>Funktionens monotoniforhold:
+<ul>
+<li>\(f\) er voksende i intervallerne \(-3 \leq x < -2\) og \(3< x \leq 6\)</li>
+<li>\(f\) er aftagende  i intervallet \(-2 < x < 3\)</li>
+
+</ul></li>
+<li>\(Vm(f) = \left\{ f \in \mathbb{R} | -13.5 \leq f \leq 18 \right\}\)</li>
+
+</ul>
+</div>
+
+<div>
+<div>
+\begin{align*}
+f(x)&= \frac{1}{3} x^3-\frac{1}{2}x^2-6x \\
+Dm(f) &= \left\{ x \in \mathbb{R} | -3 \leq x \leq 6 \right\}
+\end{align*}
+
+</div>
+
+<div id="orgbe39e6c" class="figure">
+<p><img src="./img/ekstrema_eksempel.png" alt="ekstrema_eksempel.png" width="500px" />
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="slide-orgd8f2c61" data-background="">
+<h3 id="orgd8f2c61">Opgave 7.1.8 og 7.1.9</h3>
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+
+<div id="orgde8918a" class="figure">
+<p><img src="img/opgave_718.png" alt="opgave_718.png" />
+</p>
+</div>
+</div>
+
+<div>
+
+<div id="orgecd4194" class="figure">
+<p><img src="img/opgave_719.png" alt="opgave_719.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div class="column" style="float:left; width: 50%">
+
+
+<div id="org3162325" class="figure">
+<p><img src="img/2022-01-24_09-47-44_screenshot.png" alt="2022-01-24_09-47-44_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgce76eaa" class="figure">
+<p><img src="img/2022-01-24_09-47-56_screenshot.png" alt="2022-01-24_09-47-56_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org403c1a9" data-background="">
+<h2 id="org403c1a9">Intro til differentiation</h2>
+<p>
+Det hele omhandler <b>hældninger</b>!
+</p>
+
+<div id="org6340048" class="figure">
+<p><img src="./img/Differentialregning_intro.png" alt="Differentialregning_intro.png" width="500px" />
+</p>
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Afledt funktion: \(f'(x)\) - En funktion for en funktions hældningstal</li>
+<li>Tangentligninger</li>
+<li>Funktionsanalyse:
+<ul>
+<li>Maksimum og minimum (ekstremumspunkter)</li>
+<li>Vendetangentpunkter</li>
+<li>Monotoniforhold</li>
+
+</ul></li>
+<li>Optimering</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-orgab3b205" data-background="">
+<h3 id="orgab3b205">Hældningen for en funktion</h3>
+<div style="font-size: 60%;">
+<div style="display: grid; grid-template-columns: auto auto;">
+<div>
+<ul>
+<li>I ét punkt på en graf, har grafen samme hældning som <i>tangenten</i>.</li>
+<li>Hældningen ændrer sig som funktion af x.</li>
+<li>Men, hvordan gør den det (altså hældningen)?</li>
+
+</ul>
+</div>
+
+<div>
+
+<div id="org97d910f" class="figure">
+<p><img src="./img/2022-01-31_11-33-04_screenshot.png" alt="2022-01-31_11-33-04_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="slide-orgf0452f3" data-background="">
+<h3 id="orgf0452f3">Opgave - undersøgelse af hældninger</h3>
+<div style="font-size: 40%;">
+<p>
+I skal undesøge hældningerne for forskellige funktioner (den til højre). Én funktion pr person i makkerskabsgruppen.
+</p>
+
+<div style="display: grid; grid-template-columns: 60% auto;">
+<div>
+<p>
+I geogebra:
+</p>
+
+<ul>
+<li>Indskriv funktionsforskriften i geogebra i inputfeltet.</li>
+<li>Vælg punkt-værktøjet og tryk på grafen for funktionen (så sidder punktet fast på grafen).</li>
+<li>Vælg værktøjet <b>tangenter</b> og klik først på punktet og så på grafen.</li>
+<li>Flyt på punktet og se, at tangenten og særligt dens hældning ændrer sig.</li>
+<li>Plot sammenhørende værdier af x og hældningen af tangenten.</li>
+<li>Den hurtige løsning er:
+<ul>
+<li>Skriv følgende i inputfeltet: <code>B = (x(A),hældning(g))</code></li>
+<li>Højreklik på det nye punkt <code>B</code> og sæt mærke ved tænd spor.</li>
+<li>Træk punktet <code>A</code> langsomt rundt langs grafen og se en masse prikker blive tegnet.</li>
+
+</ul></li>
+
+</ul>
+</div>
+
+<div>
+<div>
+\begin{align*}
+f(x) &= x^2 \\
+g(x) &= \ln(x) \\
+h(x) &= \frac{1}{3}x^3-x \\
+i(x) &= \sin(x)
+\end{align*}
+
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<section id="slide-orgd2581a3" data-background="">
+<h3 id="orgd2581a3">Opgave - undersøgelse af hældninger</h3>
+<div style="font-size: 40%;">
+<p>
+<b>Hvilke funktioner, ser det ud til, at jeres prikker danner?</b>
+</p>
+
+
+<div id="orgef9bbcb" class="figure">
+<p><img src="img/2022-01-31_12-27-56_screenshot.png" alt="2022-01-31_12-27-56_screenshot.png" height="300px" class="fragment (appear)" />
+</p>
+</div>
+
+<ul>
+<li class="fragment appear">Vi må nok tage det én funktion af gangen.</li>
+
+</ul>
+
+</div>
+</section>
+<section id="slide-orgf29a1e7" data-background="">
+<h3 id="orgf29a1e7">\(f(x)=x^2\)</h3>
+<div style="font-size: 60%;">
+
+<div id="org0acdcad" class="figure">
+<p><img src="img/2022-01-31_12-35-19_screenshot.png" alt="2022-01-31_12-35-19_screenshot.png" height="400px" />
+</p>
+</div>
+
+<ul>
+<li>Den <i>afledte</i> funktion er
+\[f'(x) = 2x\]</li>
+
+</ul>
+</section>
+<section id="slide-org017c361" data-background="">
+<h3 id="org017c361">\(g(x)=ln(x)\)</h3>
+<div style="font-size: 60%;">
+
+<div id="org896d3c8" class="figure">
+<p><img src="img/2022-01-31_12-37-48_screenshot.png" alt="2022-01-31_12-37-48_screenshot.png" height="400px" />
+</p>
+</div>
+
+<ul>
+<li>Den <i>afledte</i> funktion er
+\[g'(x) = \frac{1}{x}\]</li>
+
+</ul>
+</section>
+<section id="slide-org9941acc" data-background="">
+<h3 id="org9941acc">\(h(x)=\frac{1}{3}x^3-x\)</h3>
+<div style="font-size: 60%;">
+
+<div id="org4df1eb5" class="figure">
+<p><img src="img/2022-01-31_12-40-46_screenshot.png" alt="2022-01-31_12-40-46_screenshot.png" height="400px" />
+</p>
+</div>
+
+<ul>
+<li>Den <i>afledte</i> funktion er
+\[h'(x) = x^2-1\]</li>
+
+</ul>
+</section>
+<section id="slide-orgb8d137c" data-background="">
+<h3 id="orgb8d137c">\(i(x)=sin(x)\)</h3>
+<div style="font-size: 60%;">
+
+<div id="orgf341c14" class="figure">
+<p><img src="img/2022-01-31_12-42-36_screenshot.png" alt="2022-01-31_12-42-36_screenshot.png" height="400px" />
+</p>
+</div>
+
+<ul>
+<li>Den <i>afledte</i> funktion er
+\[i'(x) = cos(x)\]</li>
+
+</ul>
+</section>
+<section id="slide-org8cabb59" data-background="">
+<h3 id="org8cabb59">Hvordan bestemmer man så den afledte funktion?</h3>
+<div style="font-size: 60%;">
+<p>
+Ja, man skal anvende <b>sekanter</b> og begrebet <b>grænseværdi</b>.
+</p>
+
+<p class="fragment (appear)">
+Grafisk ser de således ud
+</p>
+
+<div id="orgde88929" class="figure">
+<p><img src="img/2022-02-01_08-10-46_screenshot.png" alt="2022-02-01_08-10-46_screenshot.png" height="300px" class="fragment (appear)" />
+</p>
+</div>
+</section>
+<section id="slide-org87e1a2f" data-background="">
+<h3 id="org87e1a2f">Tretrinsreglen</h3>
+<div style="font-size: 60%;">
+<dl>
+<dt>Trin 1</dt><dd>Opskriv <i>differenskvotienten</i> aka <i>sekantens</i> hældning. (Er også gennemsnitshældningen mellem de to punkter.)
+\[a_\text{sekant} = \frac{\Delta y}{\Delta x} = \frac{f(x+\Delta x)-f(x)}{\Delta x}\]</dd>
+<dt>Trin 2</dt><dd>Omskriv det fremkomne udtryk, så næste trin bliver nemmere at gennemføre.</dd>
+<dt>Trin 3</dt><dd>Bestem <i>differentialkvotienten</i> ved at bestemme <i>grænseværdien</i> for \(\Delta x \to 0\) for differenskvotienten.
+\[f'(x) = \frac{dy}{dx} = \lim_{\Delta x \to 0} \left( \frac{\Delta y}{\Delta x} \right) = \lim_{\Delta x \to 0} \left( \frac{f(x+\Delta x) - f(x)}{\Delta x} \right)\]</dd>
+
+</dl>
+</section>
+<section id="slide-org0ee7c64" data-background="">
+<h3 id="org0ee7c64">Eksempel</h3>
+<p>
+Vi prøver lige på tavlen med
+\[f(x) = x^2\]
+</p>
+</section>
+<section id="slide-org391dfd0" data-background="">
+<h3 id="org391dfd0">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Bestem differentialkvotienterne (de afledte funktioner) for de følgende funktioner vha tretrinsreglen
+</p>
+
+<div>
+\begin{align*}
+f(x) &= 8x\\
+g(x) &= 3x^2 \\
+h(x) &= \frac{1}{x} \\
+i(x) &= \sqrt{x}
+\end{align*}
+
+</div>
+
+<ul>
+<li>Det er lidt tricky for \(h(x)\).</li>
+<li>Det noget mere tricky for \(i(x)\). Der skal ganges med det smarte et-tal \(\frac{\sqrt{x+\Delta x}+\sqrt{x}}{\sqrt{x+\Delta x}+\sqrt{x}}\) på et tidspunkt.</li>
+
+</ul>
+</section>
+<section id="slide-orgae87b19" data-background="">
+<h3 id="orgae87b19">Mange differentiationsregler</h3>
+<div style="font-size: 60%;">
+<p>
+Man kan bevise alskens regler for differentiation, men det vender vi tilbage til senere. Nu får I bare reglerne foræret.
+</p>
+
+
+<div id="orgc895395" class="figure">
+<p><img src="img/2022-02-06_22-40-39_screenshot.png" alt="2022-02-06_22-40-39_screenshot.png" height="500px" />
+</p>
+</div>
+</section>
+<section id="slide-org66a02ea" data-background="">
+<h3 id="org66a02ea">Kan det så bruges til noget det der differentiation?</h3>
+<ul>
+<li class="fragment appear">Ja, da!</li>
+<li class="fragment appear">Til bestemmelse af <i>tangentligninger</i></li>
+<li class="fragment appear">Til bestemmelse af <i>ekstremumspunkter</i></li>
+<li class="fragment appear">Til bestemmelse af <i>vendetangentpunkter</i> (hvis de findes for funktionen)</li>
+<li class="fragment appear">Til fastlæggelse af <b>monotoniforhold</b></li>
+<li class="fragment appear">Til optimering (Vi vender tilbage til dette senere i denne præsentation)</li>
+
+</ul>
+</section>
+<section id="slide-org291348a" data-background="">
+<h3 id="org291348a">Tangentligninger</h3>
+<div class="column" style="float:left; width: 50%">
+
+<div id="orgb778f23" class="figure">
+<p><img src="img/2022-02-06_22-50-50_screenshot.png" alt="2022-02-06_22-50-50_screenshot.png" width="600px" />
+</p>
+</div>
+
+<ul>
+<li class="fragment appear">Først tager vi lige beviset på tavlen.</li>
+<li class="fragment appear">Og så et eksempel efterfølgende.</li>
+
+</ul>
+</div>
+<div class="column" style="float:right; width: 50%">
+
+<div id="org48150c1" class="figure">
+<p><img src="img/2022-02-06_22-51-21_screenshot.png" alt="2022-02-06_22-51-21_screenshot.png" height="500px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-orga9d9174" data-background="">
+<h3 id="orga9d9174">Eksempel</h3>
+<div style="font-size: 60%;">
+<p>
+Vi skal finde ligningen for tangenten, som tangerer funktionen \[f(x)=x^2\] i punktet \((2, f(2))\).
+</p>
+
+<ul>
+<li class="fragment appear">Svaret er \(t: y=4x -4\)</li>
+<li class="fragment appear">Men det tager vi også lige på tavlen.</li>
+
+</ul>
+</section>
+<section id="slide-org6a0bbba" data-background="">
+<h3 id="org6a0bbba">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Find tangentligningerne for følgende funktioner og punkter:
+</p>
+<div>
+\begin{align*}
+g(x) &= 3 x^2 \quad (3,g(3)) \\
+h(x) &= \frac{1}{x} \quad (-2,h(-2)) \\
+i(x) &= \sqrt{x} \quad (9,i(9))
+\end{align*}
+
+</div>
+
+<ul>
+<li class="fragment appear">I kan selv overveje, hvorfor vi ikke gider at gøre det for \(f(x)=8x\).</li>
+
+</ul>
+</section>
+<section id="slide-org580d285" data-background="">
+<h3 id="org580d285">Lokale ekstrema og monotoniforhold</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+
+<div id="orgf273978" class="figure">
+<p><img src="img/2022-02-07_09-01-30_screenshot.png" alt="2022-02-07_09-01-30_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org63e1502" class="figure">
+<p><img src="img/2022-02-07_09-02-51_screenshot.png" alt="2022-02-07_09-02-51_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+<ul>
+<li class="fragment appear">A er et lokalt maksimum (hældningen går fra positiv til nul til negativ)</li>
+<li class="fragment appear">B er et lokalt minimum (hældningen går fra negativ til nul til positiv)</li>
+<li class="fragment appear">C er et vandret vendetangentpunkt (hældningen går fra negativ til nul til negativ igen)</li>
+<li class="fragment appear">Hvis man har fundet lokale ekstremumspunkter for en funktion, så kan man også fastlægge funktionens <i>monotoniforhold</i>.</li>
+
+</ul>
+</section>
+<section id="slide-orgb47444b" data-background="">
+<h3 id="orgb47444b">Eksempel</h3>
+<div style="font-size: 60%;">
+<p>
+Vi tager funktionen
+\[f(x)= 3x^2 + 8x\]
+</p>
+
+<ul>
+<li>\(f(x)\) har lokalt (og globalt) minimumspunkt i (-1.33 , -5.33)</li>
+<li>Monotoniforhold:
+<ul>
+<li>\(f(x)\) er aftagende for x&lt; -1.33</li>
+<li>\(f(x)\) er voksende  for x&gt; -1.33</li>
+
+</ul></li>
+
+</ul>
+
+<ul>
+<li class="fragment appear">Det kan alt sammen vises <i>i blinde</i> (uden at tegne grafen) vha. differentialregning, men det må vi hellere lige tage på tavlen.</li>
+
+</ul>
+</section>
+<section id="slide-org55f7d7d" data-background="">
+<h3 id="org55f7d7d">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Nu skal I selv lige prøve.
+</p>
+
+<p>
+Find eventuelle ekstremumspunkter og fastlæg monotoniforholdet for
+</p>
+
+<p>
+\[f(x) = - \sqrt{x} + x\]
+</p>
+</section>
+<section id="slide-org617b0e3" data-background="">
+<h3 id="org617b0e3">Komplet funktionsanalyse</h3>
+<div style="font-size: 45%;">
+<p>
+En komplet funktionsanalyse består af
+</p>
+
+<ol>
+<li>Definitionsmængde
+<ul>
+<li>Begrænsninger for x-værdier.</li>
+<li>\(Dm(f) = \left\{ x \in \mathbb{R} | \dots \right\}\)</li>
+
+</ul></li>
+<li>Bestemmelse af nulpunkter (rødder)
+<ul>
+<li>\(f(x)=0\)</li>
+<li>isolér x i ligningen.</li>
+
+</ul></li>
+<li>Bestemmelse af eventuelle ekstrema
+<ul>
+<li>\(f'(x)=0\)</li>
+<li>isolér x i ligningen.</li>
+<li>Indsæt x-værdierne i f(x) for at finde de tilhørende y-værdier.</li>
+
+</ul></li>
+<li>Beskrivelse af monotoniforhold
+<ul>
+<li>Indsæt passende x-værdier før og efter ekstremumspunkterne i forrige punkt i \(f'(x)\)</li>
+<li>\(f(x)\) er voksende i intervallet/intervallerne \(\dots < x < \dots\)</li>
+<li>\(f(x)\) er aftagende i intervallet/intervallerne \(\dots < x < \dots\)</li>
+
+</ul></li>
+<li>Bestemmelse af Værdimængde
+<ul>
+<li>Alle y-værdier for \(f(x)\).</li>
+<li>\(Vm(f) = \left\{ f(x) \in \mathbb{R} | \dots \right\}\)</li>
+
+</ul></li>
+<li>(Bestemmelse af vendetangentpunkter)
+<ul>
+<li>Sæt \(f''(x)=0\)</li>
+<li>Isolér x i ligningen.</li>
+<li>Indsæt x-værdierne i \(f(x)\) for at finde y-værdierne.</li>
+
+</ul></li>
+<li>(Bestemmelse af asymptoter)</li>
+
+</ol>
+</section>
+<section id="slide-org338c0b8" data-background="">
+<h3 id="org338c0b8">Eksempel</h3>
+<div style="font-size: 50%;">
+<p>
+Lad os udføre en funktionsanalyse for
+</p>
+
+<p>
+\[f(x) = 6 x - \frac{1}{2} x^3\]
+</p>
+
+<ol>
+<li class="fragment appear">\(Dm(f) = \left\{ x \in \mathbb{R} \right\}\) (Der er ingen begrænsninger for x.)</li>
+<li class="fragment appear"><p>
+Rødder:
+</p>
+<div>
+\begin{align*}
+f(x) &= 0 \\
+6x - \frac{1}{2}x^3 &=0 \\
+x_1 &= 0 \\
+6 - \frac{1}{2}x^2 &= 0 \\
+x_2 &= \sqrt{12} = 3.46 \\
+x_3 &= - \sqrt{12} = - 3.46 \\
+\end{align*}
+
+</div></li>
+
+</ol>
+
+</section>
+<section data-background="">
+<div style="font-size: 50%;">
+<p>
+\[f(x) = 6 x - \frac{1}{2} x^3\]
+</p>
+<ol>
+<li class="fragment appear" value="3"><p>
+Ekstrema
+</p>
+<div>
+\begin{align*}
+f'(x) &= 0 \\
+6 - \frac{3}{2}x^2 &= 0 \\
+x_4 &= -2 \\
+x_5 &= 2  \\
+y_4 = f(x_4) &= 6 (-2) - \frac{1}{2}(-2)^3 =-8 \\
+y_5 = f(x_5) &= 6 \cdot 2 - \frac{1}{2}\cdot 2^3 = 8
+\end{align*}
+
+</div></li>
+
+</ol>
+<p class="fragment (appear)">
+\((-2,-8)\) og \((2,8)\) er altså kandidater til at være ekstremumspunkter.
+</p>
+
+</section>
+<section data-background="">
+<div style="font-size: 50%;">
+<p>
+\[f(x) = 6 x - \frac{1}{2} x^3\]
+</p>
+<ol>
+<li class="fragment appear" value="4"><p>
+Monotoniforhold
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\(x\)</th>
+<th scope="col" class="org-right">-3</th>
+<th scope="col" class="org-right">-2</th>
+<th scope="col" class="org-right">0</th>
+<th scope="col" class="org-right">2</th>
+<th scope="col" class="org-right">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(f'(x)\)</td>
+<td class="org-right">-7.5</td>
+<td class="org-right">0</td>
+<td class="org-right">6.</td>
+<td class="org-right">0</td>
+<td class="org-right">-7.5</td>
+</tr>
+
+<tr>
+<td class="org-left">\(f(x)\)</td>
+<td class="org-right">\(\searrow\)</td>
+<td class="org-right">\(\rightarrow\)</td>
+<td class="org-right">\(\nearrow\)</td>
+<td class="org-right">\(\rightarrow\)</td>
+<td class="org-right">\(\searrow\)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>\(f(x)\) er aftagende i intervallerne \(x=]-\infty \,;\, -2 [\) og \(x = ]2 \,;\, \infty[\)</li>
+<li>\(f(x)\) er voksende i intervallet \(x=]-2 \,;\, 2 [\)</li>
+<li>\((-2,-8)\) er et lokalt minimum. (Skal stå under forrige punkt)</li>
+<li>\((2,8)\) er et lokalt maksimum. (Skal stå under forrige punkt)</li>
+
+</ul></li>
+<li class="fragment appear">Værdimængde
+\[Vm(f) = \left\{ f(x) \in \mathbb{R} \right\}\]
+<ul>
+<li>Det kan ses ud fra forskriften og monotoniforholdet.</li>
+
+</ul></li>
+
+</ol>
+
+</section>
+<section data-background="">
+<div style="font-size: 50%;">
+<p>
+\[f(x) = 6 x - \frac{1}{2} x^3\]
+</p>
+<ol>
+<li class="fragment appear" value="6"><p>
+Vendetangentpunkter
+</p>
+<div>
+\begin{align*}
+f'(x) &= 6 - \frac{3}{2}x^2 \\
+f''(x) &= - \frac{6}{2}x = - 3 x \\
+-3x &= 0 \to x=0 \\
+f(0) &= 6\cdot 0 - \frac{1}{2}\cdot 0^3 = 0
+\end{align*}
+
+</div>
+<ul>
+<li>Altså er der en kandidat til et Vendetangentpunkt i (0,0)</li>
+
+</ul>
+
+<div>
+\begin{align*}
+f''(-1) &= -3 \cdot (-1) = 3 \\
+f''(1) &= -3 \cdot 1 = -3 
+\end{align*}
+
+</div>
+<ul>
+<li>(0,0) er et vendetangentpunkt, da \(f''(x)\) skifter fortegn omkring \(x=0\).</li>
+
+</ul></li>
+
+</ol>
+
+</section>
+<section data-background="">
+<div style="font-size: 50%;">
+<p>
+\[f(x) = 6 x - \frac{1}{2} x^3\]
+Konklusion
+</p>
+<ul>
+<li>Rødder: (-3.46,0) , (0,0),  (3.46,0)  ( (0,0) er også skæringen med y-aksen) )</li>
+<li>Lokalt minimum: (-2,-8)</li>
+<li>Lokalt maksimum: (2,8)</li>
+<li>Vendetangentpunkt: (0,0)</li>
+<li>Monotoniforhold:
+<ul>
+<li>\(f(x)\) er aftagende i intervallerne \(x=]-\infty \,;\, -2 [\) og \(x = ]2 \,;\, \infty[\)</li>
+<li>\(f(x)\) er voksende i intervallet \(x=]-2 \,;\, 2 [\)</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section data-background="">
+<div style="font-size: 50%;">
+<p>
+Grafisk konklusion
+</p>
+
+<p>
+Det ser ud til at passe meget godt. :)
+</p>
+<div class="column" style="float:left; width: 50%">
+
+<div id="org7178e0f" class="figure">
+<p><img src="./img/funktionsanalyse.png" alt="funktionsanalyse.png" height="500px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgf852ea1" class="figure">
+<p><img src="./img/funktionsanalyse_2.png" alt="funktionsanalyse_2.png" height="500px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org504a240" data-background="">
+<h3 id="org504a240">Optimering</h3>
+<div style="font-size: 60%;">
+<ul>
+<li>Nu skal det der differentialligning bruges til noget rigtig godt.</li>
+<li>Det er jo altid godt, at kunne beregne den <b>optimale</b> størrelse.</li>
+
+</ul>
+
+<p>
+Fremgangsmåde:
+</p>
+<ol>
+<li>Analysér problemstillingen. Matematisér den.</li>
+<li>Opstil udtryk med én ubekendt variabel, som kan maksimeres eller minimeres. Mange gange skal flere ligninger sættes sammen til en.</li>
+<li>Differentiér udtrykket og sæt lig nul.</li>
+<li>Løs ligningen.</li>
+<li>Udfør en fortegnsundersøgelse omkring rødderne i ligningen for at afgøre, om der er tale om maksima eller minima.</li>
+
+</ol>
+</section>
+<section id="slide-orgfee7c94" data-background="">
+<h3 id="orgfee7c94">Eksempel</h3>
+<div style="font-size: 50%;">
+
+<div id="org4fbcc4b" class="figure">
+<p><img src="img/2022-02-28_10-00-45_screenshot.png" alt="2022-02-28_10-00-45_screenshot.png" width="800px" />
+</p>
+</div>
+
+<ol>
+<li class="fragment appear"><p>
+Matematisering
+</p>
+
+<div>
+\begin{align*}
+\text{Længde} &= 2x + y = 480\\
+\text{Areal} &= x\cdot y
+\end{align*}
+
+</div></li>
+
+</ol>
+
+<ul>
+<li class="fragment appear">Der er to variable. Men \(y\) kan isoleres i ligningen for længden og indsættes i ligningen for arealet.</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li class="fragment appear">Længde: \[ 2x +y = 480 \to y = 480 - 2x\]</li>
+<li class="fragment appear"><p>
+Areal:
+</p>
+<div>
+\begin{align*}
+A &= x\cdot y \\
+A &= x\cdot \left( 480 - 2x \right) \\
+A(x) &= 480x - 2x^2
+\end{align*}
+
+</div></li>
+<li class="fragment appear"><p>
+Nu kan det differentieres:
+</p>
+<div>
+\begin{align*}
+A'(x) &= 480 - 4 x \\
+0 &= 480 -4x \\
+x &= \frac{480}{4} \\
+x &= 120
+\end{align*}
+
+</div></li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+Fortegnsundersøgelse for \(A'(x)\)
+</p>
+<div>
+\begin{align*}
+A'(x) &= 480 - 4 x \\
+A'(100) &= 480 - 4 \cdot 100 = 80 \\
+A'(150) &= 480 - 4 \cdot 150 = -120 
+\end{align*}
+
+</div>
+
+<p>
+Hældningen går altså fra positiv over nul til negativ. <b>Ergo er der tale om et maksimumspunkt</b>.
+</p>
+
+<ul>
+<li class="fragment appear">Den <b>optimale x-værdi er da x=120</b>.</li>
+<li class="fragment appear"><p>
+Den tilhørende optimale y-værdi kan nu beregnes vha udtrykket for længden:
+</p>
+<div>
+\begin{align*}
+y &= 480 - 2 x \\
+y &= 480 - 2 \cdot 120 \\
+y &= 240
+\end{align*}
+
+</div></li>
+
+</ul>
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+De optimale mål og arealet er da:
+</p>
+<div>
+\begin{align*}
+x &= 120\\
+y &= 240 \\
+A(x,y) &= x \cdot y \\
+A(120, 240) &= 120 \cdot 240 =28800 
+\end{align*}
+
+</div>
+</section>
+<section id="slide-org719c666" data-background="">
+<h3 id="org719c666">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Nu er der fri leg blandt de følgende opgaver.
+</p>
+<div class="column" style="float:left; width: 50%">
+
+<div id="orgdfdce56" class="figure">
+<p><img src="img/2022-02-28_10-21-27_screenshot.png" alt="2022-02-28_10-21-27_screenshot.png" width="500px" />
+</p>
+</div>
+
+
+<div id="orgbece27f" class="figure">
+<p><img src="img/2022-02-28_10-22-23_screenshot.png" alt="2022-02-28_10-22-23_screenshot.png" width="500px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgae30a77" class="figure">
+<p><img src="img/2022-02-28_10-23-04_screenshot.png" alt="2022-02-28_10-23-04_screenshot.png" width="500px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-orgba6a10f" data-background="">
+<h3 id="orgba6a10f">Differentiationsregler</h3>
+<div class="column" style="float:left; width: 50%">
+
+<div id="org1c947c9" class="figure">
+<p><img src="./img/diffregler_1.png" alt="diffregler_1.png" width="100%" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgf2fcbf1" class="figure">
+<p><img src="img/2022-02-06_22-40-39_screenshot.png" alt="2022-02-06_22-40-39_screenshot.png" width="100%" />
+</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org3171d52" data-background="">
+<h2 id="org3171d52">Intro til integration</h2>
+<p>
+Der skældnes mellem ubestemte og bestemte integraler.
+</p>
+</section>
+<section id="slide-org3ea8aaa" data-background="">
+<h3 id="org3ea8aaa">Ubestemte integraler</h3>
+<div style="font-size: 60%;">
+<ul>
+<li>Et ubestemt integral er det samme som at finde en <i>stamfunktion</i> til en funktion.</li>
+<li>En stamfunktion er en <i>anti</i>​-afledt funktion.</li>
+<li>At integrere er altså det <i>modsatte</i> af at differentiere.</li>
+
+</ul>
+
+<p>
+Notation:
+</p>
+
+<div id="orgf427d5c" class="figure">
+<p><img src="img/2022-02-07_10-04-43_screenshot.png" alt="2022-02-07_10-04-43_screenshot.png" height="300px" />
+</p>
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<ul>
+<li>Bestemt integration og differentiation går ud med hinanden</li>
+
+</ul>
+
+<div class="column" style="float:left; width: 50%">
+<p>
+Her differentieres en stamfunktion for at finde en <i>oprindelig</i> funktion.
+</p>
+<div>
+\begin{align*}
+F'(x) &= f(x) \\
+\frac{d F(x)}{dx} &= f(x) \\
+\left( \int f(x) \,dx \right)' &= f(x) \\
+\frac{d}{dx} \left( \int f(x)\,dx \right) &= f(x) \\
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+Her integreres en afledt funktion for at finde en <i>oprindelig</i> funktion, men der kommer lige en ekstra <i>konstant</i> på.
+</p>
+<div>
+\begin{align*}
+\int f'(x) \,dx &= f(x) + k
+\end{align*}
+
+</div>
+</div>
+</section>
+<section id="slide-org3b11253" data-background="">
+<h3 id="org3b11253">Integrationsprøven</h3>
+<div style="font-size: 60%;">
+<p>
+Man kan undersøge om en opgivet stamfunktion er korrekt, ved at differentiere stamfunktionen og tjekke at dette udtryk er lig den oprindelige funktion.
+</p>
+
+<p>
+<b>Eksempel</b>
+Der oplyses en funktion \(f(x)=2 x\). Eftervis at \(F(x)=x^2\) er en stamfunktion til \(f(x)\).
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+F'(x) &= \left( x^2 \right)'  = 2x
+\end{align*}
+
+</div>
+
+<p class="fragment (appear)">
+Hvad så med \(F(x) = x^2 +4\)? Er det også en stamfunktion til \(f(x)\)?
+</p>
+</section>
+<section id="slide-org9f87554" data-background="">
+<h3 id="org9f87554">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Gæt jer til stamfunktionerne til følgende funktioner, ved at tjekke om jeres gæt giver den oprindelige funktion, når I differentiere. (I må gerne differentiere vha geogebra/wordmat, <code>afledede</code> i geogebra)
+</p>
+
+<div>
+\begin{align*}
+f(x) &= 3x \\
+g(x) &= 3x^2 \\
+h(x) &= 2x^3 \\
+i(x) &= 10x^{4}
+\end{align*}
+
+</div>
+
+<ul>
+<li class="fragment appear">Kan I finde en generel formel til at finde stamfunktionen til \(x^n\)?</li>
+<li class="fragment appear">Svaret er: \(f(x) = x^n \to F(x) = \frac{x^{n+1}}{n+1} + k\)</li>
+
+</ul>
+</section>
+<section id="slide-orgf49ea32" data-background="">
+<h3 id="orgf49ea32">Flere Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+\[\int x^n\,dx = \frac{x^{n+1}}{n+1}\, (+k)\]
+</p>
+
+<p>
+Bestem de følgende ubestemte integraler (find stamfunktioner)
+</p>
+
+<ol>
+<li>\(\int x^6 \,dx\)</li>
+<li>\(\int \frac{1}{x^5} \,dx\)</li>
+<li>\(\int \sqrt[4]{x} \,dx\)</li>
+<li>\(\int \frac{1}{\sqrt[3]{x}} \,dx\)</li>
+
+</ol>
+</section>
+<section id="slide-org440eb30" data-background="">
+<h3 id="org440eb30">Bestemte integraler</h3>
+<div style="font-size: 50%;">
+<p>
+Bestemmelse af areal mellem graf og x-aksen.
+</p>
+
+<div class="column" style="float:left; width: 50%">
+<p>
+Infinitesimalregningens fundamentalsætning 
+\[\text{Areal} = \int_a^b f(x) \,dx = \left[ F(x) \right]_a^b = F(b) - F(a)\]
+</p>
+
+<p class="fragment (appear)">
+(Den må være meget vigtig med det lange navn)
+</p>
+<ul>
+<li class="fragment appear">a og b er hhv <i>nedre</i> og <i>øvre</i> grænse</li>
+<li class="fragment appear">\(f(x)\) er <i>integranden</i></li>
+<li class="fragment appear">\(dx\) angiver den variabel, der integreres med hensyn til</li>
+<li class="fragment appear">\(F(b)\) og \(F(a)\) er <i>stamfunktionen</i> til \(f(x)\), hvor b og a er indsat i stedet for x.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org9c5f0ff" class="figure">
+<p><img src="./img/bestemt_integral.png" alt="bestemt_integral.png" width="500px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org038b5f8" data-background="">
+<h3 id="org038b5f8">Eksempel</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 60%">
+<p>
+Lad os bestemme det røde areal, som vist på figuren til højre.
+</p>
+<ul>
+<li class="fragment appear">Vi skal bruge \[\int_a^b f(x) \,dx = \left[ F(x) \right]_a^b = F(b) - F(a)\]</li>
+<li class="fragment appear">\(a=-1\) og \(b=2\)</li>
+<li class="fragment appear">\(f(x)=x^2 \to F(x) = \frac{x^3}{3}\)</li>
+<li class="fragment appear"><p>
+Sat sammen bliver det:
+</p>
+<div>
+\begin{align*}
+\int_{-1}^2 x^2 \,dx &= \left[ \frac{x^3}{3} \right]_{-1}^2 = \frac{2^3}{3} - \frac{(-1)^3}{3} \\
+&= \frac{8}{3} + \frac{1}{3} = \frac{9}{3} = 3 
+\end{align*}
+
+</div></li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 40%">
+
+
+<div id="orgd26d5a4" class="figure">
+<p><img src="img/2022-02-20_14-21-48_screenshot.png" alt="2022-02-20_14-21-48_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+</section>
+<section id="slide-org8c6ba78" data-background="">
+<h3 id="org8c6ba78">Opgaver - Find sammenhænge</h3>
+<div style="font-size: 60%;">
+<p>
+Bestem størrelserne af følgende bestemte integraler:
+</p>
+<ol>
+<li>\(\int_0^1 x^3\,dx\)</li>
+<li>\(\int_1^0 x^3\,dx\)</li>
+<li>\(\int_{-1}^0 x^3\,dx\)</li>
+<li>\(\int_{-1}^1 x^3\,dx\)</li>
+
+</ol>
+
+
+<ul>
+<li class="fragment appear">Hvilke sammenhænge har I fundet?</li>
+
+</ul>
+</section>
+<section id="slide-orgc28606e" data-background="">
+<h3 id="orgc28606e">Sammenhænge</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Arealer <i>over</i> x-aksen er positive.
+\[\int_0^1 x^3\,dx = \left[ \frac{x^4}{4} \right]_0^1 = \frac{1^4}{4}-\frac{0^4}{4} =\frac{1}{4}\]</li>
+<li>Arealer <i>under</i> x-aksen er negative.
+\[\int_{-1}^0 x^3\,dx = \left[ \frac{x^4}{4} \right]_{-1}^0 =\frac{0^4}{4}-\frac{(-1)^4}{4} = - \frac{1}{4}\]</li>
+<li>Arealer over og under x-aksen udligner hinanden.
+\[\int_{-1}^1 x^3\,dx = \left[ \frac{x^4}{4} \right]_{-1}^1 = \frac{1^4}{4}-\frac{(-1)^4}{4} = 0\]</li>
+<li>Hvis integrationsgrænserne ombyttes, skiftes også fortegnet for arealet.
+\[\int_b^a f(x) \,dx = - \int_a^b f(x) \,dx\]</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org09382e0" class="figure">
+<p><img src="img/2022-02-20_14-39-24_screenshot.png" alt="2022-02-20_14-39-24_screenshot.png" width="300px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org8a2e08d" data-background="">
+<h3 id="org8a2e08d">Flere opgaver</h3>
+<div style="font-size: 80%;">
+<p>
+Bestem størrelsen af følgende bestemte integraler
+</p>
+
+<ol>
+<li>\(\int_1^3 \frac{1}{x^5}\,dx\)</li>
+<li>\(\int_0^2 \sqrt{x}\,dx\)</li>
+<li>\(\int_0^3 2 x^3-12x\,dx\)</li>
+<li>\(\int_2^3 \frac{1}{\sqrt{x}}\,dx\)</li>
+
+</ol>
+</section>
+<section id="slide-org7d13e8c" data-background="">
+<h3 id="org7d13e8c">Arealer over og under x-aksen</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Hvis man vil finde størrelsen af det markerede areal, skal man dele integralet op i to. Et integral, hvor grafen er over x-aksen og et integral, hvor grafen er under x-aksen, altså:
+</p>
+<div>
+\begin{align*}
+\int_{-2}^{-1} x^2-x-2 \,dx &=  \left[ \frac{x^3}{3}-\frac{x^2}{2}-2x \right]_{-2}^{-1} = \frac{11}{6} = 1.83 \\
+\left| \int_{-1}^2 x^2-x-2\,dx \right| &=\left| \left[ \frac{x^3}{3}-\frac{x^2}{2}-2x \right]_{-1}^{2} \right| = \left|- \frac{9}{2}  \right| = 4.5\\
+\end{align*}
+
+</div>
+<p>
+<b>I alt 6.33</b>
+</p>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div id="org082bfdc" class="figure">
+<p><img src="img/2022-02-21_08-08-17_screenshot.png" alt="2022-02-21_08-08-17_screenshot.png" width="200px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+Det naive forsøg giver
+\[\int_{-2}^2 x^2-x-2\,dx = \left[ \frac{x^3}{3}-\frac{x^2}{2}-2x \right]_{-2}^2 = - \frac{8}{3}\]
+</p>
+</div>
+</section>
+<section id="slide-orgd4cca7e" data-background="">
+<h3 id="orgd4cca7e">Areal mellem grafer</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Det er ligegyldigt, om funktionerne ligger over eller under x-aksen.</li>
+<li>Det er vigtigt, at en funktion altid ligger over den anden i det interval, der integreres over.</li>
+<li>Alternativt, del integralet op, hvor graferne skærer hinanden.</li>
+
+</ul>
+
+<p>
+\(f(x) > g(x)\) for \(a < x < b\) gælder
+</p>
+
+<p>
+\[\text{Areal}=\int_a^b f(x) - g(x) \,dx\]
+</p>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org535cbd2" class="figure">
+<p><img src="./img/areal_mellem_funktioner_1.png" alt="areal_mellem_funktioner_1.png" height="250px" />
+</p>
+</div>
+
+<div id="org29d4906" class="figure">
+<p><img src="./img/areal_mellem_funktioner_2.png" alt="areal_mellem_funktioner_2.png" height="200px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org4761b1a" data-background="">
+<h3 id="org4761b1a">Opgaver om arealer</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Opgave 1</b>
+</p>
+
+<p>
+Bestem det samlede areal, der begrænses af x-aksen og grafen for funktionen
+</p>
+
+<p>
+\[f(x) = (x+1)\cdot(x-3) \cdot (x-5) = x^3 - 7 x^2 +7x +15\]
+</p>
+
+<p>
+<b>Opgave 2</b>
+</p>
+
+<p>
+Bestem arealet af den lukkede figur, der dannes af funktionerne
+</p>
+
+<div>
+\begin{align*}
+f(x) &= -x^2+2x+1 \\
+g(x) &= - \frac{1}{2} x +1
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Opgave 3</b>
+</p>
+
+
+<div id="org2ae479e" class="figure">
+<p><img src="./img/opgave_areal_mellem_grafer.png" alt="opgave_areal_mellem_grafer.png" height="200px" />
+</p>
+</div>
+
+<p>
+Figuren viser en del af graferne for funktionerne \(f\) og \(g\) samt et tonet område A.
+</p>
+
+<p>
+Funktionerne har forskrifterne
+</p>
+
+<div>
+\begin{align*}
+f(x) &= 2 x^2 \\
+g(x) &= x^4 - 2x^2
+\end{align*}
+
+</div>
+
+<ul>
+<li>Bestem arealet af det viste område A.</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org32945c2" data-background="">
+<h3 id="org32945c2">Flere træningsopgaver</h3>
+<div style="font-size: 50%;">
+<p>
+Udregn de følgende bestemte integraler. Skriv det hele i hånden, så I får øvet jer.
+</p>
+
+<p>
+Slå stamfunktionerne op på næste slide.
+</p>
+
+<ol>
+<li>\(\int_0^2x^4 \,dx\)</li>
+<li>\(\int_3^5 x^{-2} \, dx\)</li>
+<li>\(\int_4^7 6 \, dx\)</li>
+<li>\(\int_{-3}^5 \, dx\)</li>
+<li>\(\int_1^2 3^x \, dx\)</li>
+<li>\(\int_1^4 \sqrt{x} \, dx\)</li>
+
+</ol>
+</section>
+<section id="slide-org3e94702" data-background="">
+<h3 id="org3e94702">Oversigt integrationsregler</h3>
+<div class="column" style="float:left; width: 50%">
+
+<div id="orgba95fe2" class="figure">
+<p><img src="./img/integralregler_2.png" alt="integralregler_2.png" width="auto" height="430px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org9fd7ded" class="figure">
+<p><img src="./img/integralregler_1.png" alt="integralregler_1.png" width="70%" />
+</p>
+</div>
+
+
+<div id="orgc5552f4" class="figure">
+<p><img src="./img/integralregler_3.png" alt="integralregler_3.png" width="70%" />
+</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org45b1fc6" data-background="">
+<h2 id="org45b1fc6">Den lineære funktion</h2>
+<blockquote>
+<p>
+Ikke så meget nyt under solen
+</p>
+</blockquote>
+</section>
+<section id="slide-orgc118f3a" data-background="">
+<h3 id="orgc118f3a">Bestemmelse af forskrift</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Hvis man kun har <i>2</i> kendte punkter</b>
+</p>
+
+<div>
+\begin{align*}
+P_1&=(x_1,y_1) \text{ og } P_2 = (x_2, y_2) \\
+f(x)&=a \cdot x + b \\
+a&= \frac{\Delta y}{\Delta x} =\frac{y_2-y_1}{x_2 - x_1} \\
+b&= y_1 - a \cdot x_1 = y_2-a \cdot x_2
+\end{align*}
+
+</div>
+
+
+<div id="orgef2ff42" class="figure">
+<p><img src="./img/lineaer_1.png" alt="lineaer_1.png" width="300px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Hvis man kender <i>mange</i> punkter</b>
+</p>
+
+<p>
+Lineær regression i f.eks. <code>geogebra</code>
+</p>
+
+<ul>
+<li><code>liste1 = {A,B,C,D,E}</code></li>
+<li><code>fitlinje(liste1)</code></li>
+
+</ul>
+
+<div id="orgfed070a" class="figure">
+<p><img src="./img/lineaer_2.png" alt="lineaer_2.png" width="300px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org8e6930b" data-background="">
+<h3 id="org8e6930b">Afledt funktion og stamfunktion</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Afledt funktion</b>
+</p>
+
+<div>
+\begin{align*}
+f(x)&= a\cdot x + b \\
+f'(x) &= \frac{d}{dx}\left( a\cdot x +b \right) = a
+\end{align*}
+
+</div>
+<ul>
+<li>Hældningen er den samme for <i>alle</i> x-værdier.</li>
+
+</ul>
+
+<p>
+<b>Stamfunktion</b>
+</p>
+
+<div>
+\begin{align*}
+f(x) &= a \cdot x +b \\
+F(x) &= \int a \cdot x + b \,dx = \frac{a}{2} \cdot x^2 + b \cdot x + k
+\end{align*}
+
+</div>
+<ul>
+<li>Stamfunktionen er altså en <i>parabel</i> (mere om den senere).</li>
+
+</ul>
+</div>
+
+<div id="org3fd78dc" class="figure">
+<p><img src="./img/lineaer_3.png" alt="lineaer_3.png" width="400px" />
+</p>
+</div>
+<div class="column" style="float:right; width: 50%">
+</div>
+</section>
+<section id="slide-org0fcd537" data-background="">
+<h3 id="org0fcd537">Hvad kan det så bruges til?</h3>
+<p class="fragment (appear)">
+Ja, i fysik blandt andet!
+</p>
+
+<p class="fragment (appear)">
+Lad os se på lidt <i>kinematik</i>.
+</p>
+</section>
+<section id="slide-org09a9800" data-background="">
+<h3 id="org09a9800">(t,s)-, (t,v)- og (t,a)-diagrammer</h3>
+<div style="font-size: 60%;">
+<p>
+Roll racing!
+</p>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/rNo5xfjxj6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="slide-orgdd51533" data-background="">
+<h4 id="orgdd51533">(t,v)-diagram</h4>
+<div style="font-size: 50%;">
+<p>
+Lad os se lidt på en graf over hastigheden som funktion af tiden.
+</p>
+<ul>
+<li>Typisk starter racet ved 40 mph, altså 64.37 km/h eller 17.88 m/s.</li>
+<li>Accelerationsrekorden for en dragracer er vist "6g", men lad os antage at bilerne her trækker 2 eller 3 g. Altså en acceleration på \(a=2 \cdot 9.82 m/s^2= 19.64 m/s^2\).</li>
+<li>Lad os bare antage at accelerationen er konstant (Det kan den ikke være i virkeligheden.)</li>
+
+</ul>
+
+
+<div id="org805a6b2" class="figure">
+<p><img src="./img/dragracer_v.png" alt="dragracer_v.png" width="500px" class="fragment (appear)" />
+</p>
+</div>
+</section>
+<section id="slide-org20a83d1" data-background="">
+<h4 id="org20a83d1">(t,a)-diagram</h4>
+<div style="font-size: 50%;">
+<ul>
+<li class="fragment appear">Hvis man differentierer hastigheden får man accelerationen.</li>
+<li class="fragment appear">\(a(t) = \frac{d}{dt}\left( v \right) = \frac{d}{dt} \left( 19.64 \cdot t + 17.88 \right)\)</li>
+<li class="fragment appear">\(a(t) = 19.64 \,m/s^2\)</li>
+<li class="fragment appear">Accelerationen er bare konstant.</li>
+
+</ul>
+
+
+
+<div id="org3e534ce" class="figure">
+<p><img src="./img/dragracer_a.png" alt="dragracer_a.png" width="500px" class="fragment (appear)" />
+</p>
+</div>
+</section>
+<section id="slide-org136d793" data-background="">
+<h4 id="org136d793">(t,s)-diagram</h4>
+<div style="font-size: 50%;">
+<ul>
+<li class="fragment appear">Hvis man integrerer hastigheden får man strækningen.</li>
+<li class="fragment appear">\(s(t)= \int v(t) \,dt = \int 19.64 \cdot t + 17.88 \,dt\)</li>
+<li class="fragment appear">\(s(t)= 19.64 \cdot \frac{t^2}{2} + 17.88\cdot t + k\)</li>
+<li class="fragment appear">\(k\) er en integrationskonstant. Det kan være startstrækningen til tiden 0. Vi sætter den bare til nul.</li>
+
+</ul>
+
+
+
+<div id="org4fb59f8" class="figure">
+<p><img src="./img/dragracer_s.png" alt="dragracer_s.png" width="500px" class="fragment (appear)" />
+</p>
+</div>
+</section>
+<section id="slide-org7399b99" data-background="">
+<h4 id="org7399b99">Alles zusammen</h4>
+
+<div id="org870bdfd" class="figure">
+<p><img src="./img/dragracer_s_v_a.png" alt="dragracer_s_v_a.png" width="500px" />
+</p>
+</div>
+</section>
+<section id="slide-orge75d8fb" data-background="">
+<h3 id="orge75d8fb"><del>Kongens</del> tuschens fald</h3>
+<p>
+Vi tager lige analysen og beregningerne foran og på tavlen.
+</p>
+
+<p>
+Vi skal bruge
+</p>
+<ul>
+<li>Stopur (mobiltelefon)</li>
+<li>Tommestok</li>
+
+</ul>
+</section>
+<section id="slide-org3c3d525" data-background="">
+<h3 id="org3c3d525">Opgaver</h3>
+<div style="font-size: 40%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Simpel</b>
+</p>
+
+<div id="orgb1901ec" class="figure">
+<p><img src="./img/opgave_lineare_funktioner_1.png" alt="opgave_lineare_funktioner_1.png" width="400px" />
+</p>
+</div>
+
+<p>
+Grafen viser 5 målinger af hastigheden som funktion af tiden.
+</p>
+<ol>
+<li>Opstil en forskrift for hastigheden som funktion af tiden.</li>
+<li>Bestem accelerationen vha. differentialregning.</li>
+<li>Bestem den tilbagelagte strækning i de første 5 sekunder vha integralregning.</li>
+
+</ol>
+</div>
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Middel</b>
+</p>
+
+<div id="org4ad860b" class="figure">
+<p><img src="./img/opgave_lineare_funktioner_2.png" alt="opgave_lineare_funktioner_2.png" width="400px" />
+</p>
+</div>
+
+<p>
+Grafen viser 14 målinger af hastigheden til forskellige tidspunkter.
+</p>
+
+<ol>
+<li>Bestem i hvilke intervaller, der er tale om acceleration, og hvor, der er tale om konstant hastighed.</li>
+<li>Bestem accelerationerne i de forskellige intervaller.</li>
+<li>Bestem den tilbagelagte strækning i det fulde intervarl 0 til 65 s vha integralregning. (Del op i mindre funktioner for hver bevægelsestype.)</li>
+
+</ol>
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<p>
+<b>En ekstra dejlig udfordring</b>
+</p>
+
+<p>
+Forestil jer en bil, som sætter i gang. I det øjeblik den starter er accelerationen på 8.7 m/s<sup>2</sup>. Accelerationen falder lineær, og efter 5.8 sekunder er accelerationen på nul.
+</p>
+
+<ol>
+<li>Bestem en forskrift for accelerationen som funktion af tiden.</li>
+<li>Bestem en forskrift for hastigheden som funktion af tiden. Beregn, hvor hurtigt bilen kører efter de 5.8 sekunder.</li>
+<li>Bestem en forskrift den tilbagelagte strækning som funktion af tiden. Beregn den tilbagelagte strækning efter de 5.8 sekunder.</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-orgfd3f497" data-background="">
+<h2 id="orgfd3f497">Parablen</h2>
+<div class="column" style="float:left; width: 50%">
+
+<div id="org1f5a7a1" class="figure">
+<p><img src="./img/golden_gate_bridge.jpg" alt="golden_gate_bridge.jpg" width="auto" height="300px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org09b6078" class="figure">
+<p><img src="./img/water_foundtain.jpg" alt="water_foundtain.jpg" width="auto" height="300px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org094fe86" data-background="">
+<h3 id="org094fe86">Forskriften</h3>
+<div style="font-size: 50%;">
+<p>
+Den generelle forskrift for en parabel er
+</p>
+
+<p>
+\[f(x) = a \cdot x^2+ b \cdot x + c\]
+</p>
+
+<p>
+Grafen for parablen afhænger af parablens <i>koefficienter</i> \(a\), \(b\) og \(c\).
+</p>
+
+<p>
+<b>Hvilken betydning har \(a\), \(b\) og \(c\) for grafens udseende?</b>
+</p>
+
+<iframe
+width="400"
+height="400"
+src="./ggb/Parablens_koefficienter.html"
+title="Parablens koefficienter"
+frameborder="0">
+</iframe>
+</section>
+<section id="slide-org08eb99a" data-background="">
+<h3 id="org08eb99a">Skæring med akserne</h3>
+<div style="font-size: 60%;">
+<p>
+\[f(x)=a\cdot x^2+ b \cdot x + c\]
+</p>
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>y-aksen</b>
+</p>
+
+<ul>
+<li class="fragment appear">Den er nem.</li>
+<li class="fragment appear">y-aksen ligger der, hvor \(x=0\).</li>
+<li class="fragment appear">\(y=f(x) = a \cdot 0^2 + b \cdot 0 +c =c\)</li>
+<li class="fragment appear">Skæring med y-aksen er koefficienten \(c\)</li>
+<li class="fragment appear">(Altså koefficienten uden et x ganget på.)</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>x-aksen</b>
+</p>
+
+<ul>
+<li class="fragment appear">x-aksen ligger der, hvor \(y=f(x)=0\)</li>
+<li class="fragment appear">Altså \(f(x)=a\cdot x^2 + b \cdot x +x =0\)</li>
+<li class="fragment appear">Hov, vi har altså en 2.gradsligning, som skal løses.</li>
+<li class="fragment appear">Det tager vi lige en gang til.</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org73a08e8" data-background="">
+<h3 id="org73a08e8">2.gradsligninger</h3>
+<div style="font-size: 60%;">
+<p>
+For
+\[a\cdot x^2+b \cdot x + c =0\]
+er den generelle løsning
+</p>
+
+<p>
+\[\boxed{x = \frac{-b \pm \sqrt{d}}{2 \cdot a}}\]
+</p>
+
+<p>
+hvor <i>diskriminanten</i> er
+</p>
+
+<p>
+\[\boxed{d = b^2- 4 \cdot a \cdot c}\].
+</p>
+
+<ul>
+<li>Hvis \(d>0\) (altså positiv) er der <b>to</b> løsninger.</li>
+<li>Hvis \(d=0\) er der <b>én</b> løsning.</li>
+<li>Hvis \(d<0\) (altså negativ) er der <b>ingen reelle</b> løsninger.</li>
+
+</ul>
+</section>
+<section id="slide-orgc3f72ef" data-background="">
+<h4 id="orgc3f72ef">Eksempler</h4>
+<div style="font-size: 60%;">
+<p>
+Det hele står her, men vi tager det lige på tavlen.
+</p>
+<div class="column" style="float:left; width: 50%">
+<p>
+\[x^2-2x-3 =0\]
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+a &= 1 \,,\, b=-2 \,,\, c=-3 \\
+d &= (-2)^2- 4 \cdot 1 \cdot (-3) = 16 \\
+x &= \frac{-(-2) \pm \sqrt{16}}{2 \cdot 1} \to \boxed{x_1 = 3 \,,\, x_2 = -1}
+\end{align*}
+
+</div>
+
+<p>
+\[3 x^2 - 12 x + 12=0\]
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+a &= 3 \,,\, b=-12 \,,\, c=12 \\
+d &= (-12)^2- 4 \cdot 3 \cdot 12 = 0 \\
+x &= \frac{-(-12) \pm \sqrt{0}}{2 \cdot 3} \to \boxed{x = 2}
+\end{align*}
+
+</div>
+
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+\[3+2x^2=0\]
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+a &= 2 \,,\, b=0 \,,\, c=3 \\
+d &= 0^2- 4 \cdot 2 \cdot 3 = -24 \\
+x &= \frac{-0 \pm \sqrt{-24}}{2 \cdot 2} \\
+&\boxed{\text{ingen reel løsning}}
+\end{align*}
+
+</div>
+</div>
+</section>
+<section id="slide-org532c8c6" data-background="">
+<h4 id="org532c8c6">Opgave</h4>
+<div style="font-size: 60%;">
+<p>
+Beregn skæringerne (hvis nogen) med x-aksen for følgende parabler.
+</p>
+
+<div>
+\begin{align*}
+f(x)&= 3x^2+5x+2 \\
+g(x) &= 1 + 9x^2 -6 x \\
+h(x) &= 8x -8x^2-3
+\end{align*}
+
+</div>
+</section>
+<section id="slide-orgb2a2048" data-background="">
+<h4 id="orgb2a2048">Bevis for formlen</h4>
+<div style="font-size: 50%;">
+<p>
+Vi skal "bare" isolere x i ligningen
+\[a\cdot x^2 + b \cdot x + c = 0\]
+Alle mellemregninger står her, men det er bedst at se live, så vi tager den lige på tavlen.
+</p>
+<div>
+\begin{align*}
+a\cdot x^2 + b \cdot x + c &= 0 \\
+a\cdot x^2 + b \cdot x &= -c \\
+x^2 + \frac{b}{a} \cdot x &= -\frac{c}{a} \\
+\left( x + \frac{b}{2 a} \right)^2 - \left( \frac{b}{2 a} \right)^2 &= - \frac{c}{a} \quad \boxed{\text{obs her}}\\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\left( \frac{b}{2 a} \right)^2  \\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\frac{b^2}{2^2 a^2}   \\
+\end{align*}
+
+</div>
+</section>
+<section data-background="">
+<div style="font-size: 50%;">
+<div>
+\begin{align*}
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\frac{b^2}{4 a^2}   \\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{4\cdot a \cdot c}{a\cdot 4 a}+\frac{b^2}{4 a^2}   \\
+\left( x + \frac{b}{2 a} \right)^2  &= \frac{b^2 -4\cdot a \cdot c}{4 a^2}   \\
+x + \frac{b}{2 a}   &= \pm \sqrt{\frac{b^2 -4\cdot a \cdot c}{4 a^2}}   \\
+x + \frac{b}{2 a}   &= \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{\sqrt{4 a^2}}   \\
+x + \frac{b}{2 a}   &= \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{2 a}   \\
+x    &= -\frac{b}{2 a} \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{2 a}   \\
+\end{align*}
+
+</div>
+<p>
+\[\boxed{x= \frac{-b \pm \sqrt{b^2 -4\cdot a \cdot c}}{2 a}}\]
+</p>
+</section>
+<section id="slide-orgb455093" data-background="">
+<h3 id="orgb455093">Toppunkt</h3>
+<div style="font-size: 50%;">
+<blockquote>
+<p>
+En parabel med forskriften
+\[f(x)=a x^2 + b x +c\]
+har toppunkt (eller minimumspunkt) i
+\[T = \left( - \frac{b}{2a} \,,\, - \frac{d}{4a} \right)\]
+hvor \(d= b^2-4 a c\)
+</p>
+</blockquote>
+</section>
+<section id="slide-orgf221d53" data-background="">
+<h3 id="orgf221d53">Opgave</h3>
+<div style="font-size: 60%;">
+<ul>
+<li>Vælg <b>2 forskellige</b> parabler med forskellige koefficienter ved at trække i skyderne i geogebraappletten.</li>
+<li>Beregn toppunkterne til de to parabler vha formlen fra forrige slide.</li>
+<li>Tjek at jeres beregninger stemmer med toppunktet i geogebra.</li>
+
+</ul>
+
+<iframe
+width="800"
+height="600"
+src="./ggb/Parablens_toppunkt_ggb.html"
+title=""
+frameborder="0">
+</iframe>
+</section>
+<section id="slide-org2685bc9" data-background="">
+<h3 id="org2685bc9">Bevis for toppunktsformlen</h3>
+<div style="font-size: 60%;">
+<p>
+\[f(x)=a x^2 + b x +c\]
+</p>
+<ul>
+<li>I toppunktet er tangenten vandret og  <i>hældningen</i> er derfor nul.</li>
+<li>Altså er \(f'(x) =0\)</li>
+
+</ul>
+
+<div>
+\begin{align*}
+f'(x) &= 2 a x + b \\
+2 a x + b &= 0 \iff \\
+x &= - \frac{b}{2a}
+\end{align*}
+
+</div>
+
+<ul>
+<li>y-koordinatet findes ved at indsætte de fundne x-koordinat i \(f(x)\)</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<div>
+\begin{align*}
+f(x)&=a x^2 + b x +c \\
+y = f\left(- \frac{b}{2a}\right)&=a \left(- \frac{b}{2a}\right)^2 + b \left(- \frac{b}{2a}\right) +c \\
+y &= a \cdot \frac{b^2}{4a^2}  - \frac{b^2}{2a}+c \\
+y &= \frac{b^2}{4a}  - \frac{b^2}{2a}+c \\
+y &= \frac{b^2}{4a}  - \frac{2\cdot b^2}{2\cdot 2a}+\frac{4a}{4a}c \\
+y &= \frac{b^2-2 b^2+4 a c}{4a} \\
+y &= \frac{-b^2+4 a c}{4a} \\
+y &= \frac{-d}{4a} \,\text{, hvor } d= b^2-4 a c
+\end{align*}
+
+</div>
+
+<ul>
+<li>Hermed udledt.</li>
+
+</ul>
+</section>
+<section id="slide-org1a87d36" data-background="">
+<h3 id="org1a87d36">Bestemmelse af forskrift</h3>
+<div style="font-size: 60%;">
+<p>
+Den generelle forskrift for en parabel er som bekendt
+\[f(x) = a \cdot x^2 + b \cdot x + c\]
+</p>
+<ul>
+<li class="fragment appear">Hvor mange punkter, som grafen skal gå igennem, skal man kende, for at bestemme koefficienterne?</li>
+<li class="fragment appear">Hvordan vil I bestemme koefficienterne til en parabel, som går gennem punkterne \((2,-4)\), \((-2,0)\) og \((6,8)\)? <b>Alle hjælpemidler er tilladte!</b></li>
+
+</ul>
+</section>
+<section id="slide-org02647be" data-background="">
+<h4 id="org02647be">Matematikken bag</h4>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li class="fragment appear">3 koefficienter behøver 3 kendte punkter, som skal give 3 ligninger med 3 ubekendte.</li>
+<li class="fragment appear">For punkterne \(P_1=(x_1,y_1)\), \(P_2 = (x_2, y_2)\) og \(P_3 = (x_3,y_3)\), bliver de tre ligninger</li>
+<li class="fragment appear"><div>
+\begin{align*}
+y_1 &= a \cdot x_1^2 + b \cdot x_1 + c \\
+y_2 &= a \cdot x_2^2 + b \cdot x_2 + c \\
+y_3 &= a \cdot x_3^2 + b \cdot x_3 + c
+\end{align*}
+
+</div></li>
+
+<li class="fragment appear">Og så skal de bare løses&#x2026;</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<ul>
+<li class="fragment appear"><p>
+Det er KLART nemmest med et CAS-værktøj.
+</p>
+
+<div id="orga48cad0" class="figure">
+<p><img src="img/2022-03-20_18-11-27_screenshot.png" alt="2022-03-20_18-11-27_screenshot.png" width="600px" />
+</p>
+</div></li>
+<li class="fragment appear"><b>Prøv det lige af selv</b> Læg mærke til <b>:</b>, <b>{}</b> osv</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org03fd669" data-background="">
+<h4 id="org03fd669">Opgave</h4>
+<ol>
+<li>Bestem forskriften for en parabel, som går gennem punkterne \((10,235)\), \((1,3)\) og \((0,-5)\)</li>
+<li><p>
+Bestem koordinaterne til skæringspunkterne mellem parablens graf og grafen for den lineære funktion, hvis forskrift er \(g(x)=\frac{1}{2}x+1\)
+</p>
+
+<p>
+Hint: Sæt de to forskrifter lig hinanden, og løs den fremkomne 2.gradsligning. Find her efter y-værdierne.
+</p></li>
+
+</ol>
+</section>
+<section id="slide-orgaf8e627" data-background="">
+<h3 id="orgaf8e627">Differentiation og integration</h3>
+<div style="font-size: 50%;">
+<p>
+Med forskriften \[f(x)=a x^2+b x +c\] er det nemt at finde den afledte funktion samt stamfunktionen
+</p>
+<ul>
+<li class="fragment appear">Jeg er sikker på, at I selv kan finde ud af det&#x2026;</li>
+<li class="fragment appear"><p>
+Ellers er de her:
+</p>
+<div>
+\begin{align*}
+f'(x) &= \frac{d}{dx}\left(a x^2 + b x +c \right) = a \cdot 2 x^{2-1} +b \iff \boxed{f'(x)= 2 a x + b} \\
+F(x) &= \int a x^2 + b x +c \,dx = a \cdot \frac{x^{2+1}}{2+1} + b \cdot \frac{x^{1+1}}{1+1} + c \cdot x + k \iff \boxed{F(x) = \frac{a}{3} x^3 + \frac{b}{2} x^2 + c x + k}
+\end{align*}
+
+</div></li>
+
+</ul>
+</section>
+<section id="slide-orge40563d" data-background="">
+<h3 id="orge40563d">Opgave</h3>
+<div style="font-size: 70%;">
+<p>
+Betragt parablen med forskriften \[f(x)= - \frac{1}{4}x^2 +2\,.\] og den lineære funktion \[g(x)=x -6\].
+</p>
+
+<ol>
+<li>Bestem ligningen for <i>tangenten</i> til \(f(x)\), som er parallel med \(g(x)\).</li>
+<li>Bestem arealet, der afgrænses af \(f(x)\), \(g(x)\) og deres skæringspunkter.</li>
+
+</ol>
+</section>
+<section id="slide-org9e1b2b0" data-background="">
+<h4 id="org9e1b2b0">Hints til opgaven</h4>
+<div style="font-size: 70%;">
+<ol>
+<li>Udnyt at \(f'(x)\) skal have samme værdi som hældningen for \(g(x)\). Løsningen ligningen for x og find y-koordinatet der passer til. Find derefter b-koefficienten for tangenten, som for en almindelige lineær funktion.</li>
+<li>Find først x-koordinaterne til skæringspunkterne mellem de to grafer ved at sætte forskrifterne lig hinanden og så løse den fremkomne 2.gradsligning. Arealet beregnes nu vha et bestemt integral mellem de to funktioner, hvor grænserne er de netop fundne x-koordinater.</li>
+
+</ol>
+</section>
+<section id="slide-org898f0e6" data-background="">
+<h3 id="org898f0e6">Udfordrende opgaver</h3>
+<div class="outline-text-3" id="text-org898f0e6">
+</div>
+</section>
+<section id="slide-orgbdd03d9" data-background="">
+<h4 id="orgbdd03d9">Løbebane</h4>
+
+<div id="org305774e" class="figure">
+<p><img src="./img/loebebane_opgave.png" alt="loebebane_opgave.png" width="100%" />
+</p>
+</div>
+</section>
+<section id="slide-orga861cad" data-background="">
+<h4 id="orga861cad">A-hus</h4>
+
+<div id="org757f989" class="figure">
+<p><img src="./img/a-hus_opgave.png" alt="a-hus_opgave.png" width="100%" />
+</p>
+</div>
+</section>
+<section id="slide-org4d70ecc" data-background="">
+<h4 id="org4d70ecc">Bro</h4>
+
+<div id="org0a3e5de" class="figure">
+<p><img src="./img/bro_opgave.png" alt="bro_opgave.png" width="100%" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org33657db" data-background="">
+<h2 id="org33657db">Hyperblen</h2>
+<div class="outline-text-2" id="text-org33657db">
+</div>
+</section>
+<section id="slide-org1958448" data-background="">
+<h3 id="org1958448">Hyperblens koefficienter</h3>
+<div class="column" style="float:left; width: 50%">
+<iframe
+width="600"
+height="400"
+src="./ggb/hyperblens_koefficienter.html"
+title=""
+frameborder="0">
+</iframe>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<div style="font-size: 60%;">
+<p>
+Udgangspunktet er den simpleste hyperbel, man kan forestille sig, nemlig
+\[f(x)=\frac{1}{x}\]
+Men hvis forskriften i stedet er
+\[\boxed{f(x)=\frac{k}{x-a}+b}\]
+hvilken indvirkning af har så \(k\), \(a\) og \(b\) på grafen?
+</p>
+</div>
+</section>
+<section id="slide-org188403f" data-background="">
+<h3 id="org188403f">Simple opgaver</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Link til opgaven i matematikbogen: <a href="https://matbhtx.systime.dk/?id=c13709">https://matbhtx.systime.dk/?id=c13709</a>
+</p>
+
+<div id="org7360627" class="figure">
+<p><img src="./img/hyperbelopgave_1.png" alt="hyperbelopgave_1.png" width="85%" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+Link til opgaven i matematikbogen: <a href="https://matbhtx.systime.dk/?id=c13710">https://matbhtx.systime.dk/?id=c13710</a>
+</p>
+
+<div id="org2d77e12" class="figure">
+<p><img src="./img/hyperbelopgave_2.png" alt="hyperbelopgave_2.png" width="85%" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org2788bb9" data-background="">
+<h3 id="org2788bb9">Den afledte funktion</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Vi tager lige udgangspunkt i den simple hyperbel
+\[f(x)=\frac{1}{x}\]
+</p>
+
+<p>
+Den kan I godt selv finde den afledte funktion af. <b>Gør lige det!</b>
+</p>
+
+<div class="fragment (appear)">
+\begin{align*}
+f(x) &= \frac{1}{x} \\
+f(x) &= x^{-1} \to \\
+f'(x) &= -1 \cdot x^{-2} \\
+f'(x) &= - \frac{1}{x^2}
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org292a825" class="figure">
+<p><img src="./img/hyperbel_afledt.png" alt="hyperbel_afledt.png" class="fragment (appear)" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org4802409" data-background="">
+<h3 id="org4802409">Stamfunktionen</h3>
+<div style="font-size: 60%;">
+<p>
+Vi tager lige udgangspunkt i den simple hyperbel
+\[f(x)=\frac{1}{x}\]
+</p>
+<ul>
+<li class="fragment appear">Det naive forsøg er at omskrive
+\[f(x)=x^{-1}\]</li>
+<li class="fragment appear">Kan man ikke finde stamfunktionen nu?
+\[f(x)=x^n \to F(x) = \frac{x^{n+1}}{n+1}+k\]</li>
+<li class="fragment appear"><b>Prøv lige at gøre det!</b></li>
+<li class="fragment appear"><i>Hvad er problemet?</i></li>
+
+</ul>
+
+</section>
+<section data-background="">
+<p>
+<b>Den rigtige stamfunktion</b>
+</p>
+<div style="font-size: 60%;">
+<p>
+Ifølge tabeller er den <b>rigtige</b> stamfunktion
+\[f(x)=\frac{1}{x}\]
+\[\boxed{ F(x) = \ln (x) +(k)}\]
+</p>
+
+<ul>
+<li class="fragment appear">Men hvad er \(\ln(x)\) egentlig for noget?</li>
+<li class="fragment appear">Kan det være rigtigt?</li>
+
+</ul>
+
+</section>
+<section data-background="">
+<p>
+<b>Undersøgelse af \(\ln(x)\)</b>
+</p>
+
+<div class="column" style="float:left; width: 50%">
+<iframe
+width="600"
+height="400"
+src="./ggb/hyperbel_stamfunktion.html"
+title=""
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<div style="font-size: 50%;">
+<p>
+Lad os undersøge <i>hældningen</i> for \(\ln(x)\).
+</p>
+<ul>
+<li>Tryk på <code>Tangent</code> og se, hvad I kan gøre.</li>
+<li>Tryk på <code>Tangenthældning</code> for at få <i>hældningen</i> til tangenten som funktion af x.</li>
+<li>Tryk på <code>???</code> og se, hvad der sker.</li>
+
+</ul>
+<ul>
+<li class="fragment appear">Arhh, hvis den <i>afledte funktion</i> af \(\ln(x)\) er lig \(\frac{1}{x}\), så må <i>stamfunktionen</i> til \(\frac{1}{x}\) være lig \(\ln(x)\).</li>
+<li class="fragment appear"><p>
+Altså:
+</p>
+<div>
+\begin{align*}
+f(x)=\frac{1}{x} \\
+F(x)= \int \frac{1}{x}\,dx \\
+\boxed{F(x) = \ln(x)+(k)}
+\end{align*}
+
+</div></li>
+
+</ul>
+</div>
+
+</section>
+<section data-background="">
+<div style="font-size: 70%;">
+<p>
+<b>Konklusion</b>
+</p>
+
+<p>
+For den simple hyperbel
+\[f(x)=\frac{1}{x}\]
+er den <i>afledte funktion</i>
+\[f'(x) = - \frac{1}{x^2}\]
+mens <i>stamfunktionen</i> er
+\[F(x) = \ln(x) +(k)\]
+</p>
+</section>
+<section id="slide-org5b3301b" data-background="">
+<h3 id="org5b3301b">Gabriels horn</h3>
+<div class="column" style="float:left; width: 50%">
+
+<div id="org5c78e81" class="figure">
+<p><img src="./img/gabriels_horn_1.jpg" alt="gabriels_horn_1.jpg" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org77541d7" class="figure">
+<p><img src="./img/gabriels_horn_2.jpg" alt="gabriels_horn_2.jpg" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org6facfbc" data-background="">
+<h3 id="org6facfbc">Nu skal I se noget interessant</h3>
+<div style="font-size: 60%;">
+<p>
+video med numberphile
+</p>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/yZOi9HH5ueU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="slide-org6d33013" data-background="">
+<h3 id="org6d33013">Opsummering</h3>
+
+<div id="org05af6e0" class="figure">
+<p><img src="./img/gabriels_horn_3.jpg" alt="gabriels_horn_3.jpg" height="500px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc73d8f0" data-background="">
+<h2 id="orgc73d8f0">Omdrejningslegemer</h2>
+
+<div id="org796781a" class="figure">
+<p><img src="./img/omdrejningslegemer.png" alt="omdrejningslegemer.png" height="500px" />
+</p>
+</div>
+</section>
+<section id="slide-orgfb8a37d" data-background="">
+<h3 id="orgfb8a37d">Drejning om x-aksen</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Volumen</b>
+</p>
+
+<p>
+\[V_x = \int_{x_1}^{x_2} \pi \cdot f(x)^2 \, dx\]
+</p>
+
+<p>
+<b>Overfladeareal</b>
+</p>
+
+<p>
+\[\text{Areal} = 2 \pi \int_{x_1}^{x_2} f(x)\cdot \sqrt{1+f'(x)^2} \, dx\]
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org9b9fb82" class="figure">
+<p><img src="./img/volumen_x.png" alt="volumen_x.png" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org16e7a3d" data-background="">
+<h3 id="org16e7a3d">Drejning om y-aksen</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Volumen</b>
+</p>
+
+<p>
+\[V_y = 2 \pi \int_{x_1}^{x_2} f(x) \cdot x \, dx\]
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org3b574f5" class="figure">
+<p><img src="./img/omdrejning_y.png" alt="omdrejning_y.png" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org3d7fe60" data-background="">
+<h3 id="org3d7fe60">Opgave</h3>
+<div style="font-size: 60%;">
+<p>
+Bestem rumfanget af den kegle, der fremkommer, når følgende funktion roteres omkring x-aksen mellem 0 og 6:
+</p>
+
+<p>
+\[f(x) = \frac{1}{3}x\]
+</p>
+
+
+<div id="org3b68a70" class="figure">
+<p><img src="./img/kegleopgave.png" alt="kegleopgave.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org8611dff" data-background="">
+<h2 id="org8611dff">Potensfunktioner</h2>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Den generelle forskrift
+</p>
+
+<p>
+\[f(x)= b \cdot x^a\]
+</p>
+
+<p>
+Leg med skyderne. <b>Hvad ser I</b>?
+</p>
+
+<iframe
+width="600"
+height="400"
+src="./ggb/potensfunktioner.html"
+title="Potensfunktioner"
+frameborder="0">
+</iframe>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+Hvad er forskellen på om \(a\) er:
+</p>
+<ul>
+<li>heltallig eller et decimaltal?</li>
+<li>et lige eller et ulige tal?</li>
+<li>negativ eller positiv?</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org66ad124" data-background="">
+<h3 id="org66ad124">Lige og ulige (potens)funktioner</h3>
+
+</section>
+<section id="slide-orgf249a40" data-background="">
+<h3 id="orgf249a40">Lige funktioner</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+For en lige funktion gælder det (altid), at
+</p>
+<ul>
+<li>\(f(x)=f(-x)\)</li>
+<li>Altså spejlingssymmetrisk om y-aksen.</li>
+
+</ul>
+
+
+<ul>
+<li>Hvad skal der gælde for \(a\) og \(b\), for at få de forskellige grafer til højre?</li>
+
+</ul>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgdd2cdd4" class="figure">
+<p><img src="./img/potens_lige_1.png" alt="potens_lige_1.png" />
+</p>
+</div>
+
+
+<div id="orgdc06d4a" class="figure">
+<p><img src="./img/potens_lige_2.png" alt="potens_lige_2.png" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-orgc318836" data-background="">
+<h3 id="orgc318836">Ulige funktioner</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+For en ulige funktion gælder det (altid), at
+</p>
+<ul>
+<li>\(f(x)=-f(-x)\)</li>
+<li>skal altså spejles om y-aksen <b>og</b> x-aksen.</li>
+
+</ul>
+
+
+<ul>
+<li>Hvad skal der gælde for \(a\) og \(b\), for at få de forskellige grafer til højre?</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<img src="./img/potens_ulige_1.png" alt="potens_ulige_1.png" />
+<img src="./img/potens_ulige_2.png" alt="potens_ulige_2.png" />
+</p>
+</div>
+</section>
+<section id="slide-org0944402" data-background="">
+<h3 id="org0944402">Dm og vm</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Hvad er Dm og Vm for følgende a-værdier?
+</p>
+
+<p>
+(I må gerne bruge appletten fra tidligere.)
+</p>
+
+<ul>
+<li>Lige, positiv og heltallig</li>
+<li>Lige, negativ og heltallig</li>
+<li>Ulige, postiv og heltallig</li>
+<li>Ulige, nagativ og heltallig</li>
+
+</ul>
+
+<p>
+Hvad er ændringen, når \(a\) er et decimaltal?
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<iframe
+width="600"
+height="400"
+src="./ggb/potensfunktioner.html"
+title="Potensfunktioner"
+frameborder="0">
+</iframe>
+
+</div>
+</section>
+<section id="slide-org20dc8ea" data-background="">
+<h3 id="org20dc8ea">Opgaver</h3>
+<p>
+<a href="https://matbhtx.systime.dk/?id=c13715">https://matbhtx.systime.dk/?id=c13715</a>
+</p>
+
+
+<div id="orgb353c4c" class="figure">
+<p><img src="img/2022-04-24_15-33-45_screenshot.png" alt="2022-04-24_15-33-45_screenshot.png" width="800px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc1ff3a4" data-background="">
+<h2 id="orgc1ff3a4">Polynomier</h2>
+<div class="outline-text-2" id="text-orgc1ff3a4">
+</div>
+</section>
+<section id="slide-orgdad087f" data-background="">
+<h3 id="orgdad087f">Det generelle polynomium</h3>
+<div style="font-size: 60%;">
+<div>
+\begin{align*}
+f(x)&= \sum_{i=0}^{i=n} a_i \cdot x^{i} \quad \text{for } n \in \mathbb{Z} \setminus \mathbb{Z}_- \\
+f(x)&= a_0 + a_1\cdot x + a_2\cdot x^2+ \dots + a_{n-1}\cdot x^{n-1} + a_n \cdot x^n
+\end{align*}
+
+</div>
+<p>
+Eller
+\[\boxed{f(x)= a_n \cdot x^n + a_{n-1}\cdot x^{n-1}+ \dots + a_2 \cdot x^2 + a_1 \cdot x + a_0}\]
+</p>
+<ul>
+<li>\(n\) kan altså kun være de <i>naturlige</i> tal samt nul (alle positive hele tal samt nul.</li>
+<li>Er en sum af en række potensfunktioner.</li>
+
+</ul>
+</section>
+<section id="slide-org34b33ab" data-background="">
+<h3 id="org34b33ab">Eksempler</h3>
+
+<div id="org1c808b0" class="figure">
+<p><img src="./img/polynomier_eksempler.png" alt="polynomier_eksempler.png" />
+</p>
+</div>
+
+</section>
+<section data-background="">
+
+<div id="org4fd6766" class="figure">
+<p><img src="./img/polynomier_eksempler_2.png" alt="polynomier_eksempler_2.png" />
+</p>
+</div>
+</section>
+<section id="slide-orgf91bd32" data-background="">
+<h3 id="orgf91bd32">Opgaver</h3>
+<p>
+<a href="https://matbhtx.systime.dk/?id=c13716">https://matbhtx.systime.dk/?id=c13716</a>
+</p>
+
+
+<div id="orgf3efc79" class="figure">
+<p><img src="./img/polynomieopgave_1.png" alt="polynomieopgave_1.png" />
+</p>
+</div>
+</section>
+<section id="slide-org6b9582e" data-background="">
+<h3 id="org6b9582e">Rødder (nulpunkter)</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+Algebraens fundamentalsætning:
+</p>
+
+<ul>
+<li>Ethvert polynomium, \(p(z)\), af n'te grad med \(n\geq 1\) har \(n\) komplekse rødder, \(z_1\), \(z_2\), \(\dots\), \(z_n\), (som ikke nødvendigvis er forskellige).</li>
+<li>Polynomiet kan faktoriseres som
+\[p(z) = a_n \cdot \left( z-z_1 \right)\cdot \left( z - z_2 \right) \cdots \left( z-z_n \right)\]</li>
+
+</ul>
+</blockquote>
+
+<p>
+Men dette gælder for <i>komplekse</i> tal. Hvad med de <i>reelle</i> tal?
+</p>
+
+</section>
+<section data-background="">
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Reelle rødder for et polynomium</b>
+</p>
+<ul>
+<li>Hvis polynomiegraden er ulige, er der generelt mindst én rod.</li>
+<li>Hvis polynomiegraden er lige, er der ingen garanti for en rod.</li>
+<li>Der kan maksimalt være \(n\) rødder for et n'te-gradspolynomium.</li>
+<li>Det er <i>nemt</i> at finde rødderne til 1. og 2. grad. Vi kender allerede formlerne.</li>
+<li>Det er <i>muligt</i> at finde rødderne til 3. og 4. grad, med meget besværlige formler.</li>
+<li>Der er <i>ingen generelle</i> formler til bestemmelse af rødder for 5. grad og opefter.</li>
+<li>Rødderne findes vha <i>numeriske</i> metoder.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="orgc73f2e4" class="figure">
+<p><img src="./img/polynomier.png" alt="polynomier.png" width="auto" height="650px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org2a968cd" data-background="">
+<h3 id="org2a968cd">Opgave</h3>
+<p>
+<a href="https://matbhtx.systime.dk/?id=c13717">https://matbhtx.systime.dk/?id=c13717</a>
+</p>
+
+
+<div id="orga30c685" class="figure">
+<p><img src="./img/polynomieopgave_2.png" alt="polynomieopgave_2.png" />
+</p>
+</div>
+</section>
+<section id="slide-org444e725" data-background="">
+<h3 id="org444e725">Kurvetilpasning - opgave</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Hvad er rumfanget af denne flaske?</b>
+</p>
+
+<p>
+Flasken er 18.8 cm høj.
+</p>
+
+<p>
+I må bruge alle matematiske hjælpemidler.
+</p>
+
+<ul>
+<li class="fragment appear">Okay, hvis du fik at vide, du havde en dag tilbage at <del>leve</del> regne i. <b>Hva' ville du så gøre?</b></li>
+<li class="fragment appear"><b>Hva' jeg ville gøre?</b></li>
+<li class="fragment appear">Jeg tror, jeg ville&#x2026;</li>
+<li class="fragment appear"><del>Hæve lidt penge på min firmakonto&#x2026;</del></li>
+<li class="fragment appear">Indsætte billedet af flasken i <code>geogebra</code></li>
+<li class="fragment appear">Skalere billedet, så højden af flasken passer med inddelingen af akserne</li>
+<li class="fragment appear">Lægge flasken ned symmetrisk langs x-aksen</li>
+<li class="fragment appear">Indsætte en række punkter langs flaskens profil</li>
+<li class="fragment appear">Fitte et polynomium til punkterne</li>
+<li class="fragment appear">Bruge integralregning (omdrejningslegeme om x-aksen) til at bestemme rumfanget</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div id="org1c34d19" class="figure">
+<p><img src="./img/cocacola.jpg" alt="cocacola.jpg" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org028bd5d" data-background="">
+<h3 id="org028bd5d">En dag tilbage</h3>
+
+<div id="orgd6708e7" class="figure">
+<p><a href="https://youtu.be/_JgbyISzmjQ"><img src="./img/nik_og_jay_en_dag_tilbage.png" alt="nik_og_jay_en_dag_tilbage.png" /></a>
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org898f485" data-background="">
+<h2 id="org898f485">Sammensatte funktioner</h2>
+
+<div id="org6785eb6" class="figure">
+<p><img src="./img/matryoshka.jpg" alt="matryoshka.jpg" width="50%" />
+</p>
+</div>
+</section>
+<section id="slide-orged639dc" data-background="">
+<h3 id="orged639dc">Det grundlæggende</h3>
+<div style="font-size: 60%;">
+<ul>
+<li class="fragment appear">Hvis man har flere funktioner, kan man sætte dem ind i hinanden, og så har man&#x2026;</li>
+<li class="fragment appear">drum roll!</li>
+<li class="fragment appear">sammensatte funktioner!</li>
+
+</ul>
+
+<p class="fragment (appear)">
+F.eks. \[f(x)= x^2 \quad,\quad g(x)=\sin(x) \quad,\quad h(x)=10^x\]
+</p>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li class="fragment appear"><p>
+Kan blive til
+</p>
+<div>
+\begin{align*}
+f(g(x))&= \left( \sin(x) \right)^2 \\
+h(f(x))&= 10^{\left(x^2\right)}
+\end{align*}
+
+</div></li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<ul>
+<li class="fragment appear"><p>
+mens
+</p>
+<div>
+\begin{align*}
+g(f(x))&= \sin \left(x^2  \right) \\
+f(h(x))&= \left( 10^x \right)^2
+\end{align*}
+
+</div></li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org47a15c3" data-background="">
+<h3 id="org47a15c3">Opgaver</h3>
+<div style="font-size: 50%;">
+<p>
+For funktionerne
+</p>
+<div>
+\begin{align*}
+f(x)&=x^3 & g(x)&= 2\cdot x +5 \\
+h(x)&= \sqrt{x+8} & i(x)&= \cos(x)
+\end{align*}
+
+</div>
+<p>
+Find da de sammensatte funktioner:
+</p>
+<div>
+\begin{align*}
+&f(g(x)) \\
+&i(h(x)) \\
+&h(f(x)) \\
+&i(f(h(g(x))))
+\end{align*}
+
+</div>
+</section>
+<section id="slide-orgd46ff80" data-background="">
+<h3 id="orgd46ff80">Differentiation af sammensatte funktioner</h3>
+
+<div id="org176387e" class="figure">
+<p><img src="./img/kaede.jpg" alt="kaede.jpg" width="50%" />
+</p>
+</div>
+</section>
+<section id="slide-org6950bb5" data-background="">
+<h3 id="org6950bb5">Kædereglen</h3>
+<div style="font-size: 60%;">
+<p>
+Hvis man skal differentiere en sammensat funktion, skal man anvende <i>kædereglen</i>, som siger:
+</p>
+<blockquote>
+<p>
+For den sammensatte funktion \(f(x)=g(h(x))\) gælder, at
+\[\boxed{f'(x) = g'(h(x))\cdot h'(x) = \frac{d g(h(x))}{d h(x)}\cdot \frac{d h(x)}{dx}}\]
+</p>
+</blockquote>
+
+<ul>
+<li class="fragment appear">Men hvad søren skal det nu betyde?</li>
+<li class="fragment appear">Jo, det skal læses som:</li>
+<li class="fragment appear">Først differentierer man den <i>ydre</i> funktion (mht den indre funktion) og lader den <i>indre</i> funktion stå.</li>
+<li class="fragment appear">Herefter differentierer man den <i>indre</i> funktion (mht x), og dette <i>multiplicerer</i> man på det første differentiale.</li>
+<li class="fragment appear">Vi må hellere tage nogle eksempler.</li>
+
+</ul>
+</section>
+<section id="slide-org7668993" data-background="">
+<h3 id="org7668993">Eksempel</h3>
+<div style="font-size: 60%;">
+<p>
+\[f(x)=\left( 2\cdot x^3+5x \right)^4\]
+</p>
+<ul>
+<li class="fragment appear">Den ydre funktion er \(g(x)=x^4\)</li>
+<li class="fragment appear">Den indre funktion er \(h(x)=2\cdot x^3 + 5x\)</li>
+<li class="fragment appear">Først finder man \(g'(x)=4 x^3\), men på x's plads skriver man den indre funktion, altså</li>
+<li class="fragment appear">\(g'(h(x))=4 \cdot \left( 2\cdot x^3+5x \right)^3\)</li>
+<li class="fragment appear">Så differentierer man den indre funktion på alm. vis</li>
+<li class="fragment appear">\(h'(x) = 2 \cdot 3 \cdot x^2+5 = 6x^2+5\)</li>
+<li class="fragment appear">men dette skal lige ganges på det første, altså</li>
+<li class="fragment appear">\[f'(x) = g'(h(x))\cdot h'(x) = 4 \cdot \left( 2\cdot x^3+5x \right)^3 \cdot \left( 6x^2+5 \right)\]</li>
+
+</ul>
+</section>
+<section id="slide-org402598a" data-background="">
+<h3 id="org402598a">Et andet eksempel</h3>
+<div style="font-size: 60%;">
+<p>
+Vi gør det lige en gang til (Den er lidt svær).
+\[f(x) = \sqrt{\left( 4x^3 + 1 -2x \right)^2-6x^2}\]
+</p>
+
+<p>
+\[f'(x) = \frac{1}{2} \cdot \left( \left(4x^3+1-2x \right)^2-6x^2\right)^{- \frac{1}{2}}\cdot \left( 2\left(4x^3+1-2x  \right)\cdot \left( 4 \cdot 3 x^2-2 \right) - 6 \cdot 2 x \right)\]
+</p>
+
+<p>
+hvor det er brugt, at
+</p>
+<div>
+\begin{align*}
+\frac{d}{dx} \left( \sqrt{x} \right) &= \frac{1}{2}x^{- \frac{1}{2}} = \frac{1}{2 \sqrt{x}} \\
+\frac{d}{dx} \left(\left( 4x^3+1-2x \right)^2-6x^2  \right) &= \frac{d}{dx}\left( \left(4x^3+1-2x \right)^2\right) - \frac{d}{dx} \left( 6x^2 \right) = \frac{d}{dx}\left( \left(4x^3+1-2x \right)^2\right) -  6\cdot 2x \\
+\frac{d}{dx} \left( \left(4x^3+1-2x \right)^2 \right)  &= 2 \left( 4x^3+1-2x \right) \cdot \left( 4 \cdot 3 x^2-2 \right)
+\end{align*}
+
+</div>
+</section>
+<section id="slide-orgfa1ea56" data-background="">
+<h3 id="orgfa1ea56">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Bestem de afledte funktioner for de følgende sammensatte funktioner.
+</p>
+
+<div>
+\begin{align*}
+f(x) &= \left( x^2+3x-1 \right)^3 \\
+g(x) &= \left( 3x-4 \right)^5 \\
+h(x) &= \left( \frac{5}{2x}+4 \right)^4 \\
+i(x) &= 3 \cdot \sqrt{ \left( 1 -x^2 \right)^5}
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgdc063eb" data-background="">
+<h2 id="orgdc063eb">Projekt Skatepark</h2>
+<div style="font-size: 60%;">
+
+<div id="org49c1854" class="figure">
+<p><a href="./Projekt_skatepark_diff_og_int.pdf" width="400px"><img src="img/skatepark_1.png" alt="skatepark_1.png" width="400px" /></a>
+</p>
+</div>
+
+<ul>
+<li>I kan klikke på billedet for at åbne projektoplægget.</li>
+<li>Eller I kan højreklikke og gemme som.</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/search/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+slideNumber:"c",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true,
+
+// Plugins with reveal.js 4.x and later
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>
