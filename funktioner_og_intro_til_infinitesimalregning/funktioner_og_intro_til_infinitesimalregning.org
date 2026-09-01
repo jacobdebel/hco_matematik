@@ -1441,7 +1441,7 @@ Udgangspunktet er den simpleste hyperbel, man kan forestille sig, nemlig
 $$f(x)=\frac{1}{x}$$
 Men hvis forskriften i stedet er
 $$\boxed{f(x)=\frac{k}{x-a}+b}$$
-hvilken indvirkning af har så $k$, $a$ og $b$ på grafen?
+hvilken indvirkning har så $k$, $a$ og $b$ på grafen?
 #+reveal_html: </div>
 
 ** Simple opgaver
@@ -1882,6 +1882,8 @@ h(x) &= \left( \frac{5}{2x}+4 \right)^4 \\
 i(x) &= 3 \cdot \sqrt{ \left( 1 -x^2 \right)^5}
 \end{align*}
 
+* Stykkevis sammensatte funktioner
+
 * Projekt Skatepark
 #+reveal_html: <div style="font-size: 60%;">
 #+attr_html: :width 400px
@@ -1889,3 +1891,18 @@ i(x) &= 3 \cdot \sqrt{ \left( 1 -x^2 \right)^5}
 
 - I kan klikke på billedet for at åbne projektoplægget.
 - Eller I kan højreklikke og gemme som.
+  
+* Inverse funktioner
+
+* Eksponentialfunktioner
+
+* Logaritmefunktioner
+
+* Projekt om eksponential- og logaritmefunktioner
+
+* Trigonometriske funktioner
+
+* Projekt tidevand og diger
+
+* Funktioner med polære koordinater
+
