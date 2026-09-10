@@ -1066,8 +1066,9 @@ Lad os se på lidt /kinematik/.
 ** (t,s)-, (t,v)- og (t,a)-diagrammer
 #+reveal_html: <div style="font-size: 60%;">
 Roll racing!
+
 #+begin_export html
-<iframe width="600" height="400" src="https://www.youtube.com/embed/rNo5xfjxj6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rNo5xfjxj6c?si=3I1hxWzrxz3f-T_3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 #+end_export
 
 *** (t,v)-diagram
@@ -1111,12 +1112,12 @@ Lad os se lidt på en graf over hastigheden som funktion af tiden.
 #+attr_html: :width 500px
 [[./img/dragracer_s_v_a.png]]
 
-** +Kongens+ tuschens fald
-Vi tager lige analysen og beregningerne foran og på tavlen.
+# ** +Kongens+ tuschens fald
+# Vi tager lige analysen og beregningerne foran og på tavlen.
 
-Vi skal bruge
-- Stopur (mobiltelefon)
-- Tommestok
+# Vi skal bruge
+# - Stopur (mobiltelefon)
+# - Tommestok
 ** Opgaver
 #+reveal_html: <div style="font-size: 40%;">
 #+reveal_html: <div class="column" style="float:left; width: 50%">
@@ -1138,7 +1139,7 @@ Grafen viser 14 målinger af hastigheden til forskellige tidspunkter.
 
 1. Bestem i hvilke intervaller, der er tale om acceleration, og hvor, der er tale om konstant hastighed.
 2. Bestem accelerationerne i de forskellige intervaller.
-3. Bestem den tilbagelagte strækning i det fulde intervarl 0 til 65 s vha integralregning. (Del op i mindre funktioner for hver bevægelsestype.)
+3. Bestem den tilbagelagte strækning i det fulde interval 0 til 65 s vha integralregning. (Del op i mindre funktioner for hver bevægelsestype.)
 #+reveal_html: </div>
 
 #+reveal: split
@@ -1190,7 +1191,7 @@ $$f(x)=a\cdot x^2+ b \cdot x + c$$
 #+attr_reveal: :frag (appear)
 - Den er nem.
 - y-aksen ligger der, hvor $x=0$.
-- $y=f(x) = a \cdot 0^2 + b \cdot 0 +c =c$
+- $y=f(0) = a \cdot 0^2 + b \cdot 0 +c =c$
 - Skæring med y-aksen er koefficienten $c$
 - (Altså koefficienten uden et x ganget på.)
 #+reveal_html: </div>
@@ -1200,7 +1201,7 @@ $$f(x)=a\cdot x^2+ b \cdot x + c$$
 
 #+attr_reveal: :frag (appear)
 - x-aksen ligger der, hvor $y=f(x)=0$
-- Altså $f(x)=a\cdot x^2 + b \cdot x +x =0$
+- Altså $f(x)=a\cdot x^2 + b \cdot x +c =0$
 - Hov, vi har altså en 2.gradsligning, som skal løses.
 - Det tager vi lige en gang til.
 #+reveal_html: </div>
@@ -1215,7 +1216,7 @@ $$\boxed{x = \frac{-b \pm \sqrt{d}}{2 \cdot a}}$$
 
 hvor /diskriminanten/ er
 
-$$\boxed{d = b^2- 4 \cdot a \cdot c}$$.
+$$\boxed{d = b^2- 4 \cdot a \cdot c\,.}$$
 
 - Hvis $d>0$ (altså positiv) er der *to* løsninger.
 - Hvis $d=0$ er der *én* løsning.
@@ -1265,6 +1266,7 @@ f(x)&= 3x^2+5x+2 \\
 g(x) &= 1 + 9x^2 -6 x \\
 h(x) &= 8x -8x^2-3
 \end{align*}
+#+reveal_html: </div>
 
 *** Bevis for formlen
 #+reveal_html: <div style="font-size: 50%;">
@@ -1354,7 +1356,6 @@ $$f(x) = a \cdot x^2 + b \cdot x + c$$
 #+attr_reveal: :frag (appear)
 - Hvor mange punkter, som grafen skal gå igennem, skal man kende, for at bestemme koefficienterne?
 - Hvordan vil I bestemme koefficienterne til en parabel, som går gennem punkterne $(2,-4)$, $(-2,0)$ og $(6,8)$? *Alle hjælpemidler er tilladte!*
-  
 *** Matematikken bag
 #+reveal_html: <div style="font-size: 60%;">
 #+reveal_html: <div class="column" style="float:left; width: 50%">
@@ -1386,7 +1387,6 @@ $$f(x) = a \cdot x^2 + b \cdot x + c$$
 
    Hint: Sæt de to forskrifter lig hinanden, og løs den fremkomne 2.gradsligning. Find her efter y-værdierne.
 
-   
 ** Differentiation og integration
 #+reveal_html: <div style="font-size: 50%;">
 Med forskriften $$f(x)=a x^2+b x +c$$ er det nemt at finde den afledte funktion samt stamfunktionen
@@ -1394,14 +1394,14 @@ Med forskriften $$f(x)=a x^2+b x +c$$ er det nemt at finde den afledte funktion 
 - Jeg er sikker på, at I selv kan finde ud af det...
 - Ellers er de her:
   \begin{align*}
-  f'(x) &= \frac{d}{dx}\left(a x^2 + b x +c \right) = a \cdot 2 x^{2-1} +b \iff \boxed{f'(x)= 2 a x + b} \\
-  F(x) &= \int a x^2 + b x +c \,dx = a \cdot \frac{x^{2+1}}{2+1} + b \cdot \frac{x^{1+1}}{1+1} + c \cdot x + k \iff \boxed{F(x) = \frac{a}{3} x^3 + \frac{b}{2} x^2 + c x + k}
+  f'(x) &= \frac{d}{dx}\left(a x^2 + b x +c \right) = a \cdot 2 x^{2-1} +b \iff \\ f'(x)&= 2 a x + b \\
+  F(x) &= \int a x^2 + b x +c \,dx = a \cdot \frac{x^{2+1}}{2+1} + b \cdot \frac{x^{1+1}}{1+1} + c \cdot x + k \iff \\
+  F(x) &= \frac{a}{3} x^3 + \frac{b}{2} x^2 + c x + k
   \end{align*}
-
   
 ** Opgave
 #+reveal_html: <div style="font-size: 70%;">
-Betragt parablen med forskriften $$f(x)= - \frac{1}{4}x^2 +2\,.$$ og den lineære funktion $$g(x)=x -6$$.
+Betragt parablen med forskriften $$f(x)= - \frac{1}{4}x^2 +2\,.$$ og den lineære funktion $$g(x)=x -6\,.$$
 
 1. Bestem ligningen for /tangenten/ til $f(x)$, som er parallel med $g(x)$.
 2. Bestem arealet, der afgrænses af $f(x)$, $g(x)$ og deres skæringspunkter.
@@ -1420,6 +1420,42 @@ Betragt parablen med forskriften $$f(x)= - \frac{1}{4}x^2 +2\,.$$ og den lineær
 *** Bro
 #+attr_html: :width 100%
 [[./img/bro_opgave.png]]
+* Omdrejningslegemer
+#+attr_html: :height 500px
+[[./img/omdrejningslegemer.png]]
+** Drejning om x-aksen
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+*Volumen*
+
+$$V_x = \int_{x_1}^{x_2} \pi \cdot f(x)^2 \, dx$$
+
+*Overfladeareal*
+
+$$\text{Areal} = 2 \pi \int_{x_1}^{x_2} f(x)\cdot \sqrt{1+f'(x)^2} \, dx$$
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+[[./img/volumen_x.png]]
+#+reveal_html: </div>
+** Drejning om y-aksen
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div class="column" style="float:left; width: 50%">
+*Volumen*
+
+$$V_y = 2 \pi \int_{x_1}^{x_2} f(x) \cdot x \, dx$$
+#+reveal_html: </div>
+
+#+reveal_html: <div class="column" style="float:right; width: 50%">
+[[./img/omdrejning_y.png]]
+#+reveal_html: </div>
+** Opgave
+#+reveal_html: <div style="font-size: 60%;">
+Bestem rumfanget af den kegle, der fremkommer, når følgende funktion roteres omkring x-aksen mellem 0 og 6:
+
+$$f(x) = \frac{1}{3}x$$
+
+[[./img/kegleopgave.png]]
 * Hyperblen
 
 ** Hyperblens koefficienter
@@ -1565,42 +1601,6 @@ video med numberphile
 ** Opsummering
 #+attr_html: :height 500px
 [[./img/gabriels_horn_3.jpg]]
-* Omdrejningslegemer
-#+attr_html: :height 500px
-[[./img/omdrejningslegemer.png]]
-** Drejning om x-aksen
-#+reveal_html: <div style="font-size: 50%;">
-#+reveal_html: <div class="column" style="float:left; width: 50%">
-*Volumen*
-
-$$V_x = \int_{x_1}^{x_2} \pi \cdot f(x)^2 \, dx$$
-
-*Overfladeareal*
-
-$$\text{Areal} = 2 \pi \int_{x_1}^{x_2} f(x)\cdot \sqrt{1+f'(x)^2} \, dx$$
-#+reveal_html: </div>
-
-#+reveal_html: <div class="column" style="float:right; width: 50%">
-[[./img/volumen_x.png]]
-#+reveal_html: </div>
-** Drejning om y-aksen
-#+reveal_html: <div style="font-size: 60%;">
-#+reveal_html: <div class="column" style="float:left; width: 50%">
-*Volumen*
-
-$$V_y = 2 \pi \int_{x_1}^{x_2} f(x) \cdot x \, dx$$
-#+reveal_html: </div>
-
-#+reveal_html: <div class="column" style="float:right; width: 50%">
-[[./img/omdrejning_y.png]]
-#+reveal_html: </div>
-** Opgave
-#+reveal_html: <div style="font-size: 60%;">
-Bestem rumfanget af den kegle, der fremkommer, når følgende funktion roteres omkring x-aksen mellem 0 og 6:
-
-$$f(x) = \frac{1}{3}x$$
-
-[[./img/kegleopgave.png]]
 * Potensfunktioner
 #+reveal_html: <div style="font-size: 60%;">
 #+reveal_html: <div class="column" style="float:left; width: 50%">
@@ -1708,7 +1708,7 @@ f(x)&= a_0 + a_1\cdot x + a_2\cdot x^2+ \dots + a_{n-1}\cdot x^{n-1} + a_n \cdot
 \end{align*}
 Eller
 $$\boxed{f(x)= a_n \cdot x^n + a_{n-1}\cdot x^{n-1}+ \dots + a_2 \cdot x^2 + a_1 \cdot x + a_0}$$
-- $n$ kan altså kun være de /naturlige/ tal samt nul (alle positive hele tal samt nul.
+- $n$ kan altså kun være de /naturlige/ tal samt nul (alle positive hele tal samt nul).
 - Er en sum af en række potensfunktioner.
 ** Eksempler
 [[./img/polynomier_eksempler.png]]

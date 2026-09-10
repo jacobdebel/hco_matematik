@@ -1,0 +1,47 @@
+% Intended LaTeX compiler: lualatex
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[danish]{babel}
+\usepackage{mathtools}
+\usepackage[margin=3.0cm]{geometry}
+\hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
+\setlength{\parindent}{0em}
+\parskip 1.5ex
+\date{}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
+ pdflang={Danish}}
+\begin{document}
+
+Vi skal ''bare'' isolere x i ligningen
+$$a\cdot x^2 + b \cdot x + c = 0$$
+Alle mellemregninger står her.
+\begin{align*}
+a\cdot x^2 + b \cdot x + c &= 0 \\
+a\cdot x^2 + b \cdot x &= -c \\
+x^2 + \frac{b}{a} \cdot x &= -\frac{c}{a} \\
+\left( x + \frac{b}{2 a} \right)^2 - \left( \frac{b}{2 a} \right)^2 &= - \frac{c}{a} \\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\left( \frac{b}{2 a} \right)^2  \\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\frac{b^2}{2^2 a^2}   \\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\frac{b^2}{4 a^2}   \\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{4\cdot a \cdot c}{a\cdot 4 a}+\frac{b^2}{4 a^2}   \\
+\left( x + \frac{b}{2 a} \right)^2  &= \frac{b^2 -4\cdot a \cdot c}{4 a^2}   \\
+x + \frac{b}{2 a}   &= \pm \sqrt{\frac{b^2 -4\cdot a \cdot c}{4 a^2}}   \\
+x + \frac{b}{2 a}   &= \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{\sqrt{4 a^2}}   \\
+x + \frac{b}{2 a}   &= \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{2 a}   \\
+x    &= -\frac{b}{2 a} \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{2 a}   \\
+\end{align*}
+\end{document}
