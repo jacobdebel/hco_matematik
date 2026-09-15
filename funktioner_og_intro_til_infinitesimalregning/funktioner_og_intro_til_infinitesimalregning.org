@@ -1418,7 +1418,7 @@ g:Vinkelret(A,k)
 B:skæring(g,k)
 c:Cirkel(Q,afstand(A,B))
 P:Skæring(c,f)
-r:Linjestykke(Q,C)
+r:Linjestykke(Q,P_1)
 m:Linjestykke(A,B)
 #+end_example
 - Højreklik på ~r~, vælg egenskaber, vælg navn & værdi
