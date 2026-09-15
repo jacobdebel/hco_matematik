@@ -1408,39 +1408,6 @@ $$f(x) = a \cdot x^2 + b \cdot x + c$$
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
 #+reveal_html: <div> <!-- left -->
 Skriv følgende i inputfeltet i =geogebra=:
-- ~Q=(0,5)~ 
-- ~L=(-1,0)~ 
-- ~k:y=y(L)~ 
-- ~A=(2,3)~
-- ~f:Linje(A,k)~ 
-- ~g:Vinkelret(A,k)~
-- ~B:skæring(g,k)~
-- ~c:Cirkel(Q,afstand(A,B))~
-- ~P:Skæring(c,f)~
-- ~r:Linjestykke(Q,C)~
-- ~m:Linjestykke(A,B)~
-#+reveal_html: </div>
-
-#+reveal_html: <div> <!-- right -->
-- Højreklik på ~r~, vælg egenskaber, vælg navn & værdi
-- Højreklik på ~m~, vælg egenskaber, vælg navn & værdi
-- Højreklik på ~P_1~, vælg tænd spor.
-- Højreklik på ~P_2~, vælg tænd spor.
-
-
-- Træk nu i punktet ~A~ for at afsætte en masse punkter.
-- Flyt ~Q~ for at flytte brændpunktet.
-- Flyt ~L~ for at flytte ledelinjen.
-#+reveal_html: </div>
-#+reveal_html: </div>
-
-#+reveal_html: </div>
-
-** Konstruktion i geogebra
-#+reveal_html: <div style="font-size: 60%;">
-#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
-#+reveal_html: <div> <!-- left -->
-Skriv følgende i inputfeltet i =geogebra=:
 #+begin_example
 Q=(0,5) 
 L=(-1,0) 
