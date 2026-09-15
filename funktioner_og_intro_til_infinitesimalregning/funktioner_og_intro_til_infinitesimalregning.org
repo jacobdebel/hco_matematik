@@ -1387,6 +1387,95 @@ $$f(x) = a \cdot x^2 + b \cdot x + c$$
 
    Hint: Sæt de to forskrifter lig hinanden, og løs den fremkomne 2.gradsligning. Find her efter y-værdierne.
 
+** Brændpunkt og konstruktion
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+- Vælg en /ledelinje/ \(y=k\).
+- Punktet \(Q\) er parablens /brændpunkt/.
+- Ethvert punkt \(P\) på parablen har samme til \(Q\) som den lodrette afstand til ledelinjen.
+- Altså \(\left| QP \right|=\left| PR \right|\)
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+[[file:img/braendpunkt_parabel_konstruktion.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Konstruktion i geogebra
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+Skriv følgende i inputfeltet i =geogebra=:
+- ~Q=(0,5)~ 
+- ~L=(-1,0)~ 
+- ~k:y=y(L)~ 
+- ~A=(2,3)~
+- ~f:Linje(A,k)~ 
+- ~g:Vinkelret(A,k)~
+- ~B:skæring(g,k)~
+- ~c:Cirkel(Q,afstand(A,B))~
+- ~P:Skæring(c,f)~
+- ~r:Linjestykke(Q,C)~
+- ~m:Linjestykke(A,B)~
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+- Højreklik på ~r~, vælg egenskaber, vælg navn & værdi
+- Højreklik på ~m~, vælg egenskaber, vælg navn & værdi
+- Højreklik på ~P_1~, vælg tænd spor.
+- Højreklik på ~P_2~, vælg tænd spor.
+
+
+- Træk nu i punktet ~A~ for at afsætte en masse punkter.
+- Flyt ~Q~ for at flytte brændpunktet.
+- Flyt ~L~ for at flytte ledelinjen.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Konstruktion i geogebra
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+Skriv følgende i inputfeltet i =geogebra=:
+#+begin_example
+Q=(0,5) 
+L=(-1,0) 
+k:y=y(L) 
+A=(2,3)
+f:Linje(A,k) 
+g:Vinkelret(A,k)
+B:skæring(g,k)
+c:Cirkel(Q,afstand(A,B))
+P:Skæring(c,f)
+r:Linjestykke(Q,C)
+m:Linjestykke(A,B)
+#+end_example
+- Højreklik på ~r~, vælg egenskaber, vælg navn & værdi
+- Højreklik på ~m~, vælg egenskaber, vælg navn & værdi
+- Højreklik på ~P_1~, vælg tænd spor.
+- Højreklik på ~P_2~, vælg tænd spor.
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+
+
+- Træk nu i punktet ~A~ for at afsætte en masse punkter.
+- Flyt ~Q~ for at flytte brændpunktet.
+- Flyt ~L~ for at flytte ledelinjen.
+- Få forskrift ved at skrive: =parabel(Q,k)=
+
+#+attr_reveal: :frag (appear)
+- Hvorfor hedder det mon et brændpunkt?
+- Tangenter, punkter og vinkler "to the rescue!"
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
 ** Differentiation og integration
 #+reveal_html: <div style="font-size: 50%;">
 Med forskriften $$f(x)=a x^2+b x +c$$ er det nemt at finde den afledte funktion samt stamfunktionen

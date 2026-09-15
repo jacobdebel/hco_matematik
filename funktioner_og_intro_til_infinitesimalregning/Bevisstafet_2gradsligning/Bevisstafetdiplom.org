@@ -1,0 +1,64 @@
+#+TITLE: 
+#+AUTHOR: 
+#+DATE: 
+#+OPTIONS: toc:nil date:nil num:nil
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt,notitlepage]
+#+LATEX_HEADER: \usepackage[margin=2.5cm]{geometry}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \pagestyle{empty}
+
+#+BEGIN_EXPORT latex
+\begin{tcolorbox}[colframe=black, colback=white, arc=3mm, outer arc=3mm, boxrule=1.5pt]
+\begin{center}
+{\Huge \bfseries DIPLOM FOR BEVISSTAFET} \\[0.5cm]
+{\large Tildeles hermed det exceptionelle vinderhold:} \\[0.8cm]
+\end{center}
+#+END_EXPORT
+
+* HOLD:
+
+* MEDLEMMER:
+
+#+BEGIN_EXPORT latex
+\vspace{0.5cm}
+\begin{center}
+{\itshape Som anerkendelse af usædvanlig udholdenhed, matematisk elegance og fravær af panik under den officielle udledning af løsningsformlen for andengradsligningen:}
+\end{center}
+#+END_EXPORT
+
+$$\quad ax^2 + bx + c = 0 \quad (a \neq 0) \quad$$
+
+#+BEGIN_EXPORT latex
+\begin{center}
+{\bfseries Gennem sublimt samarbejde og fysisk udfoldelse har holdet med succes:}
+\end{center}
+#+END_EXPORT
+
+- [X] Overlevet "4a-tricket" uden varige mén
+- [X] Gennemført en perfekt kvadratkomplettering under høj puls
+- [X] Håndteret diskriminanten ($d$) med ophøjet ro
+- [X] Isoleret $x$ og triumferet over kvadratroden med et stolt $\pm$
+
+#+BEGIN_EXPORT latex
+\vspace{0.5cm}
+Med dette diplom medfølger de officielle rettigheder til at prale over for klassekammeraterne samt retten til altid at sige: \textit{"Det er jo bare $x = \frac{-b \pm \sqrt{d}}{2a}$"}, hver gang nogen klager over, at matematik er svært.
+
+\vspace{1.2cm}
+
+\begin{multicols}{2}
+\noindent Dato: \underline{\hspace{3cm}} \\[1cm]
+\columnbreak
+\noindent Underskrift (Matematiklærer): \\[1cm]
+\underline{\hspace{5.5cm}}
+\end{multicols}
+
+\vspace{0.5cm}
+\begin{center}
+{\small \itshape "In math we trust, the rest is just running"}
+\end{center}
+\end{tcolorbox}
+#+END_EXPORT

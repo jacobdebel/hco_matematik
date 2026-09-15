@@ -1,0 +1,54 @@
+#+title: 
+#+subtitle: 
+#+author: 
+#+date: 
+#+latex_class: article
+#+latex_class_options: [a4paper, 11pt]
+#+language: da
+#+latex_header: \usepackage[danish]{babel}
+#+latex_header: \usepackage{mathtools}
+#+latex_header: \usepackage[margin=2.0cm]{geometry}
+#+latex_header: \hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
+#+latex_header_extra: \setlength{\parindent}{0em}
+#+latex_header_extra: \parskip 1.5ex
+#+options: ^:{} tags:nil toc:nil todo:nil num:nil timestamp:nil
+#+latex_header: \usepackage{fancyhdr}
+#+latex_header: \fancyhf{}
+#+latex_header: \pagestyle{fancy}
+#+latex_header: \fancyhead[L]{Bevisstafet - 2.gradsligningen} \fancyhead[C]{Matematik A}\fancyhead[R]{Jacob Debel}
+
+
+* Formål
+Bevisstafetten er en samarbejdsøvelse, hvor I som hold skal udlede løsningsformlen for en andengradsligning:
+\begin{align*}
+ax^2 + bx + c &= 0 \iff \\
+\dots \\
+\dots \\
+x &= \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+\end{align*}
+
+I skal kombinere jeres egen matematiske viden med målrettede "stafetløb" til et udledningsark, når I får brug for hjælp.
+
+* Regler for Stafetten
+
+** 1. Start selv
+- I har *ét fælles papir* og *én pen* ved bordet.
+- I begynder blot at udlede beviset så langt, I kan på egen hånd.
+- Hvert hold har en *løber* og en *skriver*.
+
+** 2. Skriv kun hvad der dikteres
+- *Skriveren* må *kun* skrive det ned på papiret, som de andre på holdet forklarer og dikterer.
+- *Skriveren* må ikke selv gætte eller regne videre uden om holdet.
+
+** 3. Hent hjælp ved behov
+- Hvis I går i stå eller bliver i tvivl, sender I *løberen* op til udledningsarket.
+- *Ingen noter:* Løberen må *ikke* medbringe papir, mobil eller pen op til udledningsarket. Alt skal huskes i hovedet.
+
+** 4. Tavshed indtil bordet
+- Løberen må *først sige noget*, når vedkommende er helt tilbage ved holdets bord.
+
+** 5. Skift på tur
+- Rollerne som *løber* og *skriver* skal gå på tur i gruppen, hver gang I henter ny information.
+
+* Vinderbetingelse
+Når I mener, at I har udledt hele formlen korrekt og med forklarende tekstbegrundelser, kalder I på læreren. Læreren laver en hurtig stikprøve hos en tilfældig elev på holdet, som skal kunne forklare et udvalgt trin.

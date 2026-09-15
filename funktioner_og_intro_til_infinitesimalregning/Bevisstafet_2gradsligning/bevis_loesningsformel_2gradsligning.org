@@ -1,47 +1,34 @@
-% Intended LaTeX compiler: lualatex
-\documentclass[a4paper, 12pt]{article}
-\usepackage{amsmath}
-\usepackage{fontspec}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{wrapfig}
-\usepackage{rotating}
-\usepackage[normalem]{ulem}
-\usepackage{capt-of}
-\usepackage{hyperref}
-\usepackage[danish]{babel}
-\usepackage{mathtools}
-\usepackage[margin=3.0cm]{geometry}
-\hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
-\setlength{\parindent}{0em}
-\parskip 1.5ex
-\date{}
-\title{}
-\hypersetup{
- pdfauthor={},
- pdftitle={},
- pdfkeywords={},
- pdfsubject={},
- pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
- pdflang={Danish}}
-\begin{document}
+#+title: 
+#+subtitle: 
+#+author: 
+#+date: 
+#+latex_class: article
+#+latex_class_options: [a4paper, 12pt]
+#+language: da
+#+latex_header: \usepackage[danish]{babel}
+#+latex_header: \usepackage{mathtools}
+#+latex_header: \usepackage[margin=3.0cm]{geometry}
+#+latex_header: \hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
+#+latex_header_extra: \setlength{\parindent}{0em}
+#+latex_header_extra: \parskip 1.5ex
+#+options: ^:{} tags:nil toc:nil todo:nil num:nil timestamp:nil
 
 Vi skal ''bare'' isolere x i ligningen
 $$a\cdot x^2 + b \cdot x + c = 0$$
 Alle mellemregninger står her.
 \begin{align*}
 a\cdot x^2 + b \cdot x + c &= 0 \\
-a\cdot x^2 + b \cdot x &= -c \\
-x^2 + \frac{b}{a} \cdot x &= -\frac{c}{a} \\
+x^2 + \frac{b}{a} \cdot x +\frac{c}{a}&=0  \\
+x^2 + \frac{b}{a} \cdot x &= -\frac{c}{a}  \\
 \left( x + \frac{b}{2 a} \right)^2 - \left( \frac{b}{2 a} \right)^2 &= - \frac{c}{a} \\
 \left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\left( \frac{b}{2 a} \right)^2  \\
 \left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\frac{b^2}{2^2 a^2}   \\
 \left( x + \frac{b}{2 a} \right)^2  &= - \frac{c}{a}+\frac{b^2}{4 a^2}   \\
-\left( x + \frac{b}{2 a} \right)^2  &= - \frac{4\cdot a \cdot c}{a\cdot 4 a}+\frac{b^2}{4 a^2}   \\
+\left( x + \frac{b}{2 a} \right)^2  &= - \frac{4\cdot a \cdot c}{4 \cdot a\cdot a}+\frac{b^2}{4 a^2}   \\
 \left( x + \frac{b}{2 a} \right)^2  &= \frac{b^2 -4\cdot a \cdot c}{4 a^2}   \\
 x + \frac{b}{2 a}   &= \pm \sqrt{\frac{b^2 -4\cdot a \cdot c}{4 a^2}}   \\
 x + \frac{b}{2 a}   &= \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{\sqrt{4 a^2}}   \\
 x + \frac{b}{2 a}   &= \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{2 a}   \\
 x    &= -\frac{b}{2 a} \pm \frac{\sqrt{b^2 -4\cdot a \cdot c}}{2 a}   \\
+x    &= \frac{- b\pm \sqrt{b^2 -4\cdot a \cdot c}}{2 a}
 \end{align*}
-\end{document}
