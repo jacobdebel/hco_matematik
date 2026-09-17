@@ -1720,6 +1720,12 @@ For en ulige funktion gælder det (altid), at
 [[./img/potens_ulige_2.png]]
 #+reveal_html: </div>
 
+** Opgaver
+[[https://matbhtx.systime.dk/?id=c13715]]
+
+#+attr_html: :width 800px
+[[file:img/2022-04-24_15-33-45_screenshot.png]]
+
 ** Dm og vm
 #+reveal_html: <div style="font-size: 60%;">
 #+reveal_html: <div class="column" style="float:left; width: 50%">
@@ -1730,9 +1736,10 @@ Hvad er Dm og Vm for følgende a-værdier?
 - Lige, positiv og heltallig
 - Lige, negativ og heltallig
 - Ulige, postiv og heltallig
-- Ulige, nagativ og heltallig
+- Ulige, negativ og heltallig
 
-Hvad er ændringen, når $a$ er et decimaltal?
+#+attr_reveal: :frag (appear)
+- Hvad er ændringen, når $a$ er et decimaltal?
 #+reveal_html: </div>
 
 #+reveal_html: <div class="column" style="float:right; width: 50%">
@@ -1749,11 +1756,145 @@ frameborder="0">
 
 #+reveal_html: </div>
 
-** Opgaver
-[[https://matbhtx.systime.dk/?id=c13715]]
+** Potensvækst
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+Hvis den uafhængige variabel x i en potensfunktion:
 
-#+attr_html: :width 800px
-[[file:img/2022-04-24_15-33-45_screenshot.png]]
+\[f(x)=bx^a \text{, hvor } x>0 \text{ og } b \ne 0\]
+
+multipliceres med en koeffient \(k\), hvor \(k>0\), vil det medføre, at den afhængige variabel \(f(x)\) multipliceres med \(k^a\):
+
+\[f(k x) = k^a \cdot f(x) \]
+#+end_quote
+
+#+attr_reveal: :frag (appear)
+Bevis: \(f(kx) = b \cdot \left( k \cdot x \right)^a = b \cdot k^a\cdot x^a = k^a\cdot b x^a= k^a\cdot f(x)\).
+#+reveal_html: </div>
+
+** Eksempler
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+*Bremselængde*
+
+\[S_B(v_0)=\frac{1}{2a}\cdot v_0^2\]
+
+"Hvis du fordobler din hastighed, 4-dobler du bremselængden."
+
+\[S_B(2\cdot v_0)=2^2 \cdot S_B(v_0) = 4 \cdot S_B(v_0)\]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+*Stofskifte/Kleibers lov*
+
+Basal Metabolic Rate
+
+\[BMR = b M^{\frac{3}{4}}\]
+
+En elefant vejer ca 10 000 gange mere end en mus.
+
+BMR for en elefant er derfor /kun/ \(10000^{\frac{3}{4}}=1000\) gange større end for en mus.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Procentvis vækst
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div> <!-- left -->
+#+reveal_html: <div style="font-size: 60%;">
+- Læs og forstå [[https://matb-htx.systime.dk/?id=1663#c15745][Procentvis vækst]].
+
+#+reveal_html: </div>
+#+reveal_html: <div style="overflow: auto; height: 500px;"> <!-- scroll -->
+[[file:img/procentvis_vaekst_forklaring.png]]
+
+[[file:img/procentvis_vaekst_eksempel_1.png]]
+
+[[file:img/procentvis_vaekst_eksempel_2.png]]
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+#+reveal_html: <div style="font-size: 50%;">
+Hints:
+
+#+attr_reveal: :frag (appear)
+- Når \(x\) vokser med en procentsats betyder det, at \(x\) skal *multipliceres* med en faktor.
+- Hvis \(x\) vokser med *procentsatsen* \(r_x\), så skal \(x\) *multipliceres* med \(k=1+r_x\).
+- En procentvis tilvækst beregnes ved først at bestemme den absolutte tilvækst og derefter dividere den med startværdien.
+- Den relative tilvækst for \(y\)-værdien er derfor \(r_y = \frac{\Delta y}{y}= \frac{f(kx)-f(x)}{f(x)}\)
+- For \(f(x)=b x^a\) bliver det da \(r_y =\frac{f((1+r_x)x)-f(x)}{f(x)}= \frac{(1+r_x)^a \cdot f(x) - f(x)}{f(x)} \)
+- \(r_y =\frac{f(x) \cdot \left( (1+r_x)^a - 1 \right)}{f(x)}= (1+r_x)^a-1\)
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Opgaver
+:PROPERTIES:
+:ID:       56bb0b86-7673-4394-a825-c7a9d39f7941
+:END:
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+attr_html: :width 600px
+[[file:img/2026-09-17_16-34-37_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+#+attr_html: :width 600px
+[[file:img/2026-09-17_16-35-09_screenshot.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+
+** Bestemmelse af forskrift
+#+reveal_html: <div style="font-size: 60%;">
+
+
+#+begin_quote
+Hvis to punkter \(P_1=(x_1,y_1)\) og \(P_2=(x_2,y_2)\) er beliggende på grafen for en potensfunktion af typen \(f(x)=bx^a\), hvor \(x > 0\) og \(b \ne 0\), så er:
+
+\[a = \frac{{\log \left( {\frac{{{y_2}}}{{{y_1}}}} \right)}}{{\log \left( {\frac{{{x_2}}}{{{x_1}}}} \right)}}= \frac{\log(y_2)-\log(y_1)}{\log(x_2) - \log(x_1)}\]
+
+og:
+
+\[b = \frac{{{y_1}}}{{{x_1}^a}} \text{ eller } b = \frac{{{y_2}}}{{{x_2}^a}}\]
+#+end_quote
+
+#+reveal_html: </div>
+
+** Eksempler
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+[[file:img/potensfunktioner_eksempel_1.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+[[file:img/potensfunktioner_eksempel_2.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Opgaver
+:PROPERTIES:
+:ID:       eae043ef-767e-4663-997d-f6a91e6f9ca6
+:END:
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+attr_html: :width 600px
+[[file:img/2026-09-17_16-36-06_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+
+#+DOWNLOADED: screenshot @ 2026-09-17 16:36:28
+#+attr_html: :width 600px
+#+attr_latex: :width 14cm
+[[file:img/2026-09-17_16-36-28_screenshot.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
 
 * Polynomier
 ** Det generelle polynomium
@@ -1865,6 +2006,7 @@ F.eks. $$f(x)= x^2 \quad,\quad g(x)=\sin(x) \quad,\quad h(x)=10^x$$
   f(h(x))&= \left( 10^x \right)^2
   \end{align*}
 #+reveal_html: </div>
+** Dm for sammensatte funktioner
 
 ** Opgaver
 #+reveal_html: <div style="font-size: 50%;">
