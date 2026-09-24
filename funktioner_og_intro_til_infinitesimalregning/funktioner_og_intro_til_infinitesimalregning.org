@@ -1989,7 +1989,8 @@ I må bruge alle matematiske hjælpemidler.
 
 #+attr_reveal: :frag (appear)
 F.eks. $$f(x)= x^2 \quad,\quad g(x)=\sin(x) \quad,\quad h(x)=10^x$$
-#+reveal_html: <div class="column" style="float:left; width: 50%">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
 #+attr_reveal: :frag (appear)
 - Kan blive til
   \begin{align*}
@@ -1998,7 +1999,7 @@ F.eks. $$f(x)= x^2 \quad,\quad g(x)=\sin(x) \quad,\quad h(x)=10^x$$
   \end{align*}
 #+reveal_html: </div>
 
-#+reveal_html: <div class="column" style="float:right; width: 50%">
+#+reveal_html: <div> <!-- right -->
 #+attr_reveal: :frag (appear)
 - mens
   \begin{align*}
@@ -2006,7 +2007,44 @@ F.eks. $$f(x)= x^2 \quad,\quad g(x)=\sin(x) \quad,\quad h(x)=10^x$$
   f(h(x))&= \left( 10^x \right)^2
   \end{align*}
 #+reveal_html: </div>
+#+reveal_html: </div>
+
+#+attr_reveal: :frag (appear)
+Skrivemåder:
+\[f(g(x)) = f \circ g (x) \quad \text{og} \quad g(f(x)) = g \circ f (x) \]
+
+#+reveal_html: </div>
 ** Dm for sammensatte funktioner
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+*Værdimængden* for den *indre* funktion skal være en del af *definitionsmængden* af den *ydre* funktion.
+#+end_quote
+
+#+attr_reveal: :frag (appear)
+- Man kan nemlig få problemer.
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+attr_reveal: :frag (appear)
+- eks: \(f(x)=2x-5 \quad g(x)= \sqrt{x}\)
+- Her er \(Dm(f)=]-\infty , \infty [\), \(Vm(f) = ]-\infty , \infty[\)
+- Her er \(Dm(g)=[0 , \infty [\), \(Vm(f) = [0 , \infty[\)
+- \(g \circ f (x) = g(f(x)) = \sqrt{2x-5}\)
+
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+#+attr_reveal: :frag (appear)
+- Dur fint med \(x=7\)
+- \(f(7)=2 \cdot 7 - 5 = 9 \quad , \, g(9) = \sqrt{9}=3\)
+- \(g(f(7)) = \sqrt{2 \cdot 7 - 9}=3\)
+- Dur *ikke* med \(x=2\)
+- \(f(2) = 2 \cdot 2 -5 = -1 \quad , \, g(-1) = \sqrt{-1}\)
+- Man kan ikke tage kvadratroden af et negativt tal, hvis man kun har de reelle tal at gøre godt med.
+#+reveal_html: </div>
+#+reveal_html: </div>
+  
+#+reveal_html: </div>
 
 ** Opgaver
 #+reveal_html: <div style="font-size: 50%;">
@@ -2023,6 +2061,54 @@ Find da de sammensatte funktioner:
 &i(f(h(g(x))))
 \end{align*}
 
+** Opløsning af forskrift
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+*Eksempel 1*
+
+\(h(x)=\left( 4x+7 \right)^5\)
+
+\(f(x)= 4x+7 \quad \text{indre funktion}\)
+\(g(x)= x^5 \quad \text{ydre funktion}\)
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+*Eksempel 2*
+
+\(h(x)=\sqrt{3x^2-7x}\)
+
+\(f(x)= 3x^2-7x \quad \text{indre funktion}\)
+\(g(x)= \sqrt{x} \quad \text{ydre funktion}\)
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Opgave - find indre og ydre funktioner
+#+reveal_html: <div style="font-size: 60%;">
+Identificér de indre og ydre funktioner i de følgende tilfælde:
+
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+\begin{align*}
+f_1(x) &= (4x-1)^3 \\
+f_2(x) &= 3\cdot (x^2+5)^4 \\
+f_3(x) &= \sqrt{2x+7}
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+\begin{align*}
+f_4(x) &= \frac{1}{x^2-3x+2} \\
+f_5(x) &= \sqrt[3]{5x^3-2x} \\
+f_6(x) &= \left((2x-1)^2+3\right)^5
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+
 ** Differentiation af sammensatte funktioner
 #+attr_html: :width 50%
 [[./img/kaede.jpg]]
@@ -2031,8 +2117,8 @@ Find da de sammensatte funktioner:
 #+reveal_html: <div style="font-size: 60%;">
 Hvis man skal differentiere en sammensat funktion, skal man anvende /kædereglen/, som siger:
 #+begin_quote
-For den sammensatte funktion $f(x)=g(h(x))$ gælder, at
-$$\boxed{f'(x) = g'(h(x))\cdot h'(x) = \frac{d g(h(x))}{d h(x)}\cdot \frac{d h(x)}{dx}}$$
+For den sammensatte funktion $h(x)=g(f(x))$ gælder, at
+$$\boxed{h'(x) = g'(f(x))\cdot f'(x) = \frac{d g(f(x))}{d f(x)}\cdot \frac{d f(x)}{dx}}$$
 #+end_quote
 
 #+attr_reveal: :frag (appear)
@@ -2044,21 +2130,22 @@ $$\boxed{f'(x) = g'(h(x))\cdot h'(x) = \frac{d g(h(x))}{d h(x)}\cdot \frac{d h(x
   
 ** Eksempel
 #+reveal_html: <div style="font-size: 60%;">
-$$f(x)=\left( 2\cdot x^3+5x \right)^4$$
+$$h(x)=\left( 2\cdot x^3+5x \right)^4$$
 #+attr_reveal: :frag (appear)
 - Den ydre funktion er $g(x)=x^4$
-- Den indre funktion er $h(x)=2\cdot x^3 + 5x$
+- Den indre funktion er $f(x)=2\cdot x^3 + 5x$
 - Først finder man $g'(x)=4 x^3$, men på x's plads skriver man den indre funktion, altså
-- $g'(h(x))=4 \cdot \left( 2\cdot x^3+5x \right)^3$
+- $g'(f(x))=4 \cdot \left( 2\cdot x^3+5x \right)^3$
 - Så differentierer man den indre funktion på alm. vis
-- $h'(x) = 2 \cdot 3 \cdot x^2+5 = 6x^2+5$
+- $f'(x) = 2 \cdot 3 \cdot x^2+5 = 6x^2+5$
 - men dette skal lige ganges på det første, altså
-- $$f'(x) = g'(h(x))\cdot h'(x) = 4 \cdot \left( 2\cdot x^3+5x \right)^3 \cdot \left( 6x^2+5 \right)$$
+- $h'(x) = g'(f(x))\cdot f'(x) = 4 \cdot \left( 2\cdot x^3+5x \right)^3 \cdot \left( 6x^2+5 \right)$
+#+reveal_html: </div>
 
 ** Et andet eksempel
-#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="font-size: 50%;">
 Vi gør det lige en gang til (Den er lidt svær).
-$$f(x) = \sqrt{\left( 4x^3 + 1 -2x \right)^2-6x^2}$$
+$$h(x) = \sqrt{\left( 4x^3 + 1 -2x \right)^2-6x^2}$$
 
 $$f'(x) = \frac{1}{2} \cdot \left( \left(4x^3+1-2x \right)^2-6x^2\right)^{- \frac{1}{2}}\cdot \left( 2\left(4x^3+1-2x  \right)\cdot \left( 4 \cdot 3 x^2-2 \right) - 6 \cdot 2 x \right)$$
 
@@ -2068,6 +2155,7 @@ hvor det er brugt, at
 \frac{d}{dx} \left(\left( 4x^3+1-2x \right)^2-6x^2  \right) &= \frac{d}{dx}\left( \left(4x^3+1-2x \right)^2\right) - \frac{d}{dx} \left( 6x^2 \right) = \frac{d}{dx}\left( \left(4x^3+1-2x \right)^2\right) -  6\cdot 2x \\
 \frac{d}{dx} \left( \left(4x^3+1-2x \right)^2 \right)  &= 2 \left( 4x^3+1-2x \right) \cdot \left( 4 \cdot 3 x^2-2 \right)
 \end{align*}
+#+reveal_html: </div>
 
 ** Opgaver
 #+reveal_html: <div style="font-size: 60%;">
@@ -2079,8 +2167,140 @@ g(x) &= \left( 3x-4 \right)^5 \\
 h(x) &= \left( \frac{5}{2x}+4 \right)^4 \\
 i(x) &= 3 \cdot \sqrt{ \left( 1 -x^2 \right)^5}
 \end{align*}
+#+reveal_html: </div>
 
 * Stykkevis sammensatte funktioner
+[[file:img/gaffel.png]]
+** Tre funktioner
+:PROPERTIES:
+:ID:       235ed34e-401b-49fa-96ea-10c49b7c8a26
+:END:
+#+reveal_html: <div style="font-size: 60%;">
+
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div> <!-- left -->
+
+\begin{align*}
+g(x) &= x+1 \\
+h(x) &= - \frac{1}{4}x^2+3x-3 \\
+j(x) &= -2x +22
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+
+#+DOWNLOADED: screenshot @ 2026-09-24 10:39:01
+#+attr_html: :width 600px
+#+attr_latex: :width 14cm
+[[file:img/2026-09-24_10-39-01_screenshot.png]]
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+** Gaffelfunktion
+:PROPERTIES:
+:ID:       3c19a7aa-5bb5-441e-ab78-1f57c0534d2e
+:END:
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div> <!-- left -->
+Én funktion med tre forskellige forskrifter i hvert sit interval.
+
+\[f(x) = \begin{cases} x+1 & \text{for } 0 \leq x \leq 4 \\ - \frac{1}{4}x^2+3x-3 & \text{for }  4 < x \leq 10 \\ -2x+22 & \text{for } 10 < x \leq 11\end{cases}\]
+
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+
+#+DOWNLOADED: screenshot @ 2026-09-24 10:44:53
+#+attr_html: :width 600px
+#+attr_latex: :width 14cm
+[[file:img/2026-09-24_10-44-53_screenshot.png]]
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+Geogebrakommando: =f(x)=hvis(0≤x≤4,x+1,4<x≤10,-1/4x^2+3x-3,10<x≤11,-2x+22)=
+#+reveal_html: </div>
+
+** Gaffel
+:PROPERTIES:
+:ID:       4cf2c55d-4ffa-414f-9a22-cd2ddc73e5a5
+:END:
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+Gemini's bedste bud
+[[file:img/gaffelfunktion.jpeg]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+Min forestilling
+
+#+DOWNLOADED: screenshot @ 2026-09-24 11:14:12
+#+attr_html: :width 600px
+#+attr_latex: :width 14cm
+[[file:img/2026-09-24_11-14-12_screenshot.png]]
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Eksempel/opgave
+:PROPERTIES:
+:ID:       f12307e3-0893-464e-9a9b-0e439abaafa0
+:END:
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 40% auto;">
+#+reveal_html: <div> <!-- left -->
+
+#+DOWNLOADED: screenshot @ 2026-09-24 11:15:48
+#+attr_html: :width 600px
+#+attr_latex: :width 14cm
+[[file:img/2026-09-24_11-15-48_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+1. Opstil de tre forskrifter vha beregninger.
+2. Opskriv en samlet gaffelfunktion.
+3. Hvornår har bilen en fart på 40 km/t?
+
+
+#+attr_reveal: :frag (appear)
+- Hint: Brug topunktsformlen for rette linjer. Husk også at bestemme b.
+
+#+attr_reveal: :frag (appear)  
+Svar
+#+attr_reveal: :frag (appear)  
+1. \(g(x)=5.33x \,,\, h(x)=80 \,,\, k(x)=-8x+320\)
+2. \(f(x)=\begin{cases}5.33 x & \text{for } 0 \leq x \leq 15 \\ 80 & \text{for} 15 < x \leq 30 \\ -8x+320 & \text{for } 30 < x \leq 40 \end{cases}\)
+3. Efter 7.5 s og 35 s.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Flere opgaver
+:PROPERTIES:
+:ID:       965a9443-bbf1-4c44-81bb-8ab5dc8fe2a9
+:END:
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+
+#+DOWNLOADED: screenshot @ 2026-09-24 11:31:10
+#+attr_html: :width 600px
+#+attr_latex: :width 14cm
+[[file:img/2026-09-24_11-31-10_screenshot.png]]
+
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+
+#+DOWNLOADED: screenshot @ 2026-09-24 11:31:44
+#+attr_html: :width 600px
+#+attr_latex: :width 14cm
+[[file:img/2026-09-24_11-31-44_screenshot.png]]
+
+#+reveal_html: </div>
+#+reveal_html: </div>
 
 * Projekt Skatepark
 #+reveal_html: <div style="font-size: 60%;">
