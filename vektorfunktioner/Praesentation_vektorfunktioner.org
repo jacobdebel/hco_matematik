@@ -1,0 +1,871 @@
+#+title: Vektorfunktioner
+#+subtitle: Matematik
+#+author: Jacob Debel
+#+date: 
+# Themes: beige|black|blood|league|moon|night|serif|simple|sky|solarized|white
+#+reveal_theme: night
+#+reveal_title_slide: <h2>%t</h2><h3>%s</h3><h4>%a</h4><h4>%d</h4>
+#+reveal_title_slide_background:
+#+reveal_default_slide_background:
+#+reveal_extra_options: slideNumber:"c",progress:true,transition:"slide",navigationMode:"default",history:false,hash:true
+#+options: toc:nil num:nil tags:nil timestamp:nil ^:{}
+
+* Først lidt repetition om vektorer
+
+** Svar-bazar
+#+reveal_html: <div style="font-size: 60%;">
+Reglerne er som følger:
+
+1. Alle elever har hver sit svarark.
+
+2. Gå rundt mellem hinanden, og find en ny partner, som I normalt ikke sidder ved siden af eller arbejder tæt sammen med.
+
+3. Elev 1 stiller elev 2 et spørgsmål fra arket. Elev 2 svarer, hvis vedkommende kan, mens elev 1 skriver svaret ned på sit papir.
+
+4. Elev 2 tjekker det nedskrevne og skriver sine initialer, hvis det kan godkendes.
+
+5. Rollerne byttes.
+
+6. Der findes nye partnere, hvor man gør det samme.
+
+7. Når man har svar på alle sine spørgsmål, sætter man sig på sin plads.
+
+8. Når alle er færdige sammenlignes svarene i grupper. Ved uenighed spørges læreren.
+#+reveal_html: </div>
+   
+** Svar-bazar
+#+attr_html: :height 500px
+[[./00_Svar-bazar_om_vektorer/Svar-bazar_vektorer.pdf][file:./img/svar-bazar_forside.png]]
+
+* Eksperimenter
+Giv mig jeres mest /sindsyge/ funktionsforskrifter, så ser vi, hvad det bliver til i geogebra.
+
+* Det skrå kast (fra fysik)
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+attr_html: :width 80%
+[[./img/det_skraa_kast.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+- Hvordan ser formlerne ud?
+
+  *Alle hjælpemidler er tilladte.*
+#+attr_reveal: :frag (appear)
+\begin{align*}
+x &= v_{0x} \cdot t + x_0 \\
+  &= v_0 \cdot \cos \left( \alpha \right) \cdot t + x_0\\
+y &= - \frac{1}{2} \cdot g \cdot t^2 + v_{0y}\cdot t + y_0 \\
+  &= - \frac{1}{2} \cdot g \cdot t^2 + v_0 \cdot \sin(\alpha) \cdot t + y_0
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+attr_reveal: :frag (appear)
+Lad os se, hvordan det ser ud i geogebra.
+#+reveal_html: </div>
+
+* Den rette linje
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/den_rette_linje.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+Parameterfremstilling:
+\begin{align*}
+\overrightarrow{OP}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} x_{0 } \\ y_0 \end{pmatrix} + t \cdot \begin{pmatrix} r_x \\ r_y \end{pmatrix}
+\end{align*}
+
+Hvad man skal kende:
+- Et kendt punkt på kurven.
+- En retningsvektor.
+
+Alternativt skal man kende:
+- To kendte punkter på kurven.
+
+Herfra kan retningsvektoren bestemmes.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Grafiske eksempler
+Giv mig nogle eksempler på kendte punkter og retningsvektorer.
+
+Lad os se, hvordan banekurverne ser ud i geogebra, og hvordan parameterfremstillingerne opstilles.
+
+** Lidt opgaver
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+attr_html: :width 70%
+[[./01_Linjer_og_cirkler/01_Linjer_og_cirkler_vektorfunktioner.pdf][file:./img/linjer_og_cirkler.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+- Løs opgave 1 og 2 i det følgende dokument. *Par-tjek*.
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+* Skæring med akserne
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+attr_html: :width 70%
+[[./img/skaering_med_akserne.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+\begin{align*}
+\vec{r} (t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} t^2 -3 \cdot t +2 \\ 2 \cdot t -1 \end{pmatrix}
+\end{align*}
+
+- *Skæring med x-aksen*
+  - Sæt $y(t)=0$.
+  - Isoler $t$ i ligningen.
+  - Indsæt $t$ i $x(t)$. 
+- *Skæring med y-aksen*
+  - Sæt $x(t)=0$.
+  - Isoler $t$ i ligningen.
+  - Indsæt $t$ i $y(t)$. 
+
+#+attr_reveal: :frag (appear)
+#+begin_quote
+Hvordan kan det nu være?
+#+end_quote
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Tilbage til opgaverne fra før
+
+Bestem t-værdierne samt koordinaterne til skæringspunkterne for hhv x- og y-aksen for de to vektorfunktioner i opgave 1 og 2 fra tidligere.
+* Punkt på banekurve?
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+Hvis en vektorfunktion har den generelle forskrift
+
+$$\vec{r} (t) = \begin{pmatrix} x(t) \\ y(t)\end{pmatrix}$$
+
+og et punkt $P$ har koordinaterne
+
+$$P=(P_x, P_y)$$
+
+kan man undersøge om $P$ ligger på banekurven for $\vec{r}(t)$ vha følgende procedure.
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+- Sæt $P_x = x(t)$ (eller $P_y = x(t)$)
+- Isoler $t$ i ligningen.
+- Indsæt den fundne værdi for $t$ i $y(t)$ ($x(t)$).
+- Hvis y-værdien (x-værdien) stemmer overens med punktets værdi, så ligger punktet på banekurven.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+* Fra vektorfunktion til alm funktion
+
+#+attr_html: :width 30%
+[[./img/vector_despicable_me.jpg]]
+
+** Hvilke er almindelige funktioner?
+
+#+attr_html: :height 500px
+[[file:img/2023-08-28_21-45-54_screenshot.png][file:img/2023-08-28_21-45-54_screenshot.png]]
+
+** Ingen loops etc
+#+reveal_html: <div style="font-size: 60%;">
+For at kunne skrive en vektorfunktion om til en almindelig funktion, må der ikke være loops eller lignende. Hvis dette er opfyldt, kan man gøre følgende:
+
+1. Isoler $t$ i funktionen $x(t)$.
+2. Indsæt udtrykket for $t$ i $y(t)$, som så bliver til $y(x)$, hvilket igen er svaret.
+
+#+reveal_html: </div>
+
+** Eksempler
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_html: :height 500px
+[[./img/drake_meme_til_alm_funktion.png]]
+
+#+attr_reveal: :frag (appear)
+Vi tager det lige på tavlen.
+
+#+reveal_html: </div>
+
+** Eksempler
+
+#+DOWNLOADED: screenshot @ 2023-08-28 22:18:38
+#+attr_html: :height 500px
+[[./img/2023-08-28_22-18-38_screenshot.png][file:img/2023-08-28_22-18-38_screenshot.png]]
+   
+* Fra alm funktion til vektorfunktion
+
+#+attr_html: :width 40%
+[[./img/victor_perkins_despicable_me.jpg]]
+
+** Dette er ganske nemt
+#+reveal_html: <div style="font-size: 60%;">
+Hvis man har en almindelig funktion $f(x)$, så bliver den simpleste vektorfunktion, som ligner den bare
+
+$$\vec{r} (t) = \begin{pmatrix} t \\ f(t) \end{pmatrix}\,.$$
+
+Man skal altså bare indsætte $t$ i stedet for $x(t)$ og $f(t)$ i stedet for $y(t)$ i parameterfremstillingen.
+
+Eksempler:
+
+\begin{align*}
+f(x) = 2x + 3 &\to \vec{r} (t) = \begin{pmatrix} t \\ 2t + 3 \end{pmatrix} \\
+g(x) = x^2 - 3x+4 &\to \vec{s} (t) = \begin{pmatrix} t \\ t^2 - 3t + 4 \end{pmatrix}
+\end{align*}
+
+#+reveal_html: </div>
+** En lille quickie
+1. Hvert makkerpar: Opskriv en *almindelig funktion*.
+2. Byt funktion med det andet makkerpar.
+3. Omskriv jeres nye funktion til en *vektorfunktion*:
+4. Alle: sammenlign resultater og tjek, at det er korrekt.
+
+** Opgave 3 i pdf-filen om rette linjer og cirkler
+#+reveal_html: <div style="font-size: 60%;">
+En ret linje er givet ved vektorfunktionen:
+$$\vec{r} (t) = \begin{pmatrix} t - 1 \\ 3 + 2 \cdot t \end{pmatrix}$$
+
+1. Beregn linjens skæring med y-aksen.
+2. Beregn linjens skæring med x-aksen.
+3. Undersøg om punktet $P = (−3, 7)$ er beliggende på $\vec{r}(t)$.
+4. Omskriv vektorfunktionen til en almindelig funktion af typen $f(x) = a \cdot x + b$.
+#+reveal_html: </div>
+* Cirklen som vektorfunktion
+#+reveal_html: <div style="font-size: 60%;">
+#+begin_quote
+Forstyr ikke mine cirkler!
+#+end_quote
+#+attr_html: :height 350px
+[[./img/arkimedes.png]]
+
+#+reveal_html: </div>
+** Det vigtige
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+attr_html: :width 100%
+[[file:img/2023-08-29_10-19-53_screenshot.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+$$\overrightarrow{OP} (t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} x_0 \\ y_0 \end{pmatrix} + \begin{pmatrix} r \cdot \cos \left( \omega \cdot t + \phi \right) \\ r \cdot \sin \left( \omega \cdot t + \phi \right) \end{pmatrix}$$
+
+hvor
+- $(x_0, y_0)$ er centrumskoordinaterne
+- $r$ er radius
+- $\omega$ er vinkelhastigheden
+- $\phi$ er faseforskydningen.
+
+#+attr_reveal: :frag (appear)
+Vi tager det lige på tavlen, hvordan det er fremkommet.
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Interaktiv cirkel
+#+begin_export html
+<iframe
+width="800"
+height="600"
+src="ggb/cirklen.html"
+title=""
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+#+end_export
+
+** Cirkeltræning
+#+reveal_html: <div style="font-size: 60%;">
+Løs opgave 4 og 5 på side 4 pdf-filen om rette linjer og cirkler.
+#+reveal_html: <div style="font-size: 80%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+*Opgave 4*
+
+Et objekt bevæger sig rundt på periferien af en cirkel givet ved ligningen:
+
+$$(x − 4)^{2} + (y + 2)^{2} = 25\,.$$
+
+med en vinkelhastighed på 3 $s^{-1}$ og en faseforskydning på $- \frac{\pi}{2}$.
+
+1. Omskriv ligningen til en vektorfunktion.
+2. Afbild vektorfunktionen i et koordinatsystem.
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+*Opgave 5*
+
+En cirkelbue er beskrevet ved vektorfunktionen:
+
+$$\vec{r} (t) = \begin{pmatrix} 1- \cos (t) \\ 3 + \sin (t) \end{pmatrix} \,,\, \text{ hvor } 1 \leq t \leq 2\,.$$
+
+1. Beregn buens radius.
+2. Beregn koordinaterne til buens centrum.
+3. Beregn koordinaterne til buens endepunkter.
+4. Beregn koordinaterne til det punkt, hvor $t=1.8$.
+
+Et punkt på buen har koodinaterne $(x,y) = (0.733, y)$.
+
+5. [@5] Beregn punktets tilhørende $t$​-værdi.
+6. Afbild alle oplysninger om cirkelbuen og punktet i et koordinatsystem.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+* Hastighed, fart og acceleration
+#+attr_html: :height 400px
+[[./img/speed.gif]]
+** Fra fysik kender I allerede
+Hastighed
+
+$$v = \frac{\Delta x}{\Delta t}$$
+
+Acceleration
+
+$$a = \frac{\Delta v}{\Delta t}$$
+** Som bliver til
+#+reveal_html: <div style="font-size: 60%;">
+For vektorfunktionen (stedvektoren)
+
+$$\vec{r} (t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix}$$
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+findes *hastighed* som
+
+$$\vec{v}(t) = \begin{pmatrix} \frac{d x(t)}{dt} \\ \frac{d y(t)}{dt} \end{pmatrix} = \begin{pmatrix} x'(t) \\ y'(t) \end{pmatrix}$$
+
+mens *farten* er længden af hastighedsvektoren
+
+$$\left| \vec{v} (t) \right| = \sqrt{\left( x'(t) \right)^2+\left( y'(t) \right)^2}$$
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+*Accelerationen* er da
+
+$$\vec{a}(t) = \frac{d \vec{v}(t)}{dt} = \frac{d^2 \vec{r}(t)}{dt^2} =  \begin{pmatrix} x''(t) \\ y''(t) \end{pmatrix}$$
+
+med *størrelsen* af accelerationen er
+
+$$\left| \vec{a} (t) \right| = \sqrt{\left( x''(t) \right)^2+\left( y''(t) \right)^2}$$
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Differentiation af det skrå kast
+#+reveal_html: <div style="font-size: 50%;">
+Det skrå kast kan beskrives med vektorfunktionen
+
+$$\vec{r}(t) = \begin{pmatrix} v_{0} \cdot \cos (\theta) \cdot t + x_0 \\ - \frac{1}{2} \cdot g \cdot t^2 + v_0 \cdot \sin (\theta) \cdot t + y_0 \end{pmatrix}$$
+
+Hastigheden bliver
+
+$$\vec{v}(t) = \begin{pmatrix} v_0 \cdot \cos (\theta) \\ -g \cdot t + v_0 \cdot \sin (\theta) \end{pmatrix}$$
+
+mens accelerationen er
+
+$$\vec{a}(t) = \begin{pmatrix} 0 \\ - g \end{pmatrix}$$
+
+#+attr_reveal: :frag (appear)
+Den tager vi vist også lige på tavlen.
+#+reveal_html: </div>
+** Differentiation af en cirkelbevægelse
+#+reveal_html: <div style="font-size: 60%;">
+Nu er det jeres tur. Find opgaven på side 5 pdf-filen om rette linjer og cirkler.
+
+#+attr_html: :width 600px
+[[file:img/2023-08-29_15-09-35_screenshot.png]]
+#+reveal_html: </div>
+** Geogebra galore
+#+begin_export html
+<iframe
+width="700"
+height="500"
+src="./ggb/cirklen_med_velo_acc.html"
+title=""
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+#+end_export
+
+* Tangenter
+#+attr_html: :height 500px
+[[./img/i-was-on-a-tangent.jpg]]
+
+** Lodrette og vandrette
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+*Lodrette tangenter*
+
+Optræder, hvor hastighedsvektorer peger lige op eller lige ned, altså hvor
+
+$$x'(t) = 0$$
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+*Vandrette tangenter*
+
+Optræder, hvor hastighedsvektorer peger lige henad, altså hvor
+
+$$y'(t) = 0$$
+#+reveal_html: </div>
+#+reveal_html: </div>
+Fælles for begge
+- Isoler $t$ i en af de viste ligninger.
+- Indsæt den fundne værdi for $t$ i $\vec{r}(t)$ for at finde tangentpunktet.
+- Indsæt den fundne værdi for $t$ i $\vec{r'}(t)$ for at finde tangentvektoren i punktet.
+#+reveal_html: </div>
+
+** Tangentligninger
+#+reveal_html: <div style="font-size: 60%;">
+Så længe tangentvektoren i et punkt ikke er 100% lodret, kan man opskrive en tangentligning på den traditionelle form
+
+$$t: y= a x + b$$
+
+Dette gøres på følgende måde, hvor $t_0$ er den ønskede t-værdi:
+
+1. Først bestemmes hældningen som $a= \frac{y'(t_0)}{x'(t_0)}$
+2. Siden bestemmes $b$ som $b = y(t_0) - a \cdot x(t_0)$
+3. Til sidst opskrives den endelige ligning.
+#+reveal_html: </div>
+   
+** Ornli' sygt eksempel
+
+#+attr_html: :height 400px
+[[./img/tangenter_eksempel.png]]
+
+#+reveal_html: <div style="font-size: 60%;">
+Vi må hellere tage det stille og roligt på tavlen.
+#+reveal_html: </div>
+
+** Så gi'r han nok en lille en
+#+reveal_html: <div style="font-size: 60%;">
+En banekurve er beskrevet ved vektorfunktionen:
+
+$$\vec{r}(t) = \begin{pmatrix} \cos (t) \\ e^{0.1 t}\end{pmatrix}\,,\, \text{hvor } 0 \leq t \leq 2 \pi$$
+
+1. Afbild banekurven.
+2. Beregn koordinaterne til banekurvens skæring med akserne i det anførte interval.
+3. Bestem de værdier af $t$, hvor der er lodrette tangenter.
+4. Bestem koordinaterne til de punkter, hvor der er lodrette tangenter.
+5. Beregn tangenthældningen i de punkter på kurven, hvor kurven skærer y-aksen.
+6. Bestem de værdier af $t$, hvor tangenthældningen er 1. Brug CAS.
+7. Bestem koordinaterne til de punkter, hvor tangenthældningen er 1.
+#+reveal_html: </div>
+* Sammensatte bevægelser
+#+attr_html: :height 400px
+[[./img/cirkler_sammensat_2.gif]]
+** Nyt dokument
+#+attr_html: :height 500px
+[[./02_Sammensatte_bevagelser/02_Sammensatte_bevaegelser.pdf][file:./img/sammensatte_bevaegelser_forside.png]]
+** Stop op og giv svar
+I skal arbejde i makkerpar, hvor I skiftes til at læse op. I skal i fællesskab besvare en række spørgsmål.
+
+Find nærmere vejledning på side 1 og 2 i det nye dokument.
+** Duvals fire rum
+#+attr_html: :height 500px
+[[./img/duval.png]]
+** Duvalopgave 1
+#+attr_html: :height 500px
+[[./img/duvalopgave_1.png][file:./img/duvalopgave_1.png]]
+** Duvalopgave 2
+#+attr_html: :height 500px
+[[./img/duvalopgave_2.png][file:./img/duvalopgave_2.png]]
+** Duvalopgave 3
+#+attr_html: :height 500px
+[[./img/duvalopgave_3.png][file:./img/duvalopgave_3.png]]
+** Bonusopgave
+Hvad er den vildeste sammensatte bevægelse, I kan finde på?
+
+Åbn geogebra og eksperimenter på livet løs.
+* Afstand mellem banekurve og punkt
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/afstand_mellem_banekurve_og_punkt.png][file:./img/afstand_mellem_banekurve_og_punkt.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+Afstand mellem banekurven for vektorfunktionen
+
+$$\vec{r}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix}$$
+
+og punktet
+
+$$P_0 = (x_0 , y_0)$$
+
+kan bestemmes på følgende måde
+
+$$\boxed{d(t) = \sqrt{\left( x(t) - x_0 \right)^2+\left( y(t)-y_0 \right)^2}}$$
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Huh???
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+begin_export html
+<iframe
+width="600"
+height="400"
+src="./ggb/Afstand_mellem_banekurve_og_punkt.html"
+title=""
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+#+end_export
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+Ja, det er bare formlen for afstanden mellem to punkter. :)
+
+#+attr_reveal: :frag (appear)
+Men, hvor er afstanden så *mindst*?
+#+attr_reveal: :frag (appear)
+Når $d'(t) = 0$.
+#+attr_reveal: :frag (appear)
+Vi tager det lige på tavlen.
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+** Opgave
+#+reveal_html: <div style="font-size: 60%;">
+Vektorfunktionen:
+
+$$\vec{r}(t) = \begin{pmatrix} e^t \\ t^2 + 2 \end{pmatrix} \,,\, \text{hvor } -2 \leq t \leq 2.$$
+
+1. Afbild banekurven for $\vec{r}(t)$ i intervallet $-2 \leq t \leq 2$ i et koordinatsystem.
+2. Beregn koordinaterne til de punkter, hvor $t=-2$, $t=1$ og $t=2$.
+3. Beregn afstanden mellem punkterne, hvor $t=-2$ og $t=2$.
+4. Opstil en funktionsforskrift $d(t)$ for afstanden mellem banekurven og /origo/ (0,0).
+5. Afbild grafen for $d(t)$.
+6. Beregn afstanden mellem $\vec{r}(t)$ og origo, når $t=2$.
+7. Beregn den mindste afstand mellem banekurven for $\vec{r}(t)$ og origo. Brug CAS.
+#+reveal_html: </div>
+   
+* Area 51
+#+attr_html: :height 500px
+[[./img/area_51.png]]
+
+** Arealer
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/areal_under_kurve.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+Arealet $T$ mellem x-aksen og de lodrette linjer ved $x(t_1)$ og $x(t_2)$ samt banekurven for vektorfunktionen
+
+$$\vec{r}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix}$$
+
+er givet som
+
+$$\boxed{T= \int_{t_1}^{t_2} y(t) \cdot x'(t) \, dt\,,}$$
+
+hvor
+
+$$x(t_1) < x(t_2)$$
+
+og
+
+$$y(t)\cdot x'(t) > 0$$
+
+i intervallet
+
+$$[t_1;t_2]$$
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** But why??
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+*Almindelig integration*
+
+$$T=\int_{x_1}^{x_2} f(x) \, dx$$
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+*Integration med vektorfunktioner*
+
+- $y(t)$ beskriver højden over x-aksen (fuldstændig ligesom $f(x)$)
+
+  $$T=\int_{x_1}^{x_2} y(t) \,dx$$
+
+- $\frac{d x}{dt} = x'(t) \to dx = x'(t) \cdot dt$
+
+  $$T=\int_{x_1}^{x_2} y(t) \cdot x'(t) \, dt$$
+- Til sidst skal grænserne ændres, så $x(t_1) = x_1$ og $x(t_2) = x_2$
+
+  $$T=\int_{t_1}^{t_2} y(t) \cdot x'(t) \, dt$$
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+
+#+reveal_html: </div>
+
+** Eksempel
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+#+begin_export html
+<iframe
+width="600"
+height="400"
+src="./ggb/areal_under_kurve.html"
+title=""
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+#+end_export
+
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+- Vi har
+$$\vec{r}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} t^2 \\ t^3-3t \end{pmatrix}$$
+
+- Vi skal finde arealet
+  $$T=\int_{t_1}^{t_2} y(t) \cdot x'(t) \, dt$$
+
+- Finder først grænserne $t_1$ og $t_2$
+  \begin{align*}
+  y(t) &= 0 \\
+  t^3-3t &= 0 \\
+  \left( t^2-3 \right)\cdot t &= 0 \\
+  t &= -\sqrt{3} \lor 0 \lor \sqrt{3}
+  \end{align*}
+- Fra geogebra ses det at $t_1= 0$ og $t_2 = -\sqrt{3}$
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Eksempel
+#+reveal_html: <div style="font-size: 50%;">
+- Nu findes $x'(t)$
+  $$x'(t) = 2t$$
+- Integralet opskrives
+  \begin{align*}
+  T &= \int^{-\sqrt{3}}_0 \left( t^3-3t \right)\cdot 2t \,dt \\
+  T &= 2\cdot\int^{-\sqrt{3}}_0 t^4-3t^2  \,dt \\
+  T &= 2\cdot \left[ \frac{t^5}{5}-t^3 \right]^{-\sqrt{3}}_0 \\
+  T &= 2\cdot \left(\frac{\left(- \sqrt{3} \right)^5}{5} - \left(- \sqrt{3} \right)^3 \right)  - \left(\frac{0^5}{5}-0^3\right)   \\
+  T &= 4.16
+  \end{align*}
+#+reveal_html: </div>
+
+  
+** Arbejd, arbejd
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/opgave_6_19.png][file:./img/opgave_6_19.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+På figuren ses banekurven for vektorfunktionen:
+$$\vec{r}(t) = \begin{pmatrix} \cos (t) \\ e^{\sin (t)} \end{pmatrix} \,, \, \text{hvor } 0 \leq t \leq 2 \pi$$
+
+1. Beregn koordinaterne til banekurvens skæringspunkter med y-aksen.
+2. Bestem vektorfunktionens differentialkvotient, $\vec{r'}(t)$.
+3. Beregn koordinaterne til tangentvektoren, når $t=1.75$.
+4. Beregn koordinaterne til de punkter, hvor der er lodrette og vandrette tangenter.
+5. Vis, at retningsvektoren $\vec{r}(t)$ og tangentvektoren $\vec{r'}(t)$ står vinkelret på hinanden, når $t=\frac{\pi}{2}$.
+6. Beregn arealet af det lukkede område, som banekurven danner.
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+* Are we there yet?
+[[./img/are_we_there_yet.gif]]
+
+#+reveal_html: <div style="font-size: 60%;">
+#+attr_reveal: :frag (appear)
+Eller, hvordan finder vi ud af, hvor langt vi har kørt?
+#+reveal_html: </div>
+** Kurvelængde
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/kurvelaengde.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+For vektorfunktionen
+
+$$\vec{r}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix}$$
+
+kan man finde længden *langs* banekurven vha:
+
+$$\boxed{L = \int_{t_1}^{t_2} \sqrt{x'(t)^2+y'(t)^2} \,dt}$$
+
+#+attr_reveal: :frag (appear)
+#+begin_quote
+Tænk: Længde er det samme som farten ganget med tiden, og det gør vi så bare rigtig mange gange.
+
+\begin{align*}
+L &= \sum \Delta L = \sum v_i \cdot \Delta t = \sum \sqrt{x_i'^2 + y_i'^2} \cdot \Delta t \\
+L &= \int_{t_1}^{t_2} \sqrt{x'(t)^2+y'(t)^2}\,dt
+\end{align*}
+#+end_quote
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Opgave 6.22
+#+reveal_html: <div style="font-size: 60%;">
+
+En vektorfunktion:
+
+$$\vec{r}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = \begin{pmatrix} t + 1 \\ t^2 + 1 \end{pmatrix}$$
+
+1. Afbild banekurven i et koordinatsystem.
+2. Beregn arealet mellem banekurven og x-aksen, som er afgrænset af linjerne $x = 1$ og $x = 2$.
+3. Find vektorfunktionens y-funktion, og beregn $\int_1^2 y\,dx$.
+
+Længden af et stykke af en banekurve kan beregnes ved formlen:
+
+$$L = \int_{t_1}^{t_2} \sqrt{x'(t)^2 + y'(t)^2 } dt \text{, hvor } t_2 > t_1$$
+
+4. [@4] Beregn længden af det stykke af banekurven, som er afgrænset af linjerne $x = 1$ og $x = 2$.
+
+#+reveal_html: </div>
+
+* Skæring mellem banekurver
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/skaeringspunkter_eksempel.png][file:./img/skaeringspunkter_eksempel.png]]
+
+\begin{align*}
+\vec{p}(t_1) &=\begin{pmatrix} t_1^2-4 \\ e^{t_1+1} \end{pmatrix} \\
+\vec{q}(t_2) &=\begin{pmatrix} t_2-2 \\ e^{t_2} \end{pmatrix} 
+\end{align*}
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+- $\vec{p}(t_1)$ er den røde
+- $\vec{q}(t_2)$ er den blå
+- Læg mærke til, at de to vektorfunktioner har hver deres parameter.
+
+#+begin_quote
+Hvor skærer de to banekurver hinanden?
+#+end_quote
+
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+** Opstilling af ligningssystem
+#+reveal_html: <div style="font-size: 60%;">
+Opstil 2 ligninger med 2 ubekendte.
+
+\begin{align*}
+\vec{p}(t_1) &= \vec{q}(t_2) \\
+\begin{pmatrix} t_1^2-4 \\ e^{t_1+1} \end{pmatrix} &= \begin{pmatrix} t_2-2 \\ e^{t_2} \end{pmatrix}\\
+t_1^2-4 &= t_2-2  \\
+t_1^2-2 &= t_2 \quad \text{ ligning  I} \\
+e^{t_1 +1} &= e^{t_2} \\
+t_1 + 1 &= t_2 \quad \text{ ligning II}
+\end{align*}
+#+reveal_html: </div>
+** Løsning af ligningssystem
+#+reveal_html: <div style="font-size: 60%;">
+\begin{align*}
+t_1^2-2 &= t_2 \quad \text{ ligning  I} \\
+t_1 + 1 &= t_2 \quad \text{ ligning II}
+\end{align*}
+- Indsæt $t_2$ fra ligning II i ligning I
+  \begin{align*}
+  t_1^2-2 &= t_1 + 1 \\
+  t_1^2 - t_1 -3 &= 0
+  \end{align*}
+- 2.gradsligning som løses til
+  $$t_1 =-1.303\lor 2.303$$
+#+reveal_html: </div>
+** Indsæt i vektorfunktion
+#+reveal_html: <div style="font-size: 50%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/skaeringspunkter_eksempel.png][file:./img/skaeringspunkter_eksempel.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+\begin{align*}
+\vec{p}(-1.303) &= \begin{pmatrix} \left( -1.303 \right)^2-4 \\ e^{\left( -1.303 \right)+1} \end{pmatrix} = \begin{pmatrix} -2.302 \\ 0.739 \end{pmatrix} \\
+\vec{p}(2.303) &= \begin{pmatrix} 2.303^2-4 \\ e^{2.303 +1} \end{pmatrix} = \begin{pmatrix} 1.304 \\ 27.194 \end{pmatrix}
+\end{align*}
+#+reveal_html: </div>
+#+reveal_html: </div>
+#+attr_reveal: :frag (appear)
+#+begin_quote
+Men kolliderer de to vektorfunktioner på samme tid?
+#+end_quote
+#+attr_reveal: :frag (appear)
+- Tjek, ved at indsætte $t_1$​-værdierne i $\vec{q}(t_2)$ og se, om koordinaterne bliver det samme som for $\vec{p}(t_1)$.
+- (Det gør de ikke).
+#+reveal_html: </div>
+
+* Gammel vin på nye flasker
+#+reveal_html: <div style="font-size: 60%;">
+#+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
+#+reveal_html: <div> <!-- left -->
+[[./img/gammel_vin.jpg]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+Eller i hvert fald gamle eksamensopgaver til nye elever.
+
+#+attr_html: :height 300px
+[[./03_Gamle_eksamensopgaver/03_Gamle_eksamensopgaver.pdf][file:./img/gamle_eksamensopgaver.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+#+reveal_html: </div>
+
+* Repetition
+#+attr_html: :height 500px
+[[./99_Repetition_af_vektorfunktioner/99_Repetition_af_vektorfunktioner.pdf][file:./img/repetitionsforside.png]]
+* TIVOLI!
+[[./img/tivoli.jpg]]
+
+** Projekt
+#+attr_html: :height 500px
+[[./Projekt_Tivoli_vektorfunktioner.pdf][file:./img/projekt_tivoli.png]]
