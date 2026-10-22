@@ -65,6 +65,33 @@ y &= - \frac{1}{2} \cdot g \cdot t^2 + v_{0y}\cdot t + y_0 \\
 Lad os se, hvordan det ser ud i geogebra.
 #+reveal_html: </div>
 
+** Top nice geogebrafil
+#+reveal_html: <div style="font-size: 80%;">
+Skriv følgende i inputfeltet
+
+#+begin_src 
+t_{min} = 0
+t_{maks} = 10
+α = skyder(0,360)    
+v_0 = skyder(0,20)
+x_0 = skyder(-5,5)
+y_0 = skyder(-5,5)
+t = skyder(t_{min},t_{maks})
+r = kurve(v_0*cos(α°)*u+x_0,-1/2*9.82*u^2+v_0*sin(α°)*u+y_0,u,t_{min},t)
+P= r(t)
+s=vektor(P)
+tegnspor=tjekboks("Vis banekurve",{r})
+# Nice to have
+v = vektor(P,P+r'(t))
+a = vektor(P,P+r''(t))
+visv=tjekboks("Vis v",{v})
+visa=tjekboks("Vis a",{a})
+#+end_src
+
+- Tryk =alt+a= for α
+- Tryk =alt+o= for °
+#+reveal_html: </div>
+
 * Den rette linje
 #+reveal_html: <div style="font-size: 60%;">
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
