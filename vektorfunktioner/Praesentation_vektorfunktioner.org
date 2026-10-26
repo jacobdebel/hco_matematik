@@ -890,9 +890,6 @@ Eller i hvert fald gamle eksamensopgaver til nye elever.
 * Repetition
 #+attr_html: :height 500px
 [[./99_Repetition_af_vektorfunktioner/99_Repetition_af_vektorfunktioner.pdf][file:./img/repetitionsforside.png]]
-* TIVOLI!
-[[./img/tivoli.jpg]]
-
-** Projekt
+* Projekt
 #+attr_html: :height 500px
-[[./Projekt_Tivoli_vektorfunktioner.pdf][file:./img/projekt_tivoli.png]]
+[[file:Projekt_forlystelser_vektorfunktioner.pdf][file:img/projekt_forlystelser_forside.png]]
