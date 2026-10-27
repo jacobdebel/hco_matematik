@@ -1,0 +1,84 @@
+% Intended LaTeX compiler: lualatex
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[danish]{babel}
+\usepackage[a4paper,margin=1.8cm]{geometry}
+\usepackage{amsmath,array,pgffor}
+\pagestyle{empty}
+\renewcommand{\arraystretch}{2.2}
+\newcommand{\kort}[2]{\fbox{\parbox[c][1.5cm][c]{0.45\textwidth}{\centering\small\textbf{#1}\quad #2}}}
+\newcommand{\kopier}[3]{\foreach \i in {1,...,#1}{\noindent\kort{#2}{#3}\hfill\kort{#2}{#3}\par\vspace{2mm}}}
+\setlength{\parindent}{0em}
+\parskip 1.5ex
+\date{}
+\title{Facit (lærer)}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Facit (lærer)},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={},
+ pdflang={Danish}}
+\begin{document}
+
+\maketitle
+\section*{Udgave 1: kort til hver linje}
+\label{sec:orgb93ca6c}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Linje & Ark A & Ark B & Ark C & D, p.1 & D, p.2\\
+\hline
+1 & K6 & K6 & K6 & K12 & K13\\
+2 & K1 & K1 & K1 & K8 & K14\\
+3 & K7 & K7 & K7 & K2 & K16\\
+4 & K3 & K4 & K5 &  & \\
+5 & K8 & K8 & K8 &  & \\
+6 & K2 & K2 & K2 &  & \\
+7 & K7 & K7 & K7 &  & \\
+\hline
+\end{tabular}
+\end{center}
+
+Overflødige kort på ark A-C: K9, K10 (falsk), K11 og K12-K16. K9 kan bruges i en alternativ version i stedet for K8 og K2, hvilket er et godt diskussionsspørgsmål.
+\section*{Udgave 2: rigtig rækkefølge og kort}
+\label{sec:org924371b}
+
+Bogstaverne står i den rækkefølge, de skal stå i beviset.
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Ark & Rækkefølge (1 til 7) & Kort i den rækkefølge\\
+\hline
+A & D, B, G, E, A, F, C & K6, K1, K7, K3, K8, K2, K7\\
+B & C, E, A, G, D, B, F & K6, K1, K7, K4, K8, K2, K7\\
+C & B, F, D, A, G, C, E & K6, K1, K7, K5, K8, K2, K7\\
+D, påstand 1 & B, C, A & K12, K8, K2\\
+D, påstand 2 & C, A, B & K13, K14, K16\\
+\hline
+\end{tabular}
+\end{center}
+\section*{Svar til udvalgte opgaver}
+\label{sec:orgf981ba6}
+\begin{itemize}
+\item Ark A, opg. 1: \(\log(100000)=5=2+3\).
+\item Ark A, opg. 2: Er \(a=-10\), findes \(\log(a)\) ikke, så linje 1 går galt.
+\item Ark A, opg. 3: \(\log(5)\approx 0{,}70\), men \(\log(2)+\log(3)\approx 0{,}78\). Potensreglen virker for produkter af potenser, ikke for summer.
+\item Ark B, opg. 3: Fx \(\log(1000/10)=2\), men \(\log(1000)/\log(10)=3\).
+\item Ark C, opg. 2: \(r=\frac12\), fordi \(\sqrt a=a^{1/2}\).
+\item Ark C, opg. 3: Fx \(a=10\), \(r=2\): \(\log(10^2)=2\), men \((\log 10)^2=1\).
+\item Ark D, opg. 2: \(\log(abc)=\log((ab)\cdot c)=\log(ab)+\log(c)=\log(a)+\log(b)+\log(c)\).
+\item Ark D, opg. 3: \(\ln(a\cdot b)=\ln(a)+\ln(b)\). Grundtallet bliver \(e\), og K1, K2, K3 og K8 ændres, så \(10\) erstattes af \(e\).
+\end{itemize}
+\end{document}

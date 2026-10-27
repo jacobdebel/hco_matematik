@@ -2623,7 +2623,28 @@ I skal løse følgende ligninger vha. *Parsammenligning*
 \end{align*}
 #+reveal_html: </div>
 
-* En hel særlig eksponential- og logaritmefunktion
+** Beviser for logaritmeregnereglerne
+#+reveal_html: <div style="display: grid; grid-template-columns: 50% auto;">
+#+reveal_html: <div> <!-- left -->
+Simpel
+
+#+attr_html: :width 400px
+[[file:Logaritmeregneregler/arbejdsark_ordnet.pdf][file:img/beviser_logaritmer_simpel.png]]
+#+reveal_html: </div>
+
+#+reveal_html: <div> <!-- right -->
+Udfordrende
+
+#+attr_html: :width 400px
+[[file:Logaritmeregneregler/arbejdsark_blandet.pdf][file:img/beviser_logaritmer_udfordrende.png]]
+#+reveal_html: </div>
+#+reveal_html: </div>
+
+** Jim Larsen McLean FTW
+#+begin_export html
+<iframe width="2473" height="1156" src="https://www.youtube.com/embed/zOuW37V8zCw" title="Matematik: Logaritmeregneregler" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+#+end_export
+* Helt særlige eksponential- og logaritmefunktioner
 \begin{align*}
 f(x) &= 2.71828182846 \dots^x \\
 f^{-1}(x) &= \ln(x)
@@ -2674,7 +2695,7 @@ F(x) &= \int e^x \,dx = e^x (+k)
 #+reveal_html: <div style="display: grid; grid-template-columns: auto auto;">
 #+reveal_html: <div>
 #+begin_quote
-*Definition 3 (kapitel 3)*
+*Definition*
 
 Den naturlige logaritme til et positivt tal $a$ er den eksponent $b$, som grundtallet $e$ skal opløftes til for at give tallet $a$:
 

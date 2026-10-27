@@ -1,0 +1,168 @@
+% Intended LaTeX compiler: lualatex
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[danish]{babel}
+\usepackage[a4paper,margin=1.8cm]{geometry}
+\usepackage{amsmath,array,pgffor}
+\pagestyle{empty}
+\renewcommand{\arraystretch}{2.2}
+\newcommand{\kort}[2]{\fbox{\parbox[c][1.5cm][c]{0.45\textwidth}{\centering\small\textbf{#1}\quad #2}}}
+\newcommand{\kopier}[3]{\foreach \i in {1,...,#1}{\noindent\kort{#2}{#3}\hfill\kort{#2}{#3}\par\vspace{2mm}}}
+\setlength{\parindent}{0em}
+\parskip 1.5ex
+\date{}
+\title{Logaritmeregneregler: find rækkefølge og begrundelse (Udfordrende)}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Logaritmeregneregler: find rækkefølge og begrundelse (Udfordrende)},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={},
+ pdflang={Danish}}
+\begin{document}
+
+\maketitle
+Linjerne i beviset er rigtige, men står i blandet rækkefølge.
+\begin{enumerate}
+\item Find ud af, i hvilken rækkefølge linjerne skal stå. Skriv deres plads (1, 2, 3, \ldots{}) i kolonnen "Plads".
+\item Find et kort til hver linje, og skriv kortets nummer i kolonnen "Kort nr.".
+\end{enumerate}
+
+Nogle kort bruges flere gange, og nogle slet ikke.
+
+\newpage
+\section*{Ark A: Produktreglen}
+\label{sec:orga873b1a}
+
+\emph{Påstand:} For alle \(a,b>0\) gælder \(\log(a\cdot b)=\log(a)+\log(b)\).
+
+\begin{center}
+\begin{tabular}{|c|l|c|p{2.5cm}|}
+\hline
+Bog & Formellinje & Plads & Kort nr.\\
+\hline
+A & \(\log(a\cdot b)=\log(10^{x+y})\) &  & \\
+B & Så er \(a=10^x\) og \(b=10^y\) &  & \\
+C & \(\log(a\cdot b)=\log(a)+\log(b)\) &  & \\
+D & Lad \(x=\log(a)\) og \(y=\log(b)\) &  & \\
+E & \(a\cdot b=10^{x+y}\) &  & \\
+F & \(\log(a\cdot b)=x+y\) &  & \\
+G & \(a\cdot b=10^x\cdot 10^y\) &  & \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Opgaver}
+\begin{enumerate}
+\item Test reglen med \(a=100\) og \(b=1000\). Regn begge sider ud uden lommeregner.
+\item Hvorfor kræver beviset, at \(a>0\) og \(b>0\)? Hvilken linje går galt, hvis \(a=-10\)?
+\item Mads skriver \(\log(2+3)=\log(2)+\log(3)\). Vis med tal, at det er forkert. Forklar, hvorfor beviset ikke virker for en sum.
+\item Skriv med egne ord: Hvad er den vigtigste idé i beviset?
+\end{enumerate}
+
+\newpage
+\section*{Ark B: Kvotientreglen}
+\label{sec:org0abf818}
+
+\emph{Påstand:} For alle \(a,b>0\) gælder \(\log\left(\dfrac ab\right)=\log(a)-\log(b)\).
+
+\begin{center}
+\begin{tabular}{|c|l|c|p{2.5cm}|}
+\hline
+Bog & Formellinje & Plads & Kort nr.\\
+\hline
+A & \(\dfrac ab=\dfrac{10^x}{10^y}\) &  & \\
+B & \(\log\left(\dfrac ab\right)=x-y\) &  & \\
+C & Lad \(x=\log(a)\) og \(y=\log(b)\) &  & \\
+D & \(\log\left(\dfrac ab\right)=\log(10^{x-y})\) &  & \\
+E & Så er \(a=10^x\) og \(b=10^y\) &  & \\
+F & \(\log\left(\dfrac ab\right)=\log(a)-\log(b)\) &  & \\
+G & \(\dfrac ab=10^{x-y}\) &  & \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Opgaver}
+\begin{enumerate}
+\item Sammenlign med ark A. Hvilke linjer er næsten ens, og hvilke kort er ændret?
+\item Test reglen med \(a=1000\) og \(b=10\).
+\item Hvad er forskellen på \(\log\left(\frac ab\right)\) og \(\frac{\log(a)}{\log(b)}\)? Vis med tal, at de ikke er ens.
+\end{enumerate}
+
+\newpage
+\section*{Ark C: Potensreglen}
+\label{sec:org989f878}
+
+\emph{Påstand:} For alle \(a>0\) og alle tal \(r\) gælder \(\log(a^r)=r\cdot\log(a)\).
+
+\begin{center}
+\begin{tabular}{|c|l|c|p{2.5cm}|}
+\hline
+Bog & Formellinje & Plads & Kort nr.\\
+\hline
+A & \(a^r=10^{r\cdot x}\) &  & \\
+B & Lad \(x=\log(a)\) &  & \\
+C & \(\log(a^r)=r\cdot x\) &  & \\
+D & \(a^r=(10^x)^r\) &  & \\
+E & \(\log(a^r)=r\cdot\log(a)\) &  & \\
+F & Så er \(a=10^x\) &  & \\
+G & \(\log(a^r)=\log(10^{r\cdot x})\) &  & \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Opgaver}
+\begin{enumerate}
+\item Test reglen med \(a=10\), \(r=3\) og med \(a=100\), \(r=\frac12\).
+\item Brug reglen til at vise, at \(\log(\sqrt a)=\frac12\log(a)\). Hvad er \(r\) her?
+\item Hvorfor er \((\log(a))^r\) \emph{ikke} det samme som \(\log(a^r)\)? Find et taleksempel.
+\end{enumerate}
+
+\newpage
+\section*{Ark D (ekstra): Følgeregler}
+\label{sec:orgf3ccabc}
+
+\emph{Påstand 1:} \(\log(1)=0\)
+
+\begin{center}
+\begin{tabular}{|c|l|c|p{2.5cm}|}
+\hline
+Bog & Formellinje & Plads & Kort nr.\\
+\hline
+A & \(\log(1)=0\) &  & \\
+B & \(1=10^0\) &  & \\
+C & \(\log(1)=\log(10^0)\) &  & \\
+\hline
+\end{tabular}
+\end{center}
+
+\emph{Påstand 2:} For \(a>0\) gælder \(\log\left(\dfrac1a\right)=-\log(a)\).
+
+\begin{center}
+\begin{tabular}{|c|l|c|p{2.5cm}|}
+\hline
+Bog & Formellinje & Plads & Kort nr.\\
+\hline
+A & \(\log\left(\dfrac1a\right)=0-\log(a)\) &  & \\
+B & \(\log\left(\dfrac1a\right)=-\log(a)\) &  & \\
+C & \(\log\left(\dfrac1a\right)=\log(1)-\log(a)\) &  & \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Opgaver}
+\begin{enumerate}
+\item Hvilke tidligere beviste regler bruges?
+\item Bevis, at \(\log(a\cdot b\cdot c)=\log(a)+\log(b)+\log(c)\) ved at bruge produktreglen to gange.
+\item Skriv \(\ln\)-versionen af produktreglen. Hvilket grundtal og hvilke kort skal ændres?
+\end{enumerate}
+\end{document}

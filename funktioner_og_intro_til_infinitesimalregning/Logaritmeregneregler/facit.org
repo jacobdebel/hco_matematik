@@ -1,0 +1,44 @@
+#+SETUPFILE: header.org
+#+TITLE: Facit (lærer)
+
+* Udgave 1: kort til hver linje
+
+#+ATTR_LATEX: :environment tabular :align |c|c|c|c|c|c|
+|-------+-------+-------+-------+--------+--------|
+| Linje | Ark A | Ark B | Ark C | D, p.1 | D, p.2 |
+|-------+-------+-------+-------+--------+--------|
+|     1 | K6    | K6    | K6    | K12    | K13    |
+|     2 | K1    | K1    | K1    | K8     | K14    |
+|     3 | K7    | K7    | K7    | K2     | K16    |
+|     4 | K3    | K4    | K5    |        |        |
+|     5 | K8    | K8    | K8    |        |        |
+|     6 | K2    | K2    | K2    |        |        |
+|     7 | K7    | K7    | K7    |        |        |
+|-------+-------+-------+-------+--------+--------|
+
+Overflødige kort på ark A-C: K9, K10 (falsk), K11 og K12-K16. K9 kan bruges i en alternativ version i stedet for K8 og K2, hvilket er et godt diskussionsspørgsmål.
+
+* Udgave 2: rigtig rækkefølge og kort
+
+Bogstaverne står i den rækkefølge, de skal stå i beviset.
+
+#+ATTR_LATEX: :environment tabular :align |l|l|l|
+|--------------------+----------------------+---------------------------|
+| Ark                | Rækkefølge (1 til 7) | Kort i den rækkefølge     |
+|--------------------+----------------------+---------------------------|
+| A                  | D, B, G, E, A, F, C  | K6, K1, K7, K3, K8, K2, K7|
+| B                  | C, E, A, G, D, B, F  | K6, K1, K7, K4, K8, K2, K7|
+| C                  | B, F, D, A, G, C, E  | K6, K1, K7, K5, K8, K2, K7|
+| D, påstand 1       | B, C, A              | K12, K8, K2               |
+| D, påstand 2       | C, A, B              | K13, K14, K16             |
+|--------------------+----------------------+---------------------------|
+
+* Svar til udvalgte opgaver
+- Ark A, opg. 1: \(\log(100000)=5=2+3\).
+- Ark A, opg. 2: Er \(a=-10\), findes \(\log(a)\) ikke, så linje 1 går galt.
+- Ark A, opg. 3: \(\log(5)\approx 0{,}70\), men \(\log(2)+\log(3)\approx 0{,}78\). Potensreglen virker for produkter af potenser, ikke for summer.
+- Ark B, opg. 3: Fx \(\log(1000/10)=2\), men \(\log(1000)/\log(10)=3\).
+- Ark C, opg. 2: \(r=\frac12\), fordi \(\sqrt a=a^{1/2}\).
+- Ark C, opg. 3: Fx \(a=10\), \(r=2\): \(\log(10^2)=2\), men \((\log 10)^2=1\).
+- Ark D, opg. 2: \(\log(abc)=\log((ab)\cdot c)=\log(ab)+\log(c)=\log(a)+\log(b)+\log(c)\).
+- Ark D, opg. 3: \(\ln(a\cdot b)=\ln(a)+\ln(b)\). Grundtallet bliver \(e\), og K1, K2, K3 og K8 ændres, så \(10\) erstattes af \(e\).

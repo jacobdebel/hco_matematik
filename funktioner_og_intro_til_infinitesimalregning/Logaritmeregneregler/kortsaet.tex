@@ -1,0 +1,52 @@
+% Intended LaTeX compiler: lualatex
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[danish]{babel}
+\usepackage[a4paper,margin=1.8cm]{geometry}
+\usepackage{amsmath,array,pgffor}
+\pagestyle{empty}
+\renewcommand{\arraystretch}{2.2}
+\newcommand{\kort}[2]{\fbox{\parbox[c][1.5cm][c]{0.45\textwidth}{\centering\small\textbf{#1}\quad #2}}}
+\newcommand{\kopier}[3]{\foreach \i in {1,...,#1}{\noindent\kort{#2}{#3}\hfill\kort{#2}{#3}\par\vspace{2mm}}}
+\setlength{\parindent}{0em}
+\parskip 1.5ex
+\date{}
+\title{Begrundelseskort til logaritmebeviser}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={Begrundelseskort til logaritmebeviser},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={},
+ pdflang={Danish}}
+\begin{document}
+
+\maketitle
+Print på karton og klip langs rammerne. Hvert kort findes i mange kopier. Grupperne må bruge et kort så mange gange, de har brug for, og nogle kort skal slet ikke bruges.
+
+\kopier{7}{K1}{Definition af log: \(10^{\log(a)}=a\) for \(a>0\)}
+\kopier{7}{K2}{Definition af log: \(\log(10^u)=u\)}
+\kopier{7}{K3}{Potensregel: \(10^x\cdot 10^y=10^{x+y}\)}
+\kopier{7}{K4}{Potensregel: \(\dfrac{10^x}{10^y}=10^{x-y}\)}
+\kopier{7}{K5}{Potensregel: \((10^x)^r=10^{r\cdot x}\)}
+\kopier{7}{K6}{Vi giver logaritmerne navne (indfører variable)}
+\kopier{7}{K7}{Indsættelse: vi erstatter noget med noget, der er lig med det}
+\kopier{7}{K8}{Vi tager \(\log\) på begge sider af lighedstegnet}
+\kopier{7}{K9}{\(10^u=10^v\) giver \(u=v\) (samme grundtal, samme eksponent)}
+\kopier{7}{K10}{\(\log(a+b)=\log(a)+\log(b)\)}
+\kopier{7}{K11}{Kvadratsætning: \((a+b)^2=a^2+2ab+b^2\)}
+\kopier{7}{K12}{\(a^0=1\) for \(a\neq 0\)}
+\kopier{7}{K13}{Kvotientreglen (bevist på ark B)}
+\kopier{7}{K14}{Påstand 1 på ark D: \(\log(1)=0\)}
+\kopier{7}{K15}{Produktreglen (bevist på ark A)}
+\kopier{7}{K16}{Regning: \(0-u=-u\)}
+\end{document}

@@ -1,0 +1,108 @@
+#+SETUPFILE: header.org
+#+TITLE: Logaritmeregneregler: find rækkefølge og begrundelse (Udfordrende)
+
+Linjerne i beviset er rigtige, men står i blandet rækkefølge.
+1. Find ud af, i hvilken rækkefølge linjerne skal stå. Skriv deres plads (1, 2, 3, ...) i kolonnen "Plads".
+2. Find et kort til hver linje, og skriv kortets nummer i kolonnen "Kort nr.".
+
+Nogle kort bruges flere gange, og nogle slet ikke.
+
+\newpage
+* Ark A: Produktreglen
+
+/Påstand:/ For alle \(a,b>0\) gælder \(\log(a\cdot b)=\log(a)+\log(b)\).
+
+#+ATTR_LATEX: :environment tabular :align |c|l|c|p{2.5cm}|
+|-----+------------------------------------+-------+----------|
+| Bog | Formellinje                        | Plads | Kort nr. |
+|-----+------------------------------------+-------+----------|
+| A   | \(\log(a\cdot b)=\log(10^{x+y})\)  |       |          |
+| B   | Så er \(a=10^x\) og \(b=10^y\)     |       |          |
+| C   | \(\log(a\cdot b)=\log(a)+\log(b)\) |       |          |
+| D   | Lad \(x=\log(a)\) og \(y=\log(b)\) |       |          |
+| E   | \(a\cdot b=10^{x+y}\)              |       |          |
+| F   | \(\log(a\cdot b)=x+y\)             |       |          |
+| G   | \(a\cdot b=10^x\cdot 10^y\)        |       |          |
+|-----+------------------------------------+-------+----------|
+
+*Opgaver*
+1. Test reglen med \(a=100\) og \(b=1000\). Regn begge sider ud uden lommeregner.
+2. Hvorfor kræver beviset, at \(a>0\) og \(b>0\)? Hvilken linje går galt, hvis \(a=-10\)?
+3. Mads skriver \(\log(2+3)=\log(2)+\log(3)\). Vis med tal, at det er forkert. Forklar, hvorfor beviset ikke virker for en sum.
+4. Skriv med egne ord: Hvad er den vigtigste idé i beviset?
+
+\newpage
+* Ark B: Kvotientreglen
+
+/Påstand:/ For alle \(a,b>0\) gælder \(\log\left(\dfrac ab\right)=\log(a)-\log(b)\).
+
+#+ATTR_LATEX: :environment tabular :align |c|l|c|p{2.5cm}|
+|-----+-----------------------------------------------+-------+----------|
+| Bog | Formellinje                                   | Plads | Kort nr. |
+|-----+-----------------------------------------------+-------+----------|
+| A   | \(\dfrac ab=\dfrac{10^x}{10^y}\)              |       |          |
+| B   | \(\log\left(\dfrac ab\right)=x-y\)            |       |          |
+| C   | Lad \(x=\log(a)\) og \(y=\log(b)\)            |       |          |
+| D   | \(\log\left(\dfrac ab\right)=\log(10^{x-y})\) |       |          |
+| E   | Så er \(a=10^x\) og \(b=10^y\)                |       |          |
+| F   | \(\log\left(\dfrac ab\right)=\log(a)-\log(b)\)|       |          |
+| G   | \(\dfrac ab=10^{x-y}\)                        |       |          |
+|-----+-----------------------------------------------+-------+----------|
+
+*Opgaver*
+1. Sammenlign med ark A. Hvilke linjer er næsten ens, og hvilke kort er ændret?
+2. Test reglen med \(a=1000\) og \(b=10\).
+3. Hvad er forskellen på \(\log\left(\frac ab\right)\) og \(\frac{\log(a)}{\log(b)}\)? Vis med tal, at de ikke er ens.
+
+\newpage
+* Ark C: Potensreglen
+
+/Påstand:/ For alle \(a>0\) og alle tal \(r\) gælder \(\log(a^r)=r\cdot\log(a)\).
+
+#+ATTR_LATEX: :environment tabular :align |c|l|c|p{2.5cm}|
+|-----+-----------------------------------+-------+----------|
+| Bog | Formellinje                       | Plads | Kort nr. |
+|-----+-----------------------------------+-------+----------|
+| A   | \(a^r=10^{r\cdot x}\)             |       |          |
+| B   | Lad \(x=\log(a)\)                 |       |          |
+| C   | \(\log(a^r)=r\cdot x\)            |       |          |
+| D   | \(a^r=(10^x)^r\)                  |       |          |
+| E   | \(\log(a^r)=r\cdot\log(a)\)       |       |          |
+| F   | Så er \(a=10^x\)                  |       |          |
+| G   | \(\log(a^r)=\log(10^{r\cdot x})\) |       |          |
+|-----+-----------------------------------+-------+----------|
+
+*Opgaver*
+1. Test reglen med \(a=10\), \(r=3\) og med \(a=100\), \(r=\frac12\).
+2. Brug reglen til at vise, at \(\log(\sqrt a)=\frac12\log(a)\). Hvad er \(r\) her?
+3. Hvorfor er \((\log(a))^r\) /ikke/ det samme som \(\log(a^r)\)? Find et taleksempel.
+
+\newpage
+* Ark D (ekstra): Følgeregler
+
+/Påstand 1:/ \(\log(1)=0\)
+
+#+ATTR_LATEX: :environment tabular :align |c|l|c|p{2.5cm}|
+|-----+------------------------+-------+----------|
+| Bog | Formellinje            | Plads | Kort nr. |
+|-----+------------------------+-------+----------|
+| A   | \(\log(1)=0\)          |       |          |
+| B   | \(1=10^0\)             |       |          |
+| C   | \(\log(1)=\log(10^0)\) |       |          |
+|-----+------------------------+-------+----------|
+
+/Påstand 2:/ For \(a>0\) gælder \(\log\left(\dfrac1a\right)=-\log(a)\).
+
+#+ATTR_LATEX: :environment tabular :align |c|l|c|p{2.5cm}|
+|-----+----------------------------------------------+-------+----------|
+| Bog | Formellinje                                  | Plads | Kort nr. |
+|-----+----------------------------------------------+-------+----------|
+| A   | \(\log\left(\dfrac1a\right)=0-\log(a)\)      |       |          |
+| B   | \(\log\left(\dfrac1a\right)=-\log(a)\)       |       |          |
+| C   | \(\log\left(\dfrac1a\right)=\log(1)-\log(a)\)|       |          |
+|-----+----------------------------------------------+-------+----------|
+
+*Opgaver*
+1. Hvilke tidligere beviste regler bruges?
+2. Bevis, at \(\log(a\cdot b\cdot c)=\log(a)+\log(b)+\log(c)\) ved at bruge produktreglen to gange.
+3. Skriv \(\ln\)-versionen af produktreglen. Hvilket grundtal og hvilke kort skal ændres?

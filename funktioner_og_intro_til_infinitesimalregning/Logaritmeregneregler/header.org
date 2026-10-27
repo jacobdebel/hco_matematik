@@ -1,0 +1,14 @@
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage[danish]{babel}
+#+LATEX_HEADER: \usepackage[a4paper,margin=1.8cm]{geometry}
+#+LATEX_HEADER: \usepackage{amsmath,array,pgffor}
+#+LATEX_HEADER: \pagestyle{empty}
+#+LATEX_HEADER: \renewcommand{\arraystretch}{2.2}
+#+LATEX_HEADER: \newcommand{\kort}[2]{\fbox{\parbox[c][1.5cm][c]{0.45\textwidth}{\centering\small\textbf{#1}\quad #2}}}
+#+LATEX_HEADER: \newcommand{\kopier}[3]{\foreach \i in {1,...,#1}{\noindent\kort{#2}{#3}\hfill\kort{#2}{#3}\par\vspace{2mm}}}
+#+latex_header_extra: \setlength{\parindent}{0em}
+#+latex_header_extra: \parskip 1.5ex
+#+OPTIONS: ^:{} tags:nil toc:nil todo:nil num:nil timestamp:nil date:nil author:nil
+
+
