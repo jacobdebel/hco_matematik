@@ -575,6 +575,11 @@ Men, hvor er afstanden så *mindst*?
 Når $d'(t) = 0$.
 #+attr_reveal: :frag (appear)
 Vi tager det lige på tavlen.
+#+attr_reveal: :frag (appear)
+...
+#+attr_reveal: :frag (appear)
+Mindste afstand opstår, når \(\overrightarrow{P_0 P} \perp \vec{r}'(t) \iff \overrightarrow{P_0 P} \bullet \vec{r}'(t) = 0\,.\)
+
 #+reveal_html: </div>
 #+reveal_html: </div>
 
