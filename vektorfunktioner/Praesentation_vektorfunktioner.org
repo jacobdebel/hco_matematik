@@ -871,7 +871,7 @@ t_1 + 1 &= t_2 \quad \text{ ligning II}
 Men kolliderer de to vektorfunktioner på samme tid?
 #+end_quote
 #+attr_reveal: :frag (appear)
-- Tjek, ved at indsætte $t_1$​-værdierne i $\vec{q}(t_2)$ og se, om koordinaterne bliver det samme som for $\vec{p}(t_1)$.
+- Tjek, ved at indsætte \(t_1\)- og \(t_2\)-værdierne i hhv \(\vec{p}(t)\) og \(\vec{q}(t)\) og se, om koordinaterne bliver de samme.
 - (Det gør de ikke).
 #+reveal_html: </div>
 
